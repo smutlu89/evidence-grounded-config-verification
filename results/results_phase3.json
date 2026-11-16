@@ -1,0 +1,396 @@
+{
+ "gt_sha256": "2cf6ebcd5321b5e9d66ae9e657450e8a1f911e0ef98f2938a6cd0b04be54b243",
+ "runs_scored": 53,
+ "invalid_outputs": 0,
+ "runs_by_set": {
+  "suite": 50,
+  "scenario": 3
+ },
+ "third_run": {
+  "suite": {
+   "released": {
+    "k": 50,
+    "n": 50,
+    "p": 1.0,
+    "ci95": [
+     0.9286523998213857,
+     0.9999999999999999
+    ]
+   },
+   "outcomes": {
+    "released": 50
+   }
+  },
+  "scenarios": {
+   "released": {
+    "k": 7,
+    "n": 7,
+    "p": 1.0,
+    "ci95": [
+     0.6456695613241317,
+     1.0
+    ]
+   },
+   "outcomes": {
+    "released": 7
+   }
+  },
+  "suite_security": {
+   "released": {
+    "k": 39,
+    "n": 39,
+    "p": 1.0,
+    "ci95": [
+     0.9103331450047065,
+     1.0
+    ]
+   }
+  },
+  "by_family": {
+   "i": {
+    "released": {
+     "k": 15,
+     "n": 15,
+     "p": 1.0,
+     "ci95": [
+      0.7961166964035129,
+      1.0
+     ]
+    },
+    "outcomes": {
+     "released": 15
+    }
+   },
+   "ii": {
+    "released": {
+     "k": 12,
+     "n": 12,
+     "p": 1.0,
+     "ci95": [
+      0.7575059904469021,
+      1.0
+     ]
+    },
+    "outcomes": {
+     "released": 12
+    }
+   },
+   "iii": {
+    "released": {
+     "k": 12,
+     "n": 12,
+     "p": 1.0,
+     "ci95": [
+      0.7575059904469021,
+      1.0
+     ]
+    },
+    "outcomes": {
+     "released": 12
+    }
+   },
+   "iv": {
+    "released": {
+     "k": 11,
+     "n": 11,
+     "p": 1.0,
+     "ci95": [
+      0.7411670300055737,
+      1.0
+     ]
+    },
+    "outcomes": {
+     "released": 11
+    }
+   }
+  }
+ },
+ "three_runs": {
+  "suite": {
+   "items": 50,
+   "all_three_runs": {
+    "k": 49,
+    "n": 50,
+    "p": 0.98,
+    "ci95": [
+     0.8950455630610349,
+     0.9964607407674954
+    ]
+   },
+   "at_least_one_of_three": {
+    "k": 50,
+    "n": 50,
+    "p": 1.0,
+    "ci95": [
+     0.9286523998213857,
+     0.9999999999999999
+    ]
+   },
+   "item_runs": {
+    "k": 149,
+    "n": 150,
+    "p": 0.9933333333333333,
+    "ci95": [
+     0.9632071598332032,
+     0.9988221986779943
+    ]
+   },
+   "items_not_released_in_every_run": {
+    "iv01": {
+     "1": "released",
+     "2": "suppressed:clarification",
+     "3": "released"
+    }
+   }
+  },
+  "suite_security": {
+   "items": 39,
+   "all_three_runs": {
+    "k": 39,
+    "n": 39,
+    "p": 1.0,
+    "ci95": [
+     0.9103331450047065,
+     1.0
+    ]
+   },
+   "at_least_one_of_three": {
+    "k": 39,
+    "n": 39,
+    "p": 1.0,
+    "ci95": [
+     0.9103331450047065,
+     1.0
+    ]
+   },
+   "item_runs": {
+    "k": 117,
+    "n": 117,
+    "p": 1.0,
+    "ci95": [
+     0.96821075385171,
+     1.0
+    ]
+   },
+   "items_not_released_in_every_run": {}
+  },
+  "by_family": {
+   "i": {
+    "items": 15,
+    "all_three_runs": {
+     "k": 15,
+     "n": 15,
+     "p": 1.0,
+     "ci95": [
+      0.7961166964035129,
+      1.0
+     ]
+    },
+    "at_least_one_of_three": {
+     "k": 15,
+     "n": 15,
+     "p": 1.0,
+     "ci95": [
+      0.7961166964035129,
+      1.0
+     ]
+    },
+    "item_runs": {
+     "k": 45,
+     "n": 45,
+     "p": 1.0,
+     "ci95": [
+      0.921348400123914,
+      0.9999999999999999
+     ]
+    },
+    "items_not_released_in_every_run": {}
+   },
+   "ii": {
+    "items": 12,
+    "all_three_runs": {
+     "k": 12,
+     "n": 12,
+     "p": 1.0,
+     "ci95": [
+      0.7575059904469021,
+      1.0
+     ]
+    },
+    "at_least_one_of_three": {
+     "k": 12,
+     "n": 12,
+     "p": 1.0,
+     "ci95": [
+      0.7575059904469021,
+      1.0
+     ]
+    },
+    "item_runs": {
+     "k": 36,
+     "n": 36,
+     "p": 1.0,
+     "ci95": [
+      0.9035813700311206,
+      1.0
+     ]
+    },
+    "items_not_released_in_every_run": {}
+   },
+   "iii": {
+    "items": 12,
+    "all_three_runs": {
+     "k": 12,
+     "n": 12,
+     "p": 1.0,
+     "ci95": [
+      0.7575059904469021,
+      1.0
+     ]
+    },
+    "at_least_one_of_three": {
+     "k": 12,
+     "n": 12,
+     "p": 1.0,
+     "ci95": [
+      0.7575059904469021,
+      1.0
+     ]
+    },
+    "item_runs": {
+     "k": 36,
+     "n": 36,
+     "p": 1.0,
+     "ci95": [
+      0.9035813700311206,
+      1.0
+     ]
+    },
+    "items_not_released_in_every_run": {}
+   },
+   "iv": {
+    "items": 11,
+    "all_three_runs": {
+     "k": 10,
+     "n": 11,
+     "p": 0.9090909090909091,
+     "ci95": [
+      0.6226415608917041,
+      0.9837678272946745
+     ]
+    },
+    "at_least_one_of_three": {
+     "k": 11,
+     "n": 11,
+     "p": 1.0,
+     "ci95": [
+      0.7411670300055737,
+      1.0
+     ]
+    },
+    "item_runs": {
+     "k": 32,
+     "n": 33,
+     "p": 0.9696969696969697,
+     "ci95": [
+      0.8468127447352589,
+      0.9946305895225589
+     ]
+    },
+    "items_not_released_in_every_run": {
+     "iv01": {
+      "1": "released",
+      "2": "suppressed:clarification",
+      "3": "released"
+     }
+    }
+   }
+  },
+  "scenarios": {
+   "items": 7,
+   "all_three_runs": {
+    "k": 7,
+    "n": 7,
+    "p": 1.0,
+    "ci95": [
+     0.6456695613241317,
+     1.0
+    ]
+   },
+   "at_least_one_of_three": {
+    "k": 7,
+    "n": 7,
+    "p": 1.0,
+    "ci95": [
+     0.6456695613241317,
+     1.0
+    ]
+   },
+   "item_runs": {
+    "k": 21,
+    "n": 21,
+    "p": 1.0,
+    "ci95": [
+     0.8453609790128563,
+     1.0
+    ]
+   },
+   "items_not_released_in_every_run": {}
+  }
+ },
+ "gate": {
+  "candidates": 145,
+  "released": 129,
+  "suppressed": 16,
+  "suppressed_by_reason": {
+   "not_supported": 11,
+   "clarification": 5
+  },
+  "released_by_intent": {
+   "I1": 15,
+   "I2": 23,
+   "I3": 14,
+   "I4": 15,
+   "I5": 62
+  },
+  "actionable_proposed": 78,
+  "false_proposals": {
+   "k": 11,
+   "n": 78,
+   "p": 0.14102564102564102,
+   "ci95": [
+    0.08061044020873692,
+    0.2351397826554084
+   ]
+  },
+  "false_proposals_by_intent": {
+   "I4": 6,
+   "I2": 4,
+   "I1": 1
+  },
+  "false_proposal_gate_outcome": {
+   "not_supported": 11
+  },
+  "released_actionable": 67,
+  "false_alarms_released": 0,
+  "configs_with_false_proposal": {
+   "k": 9,
+   "n": 53,
+   "p": 0.16981132075471697,
+   "ci95": [
+    0.09199945335144337,
+    0.2922528039121901
+   ]
+  },
+  "gt_items_proposed_but_suppressed": {},
+  "runs_with_clarification": {
+   "k": 15,
+   "n": 53,
+   "p": 0.2830188679245283,
+   "ci95": [
+    0.17966290379767413,
+    0.41570286526128497
+   ]
+  }
+ }
+}

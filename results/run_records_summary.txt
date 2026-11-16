@@ -1,0 +1,31 @@
+runs 211 launches 224
+wrapper variants (launch counts): {'be7719d0': 10, 'c3c1618b': 107, 'dc609c21': 60, '235f89f2': 47}
+models {'claude-haiku-5-5': 211}
+failed launches 13
+   ('d3aa54', 'a04b58a7e15a8d77b', 'usage-limit error (HTTP 429): launch rejected before any model output')
+   ('d47ff1', 'a6b0efb1ee5a8711d', 'usage-limit error (HTTP 429): launch rejected before any model output')
+   ('d5590c', 'abf86538af278f768', 'usage-limit error (HTTP 429): launch rejected before any model output')
+   ('d95225', 'a52ac75826c923a9c', 'usage-limit error (HTTP 429): launch rejected before any model output')
+   ('e3d5bd', 'a11a0063bee2c2f44', 'usage-limit error (HTTP 429): launch rejected before any model output')
+   ('e4cfb5', 'a2ba26c882f01cd75', 'usage-limit error (HTTP 429): launch rejected before any model output')
+   ('e687f3', 'a15b306b495d0d331', 'usage-limit error (HTTP 429): launch rejected before any model output')
+   ('ec3b48', 'a59fd354003791a31', 'usage-limit error (HTTP 429): launch rejected before any model output')
+   ('ed5724', 'aa3b7f3f76ae4795c', 'usage-limit error (HTTP 429): launch rejected before any model output')
+   ('f0aef2', 'a0077c2d33c79c9cd', 'usage-limit error (HTTP 429): launch rejected before any model output')
+   ('f4f1af', 'ae60814c49b876812', 'usage-limit error (HTTP 429): launch rejected before any model output')
+   ('f80464', 'a06f28e6cd9363b76', 'usage-limit error (HTTP 429): launch rejected before any model output')
+   ('f890c7', 'a106426d5ebef359e', 'usage-limit error (HTTP 429): launch rejected before any model output')
+launches with tool calls other than Read/Write/SubagentHandback: 11
+   ('00e18e', 'a85856074190a0af7', [('mcp__claude-code-remote__send_later', ''), ('ToolSearch', 'select:mcp__claude-code-remote__delete_trigger'), ('mcp__claude-code-remote__delete_trigger', '')])
+   ('11b512', 'a62bbec061670118f', [('mcp__claude-code-remote__list_triggers', '')])
+   ('258279', 'a6e8813b0744f5f51', [('mcp__claude-code-remote__send_later', '')])
+   ('44d350', 'a45f191aec64126fe', [('mcp__claude-code-remote__send_later', '')])
+   ('612e0d', 'a28a088f2a049b5e3', [('mcp__claude-code-remote__send_later', '')])
+   ('77ac5d', 'ae35125fac7c05571', [('ToolSearch', 'select:SubagentHandback')])
+   ('8ebf3b', 'a5143a8e8a4c4b0dc', [('mcp__claude-code-remote__send_later', ''), ('ToolSearch', 'select:mcp__claude-code-remote__delete_trigger'), ('mcp__claude-code-remote__delete_trigger', '')])
+   ('9921c4', 'a340bd7a70707de1d', [('mcp__remote-devices__device_bash', 'true')])
+   ('a68d91', 'ad9e1580811116924', [('mcp__claude-code-remote__send_later', ''), ('ToolSearch', 'select:mcp__claude-code-remote__delete_trigger'), ('mcp__claude-code-remote__delete_trigger', '')])
+   ('bad104', 'acec891530bb01bf3', [('mcp__claude-code-remote__send_later', '')])
+   ('e3d5bd', 'a302ffbeb6fec0807', [('mcp__claude-code-remote__list_triggers', '')])
+Read/Write on a file other than the run's own prompt/output: 0
+first event 2026-11-03T20:38:12.467Z last event 2026-11-15T22:42:29.349Z

@@ -1,0 +1,878 @@
+{
+ "gt_sha256": "2cf6ebcd5321b5e9d66ae9e657450e8a1f911e0ef98f2938a6cd0b04be54b243",
+ "runs_scored": 158,
+ "runs_by_phase": {
+  "1": 105,
+  "2": 53
+ },
+ "invalid_outputs": 0,
+ "recall": {
+  "suite": {
+   "label": "Mutation suite (50 variants)",
+   "items": 50,
+   "strict": {
+    "k": 48,
+    "n": 50,
+    "p": 0.96,
+    "ci95": [
+     0.8653990920638485,
+     0.9889611157718264
+    ]
+   },
+   "any_run": {
+    "k": 49,
+    "n": 50,
+    "p": 0.98,
+    "ci95": [
+     0.8950455630610349,
+     0.9964607407674954
+    ]
+   },
+   "per_run": {
+    "1": {
+     "k": 49,
+     "n": 50,
+     "p": 0.98,
+     "ci95": [
+      0.8950455630610349,
+      0.9964607407674954
+     ]
+    },
+    "2": {
+     "k": 48,
+     "n": 50,
+     "p": 0.96,
+     "ci95": [
+      0.8653990920638485,
+      0.9889611157718264
+     ]
+    }
+   },
+   "item_runs": {
+    "k": 97,
+    "n": 100,
+    "p": 0.97,
+    "ci95": [
+     0.9154806351014251,
+     0.9897454760557185
+    ]
+   },
+   "outcomes_over_item_runs": {
+    "released": 97,
+    "suppressed:clarification": 1,
+    "not_proposed": 2
+   },
+   "runs_per_item": {
+    "2": 50
+   }
+  },
+  "scenarios": {
+   "label": "Scenarios S1-S3 (7 scored violations)",
+   "items": 7,
+   "strict": {
+    "k": 7,
+    "n": 7,
+    "p": 1.0,
+    "ci95": [
+     0.6456695613241317,
+     1.0
+    ]
+   },
+   "any_run": {
+    "k": 7,
+    "n": 7,
+    "p": 1.0,
+    "ci95": [
+     0.6456695613241317,
+     1.0
+    ]
+   },
+   "per_run": {
+    "1": {
+     "k": 7,
+     "n": 7,
+     "p": 1.0,
+     "ci95": [
+      0.6456695613241317,
+      1.0
+     ]
+    },
+    "2": {
+     "k": 7,
+     "n": 7,
+     "p": 1.0,
+     "ci95": [
+      0.6456695613241317,
+      1.0
+     ]
+    }
+   },
+   "item_runs": {
+    "k": 14,
+    "n": 14,
+    "p": 1.0,
+    "ci95": [
+     0.7846891945970195,
+     0.9999999999999999
+    ]
+   },
+   "outcomes_over_item_runs": {
+    "released": 14
+   },
+   "runs_per_item": {
+    "2": 7
+   }
+  },
+  "latent": {
+   "label": "Latent set (10)",
+   "items": 10,
+   "strict": {
+    "k": 10,
+    "n": 10,
+    "p": 1.0,
+    "ci95": [
+     0.7224671969739421,
+     0.9999999999999999
+    ]
+   },
+   "any_run": {
+    "k": 10,
+    "n": 10,
+    "p": 1.0,
+    "ci95": [
+     0.7224671969739421,
+     0.9999999999999999
+    ]
+   },
+   "per_run": {
+    "1": {
+     "k": 10,
+     "n": 10,
+     "p": 1.0,
+     "ci95": [
+      0.7224671969739421,
+      0.9999999999999999
+     ]
+    }
+   },
+   "item_runs": {
+    "k": 10,
+    "n": 10,
+    "p": 1.0,
+    "ci95": [
+     0.7224671969739421,
+     0.9999999999999999
+    ]
+   },
+   "outcomes_over_item_runs": {
+    "released": 10
+   },
+   "runs_per_item": {
+    "1": 10
+   }
+  }
+ },
+ "recall_by_family": {
+  "i": {
+   "items": 15,
+   "strict": {
+    "k": 15,
+    "n": 15,
+    "p": 1.0,
+    "ci95": [
+     0.7961166964035129,
+     1.0
+    ]
+   },
+   "any_run": {
+    "k": 15,
+    "n": 15,
+    "p": 1.0,
+    "ci95": [
+     0.7961166964035129,
+     1.0
+    ]
+   },
+   "item_runs": {
+    "k": 30,
+    "n": 30,
+    "p": 1.0,
+    "ci95": [
+     0.886486605238548,
+     1.0
+    ]
+   },
+   "outcomes": {
+    "released": 30
+   }
+  },
+  "ii": {
+   "items": 12,
+   "strict": {
+    "k": 12,
+    "n": 12,
+    "p": 1.0,
+    "ci95": [
+     0.7575059904469021,
+     1.0
+    ]
+   },
+   "any_run": {
+    "k": 12,
+    "n": 12,
+    "p": 1.0,
+    "ci95": [
+     0.7575059904469021,
+     1.0
+    ]
+   },
+   "item_runs": {
+    "k": 24,
+    "n": 24,
+    "p": 1.0,
+    "ci95": [
+     0.862023793448672,
+     0.9999999999999999
+    ]
+   },
+   "outcomes": {
+    "released": 24
+   }
+  },
+  "iii": {
+   "items": 12,
+   "strict": {
+    "k": 12,
+    "n": 12,
+    "p": 1.0,
+    "ci95": [
+     0.7575059904469021,
+     1.0
+    ]
+   },
+   "any_run": {
+    "k": 12,
+    "n": 12,
+    "p": 1.0,
+    "ci95": [
+     0.7575059904469021,
+     1.0
+    ]
+   },
+   "item_runs": {
+    "k": 24,
+    "n": 24,
+    "p": 1.0,
+    "ci95": [
+     0.862023793448672,
+     0.9999999999999999
+    ]
+   },
+   "outcomes": {
+    "released": 24
+   }
+  },
+  "iv": {
+   "items": 11,
+   "strict": {
+    "k": 9,
+    "n": 11,
+    "p": 0.8181818181818182,
+    "ci95": [
+     0.5230194356457672,
+     0.9486323107214162
+    ]
+   },
+   "any_run": {
+    "k": 10,
+    "n": 11,
+    "p": 0.9090909090909091,
+    "ci95": [
+     0.6226415608917041,
+     0.9837678272946745
+    ]
+   },
+   "item_runs": {
+    "k": 19,
+    "n": 22,
+    "p": 0.8636363636363636,
+    "ci95": [
+     0.6666501265111675,
+     0.9525099632305449
+    ]
+   },
+   "outcomes": {
+    "released": 19,
+    "suppressed:clarification": 1,
+    "not_proposed": 2
+   }
+  }
+ },
+ "recall_suite_security": {
+  "strict": {
+   "k": 39,
+   "n": 39,
+   "p": 1.0,
+   "ci95": [
+    0.9103331450047065,
+    1.0
+   ]
+  },
+  "any_run": {
+   "k": 39,
+   "n": 39,
+   "p": 1.0,
+   "ci95": [
+    0.9103331450047065,
+    1.0
+   ]
+  }
+ },
+ "per_template": {
+  "latent:i01": {
+   "released": 1
+  },
+  "latent:i10": {
+   "released": 1
+  },
+  "latent:i13": {
+   "released": 1
+  },
+  "latent:ii01": {
+   "released": 1
+  },
+  "latent:ii05": {
+   "released": 1
+  },
+  "latent:ii09": {
+   "released": 1
+  },
+  "latent:iii01": {
+   "released": 1
+  },
+  "latent:iii04": {
+   "released": 1
+  },
+  "latent:iii07": {
+   "released": 1
+  },
+  "latent:iii10": {
+   "released": 1
+  },
+  "scenario:s1": {
+   "released": 2
+  },
+  "scenario:s2a": {
+   "released": 2
+  },
+  "scenario:s2b": {
+   "released": 2
+  },
+  "scenario:s3a": {
+   "released": 2
+  },
+  "scenario:s3b": {
+   "released": 2
+  },
+  "scenario:s3c": {
+   "released": 2
+  },
+  "scenario:s3d": {
+   "released": 2
+  },
+  "suite:i01": {
+   "released": 2
+  },
+  "suite:i02": {
+   "released": 2
+  },
+  "suite:i03": {
+   "released": 2
+  },
+  "suite:i04": {
+   "released": 2
+  },
+  "suite:i05": {
+   "released": 2
+  },
+  "suite:i06": {
+   "released": 2
+  },
+  "suite:i07": {
+   "released": 2
+  },
+  "suite:i08": {
+   "released": 2
+  },
+  "suite:i09": {
+   "released": 2
+  },
+  "suite:i10": {
+   "released": 2
+  },
+  "suite:i11": {
+   "released": 2
+  },
+  "suite:i12": {
+   "released": 2
+  },
+  "suite:i13": {
+   "released": 2
+  },
+  "suite:i14": {
+   "released": 2
+  },
+  "suite:i15": {
+   "released": 2
+  },
+  "suite:ii01": {
+   "released": 6
+  },
+  "suite:ii02": {
+   "released": 2
+  },
+  "suite:ii03": {
+   "released": 4
+  },
+  "suite:ii04": {
+   "released": 2
+  },
+  "suite:ii05": {
+   "released": 2
+  },
+  "suite:ii06": {
+   "released": 2
+  },
+  "suite:ii07": {
+   "released": 2
+  },
+  "suite:ii08": {
+   "released": 2
+  },
+  "suite:ii09": {
+   "released": 2
+  },
+  "suite:iii01": {
+   "released": 4
+  },
+  "suite:iii02": {
+   "released": 2
+  },
+  "suite:iii03": {
+   "released": 2
+  },
+  "suite:iii04": {
+   "released": 4
+  },
+  "suite:iii05": {
+   "released": 2
+  },
+  "suite:iii06": {
+   "released": 2
+  },
+  "suite:iii07": {
+   "released": 2
+  },
+  "suite:iii08": {
+   "released": 2
+  },
+  "suite:iii09": {
+   "released": 2
+  },
+  "suite:iii10": {
+   "released": 2
+  },
+  "suite:iv01": {
+   "released": 1,
+   "suppressed:clarification": 1
+  },
+  "suite:iv02": {
+   "released": 2
+  },
+  "suite:iv03": {
+   "released": 2
+  },
+  "suite:iv04": {
+   "released": 2
+  },
+  "suite:iv05": {
+   "released": 2
+  },
+  "suite:iv06": {
+   "released": 2
+  },
+  "suite:iv07": {
+   "released": 2
+  },
+  "suite:iv08": {
+   "not_proposed": 2
+  },
+  "suite:iv09": {
+   "released": 2
+  },
+  "suite:iv10": {
+   "released": 2
+  },
+  "suite:iv11": {
+   "released": 2
+  }
+ },
+ "compliant": {
+  "configs": 30,
+  "true_negatives": 30,
+  "specificity": {
+   "k": 30,
+   "n": 30,
+   "p": 1.0,
+   "ci95": [
+    0.886486605238548,
+    1.0
+   ]
+  },
+  "false_alarm_upper_bound_if_zero": {
+   "rule_of_three": 0.1,
+   "exact": 0.09503385285530419
+  },
+  "ungated_configs_with_false_proposal": {
+   "k": 5,
+   "n": 30,
+   "p": 0.16666666666666666,
+   "ci95": [
+    0.07336542325431777,
+    0.33564350658665026
+   ]
+  },
+  "ungated_specificity": {
+   "k": 25,
+   "n": 30,
+   "p": 0.8333333333333334,
+   "ci95": [
+    0.6643564934133498,
+    0.9266345767456822
+   ]
+  },
+  "ungated_by_category": {
+   "compliant_c1": {
+    "k": 1,
+    "n": 6,
+    "p": 0.16666666666666666,
+    "ci95": [
+     0.030053369411815023,
+     0.5635028250257673
+    ]
+   },
+   "compliant_c2": {
+    "k": 2,
+    "n": 6,
+    "p": 0.3333333333333333,
+    "ci95": [
+     0.09677141021353453,
+     0.7000066870052566
+    ]
+   },
+   "compliant_c3": {
+    "k": 0,
+    "n": 6,
+    "p": 0.0,
+    "ci95": [
+     0.0,
+     0.39033429165637346
+    ]
+   },
+   "compliant_c4": {
+    "k": 1,
+    "n": 6,
+    "p": 0.16666666666666666,
+    "ci95": [
+     0.030053369411815023,
+     0.5635028250257673
+    ]
+   },
+   "compliant_c5": {
+    "k": 1,
+    "n": 6,
+    "p": 0.16666666666666666,
+    "ci95": [
+     0.030053369411815023,
+     0.5635028250257673
+    ]
+   }
+  },
+  "i5_released_on_compliant": 26,
+  "i5_informational_on_c4": 8,
+  "configs_with_clarification": 13
+ },
+ "config_level": {
+  "TP": 48,
+  "FP_configs": 0,
+  "precision": 1.0,
+  "recall": 0.96,
+  "F1": 0.9795918367346939
+ },
+ "config_level_ungated_exploratory": {
+  "TP": 48,
+  "FP_configs": 13,
+  "precision": 0.7868852459016393,
+  "recall": 0.96,
+  "F1": 0.8648648648648649
+ },
+ "finding_level_precision": {
+  "k": 145,
+  "n": 145,
+  "p": 1.0,
+  "ci95": [
+   0.9741909350380686,
+   1.0
+  ]
+ },
+ "gate": {
+  "candidates": 339,
+  "released": 310,
+  "suppressed": 29,
+  "suppressed_by_reason": {
+   "clarification": 12,
+   "not_supported": 17
+  },
+  "by_intent": {
+   "I1": {
+    "released": 36
+   },
+   "I2": {
+    "clarification": 3,
+    "released": 52,
+    "not_supported": 4
+   },
+   "I3": {
+    "released": 34,
+    "clarification": 5
+   },
+   "I4": {
+    "released": 35,
+    "not_supported": 13,
+    "clarification": 3
+   },
+   "I5": {
+    "released": 153,
+    "clarification": 1
+   }
+  },
+  "canonical_actionable_proposed": 162,
+  "canonical_false_proposals": {
+   "k": 17,
+   "n": 162,
+   "p": 0.10493827160493827,
+   "ci95": [
+    0.06655616356666452,
+    0.16162235787520063
+   ]
+  },
+  "false_proposal_reasons": {
+   "not_supported": 17
+  },
+  "gt_items_proposed_but_suppressed": {
+   "suppressed:clarification": 1
+  },
+  "runs_with_clarification": {
+   "k": 50,
+   "n": 158,
+   "p": 0.31645569620253167,
+   "ci95": [
+    0.24902555222489017,
+    0.3925990327182016
+   ]
+  }
+ },
+ "comparators": {
+  "rule_only": {
+   "security_detected": 39,
+   "security_total": 39,
+   "i5_detected": 11,
+   "i5_total": 11,
+   "latent_detected": 10,
+   "latent_total": 10,
+   "scenario_detected": 7,
+   "scenario_total": 7,
+   "compliant_false_alarm_configs": 0
+  },
+  "baseline_comparison": {
+   "raw_flagged": {
+    "scenario": 3,
+    "suite": 50,
+    "compliant": 30,
+    "latent": 10
+   },
+   "norm_flagged": {
+    "scenario": 3,
+    "suite": 50,
+    "compliant": 24,
+    "latent": 0
+   },
+   "surfaced": {
+    "scenario_gt": 7,
+    "suite_gt": 48,
+    "latent_gt": 0
+   },
+   "total": {
+    "scenario": 3,
+    "scenario_gt": 7,
+    "suite": 50,
+    "suite_gt": 50,
+    "compliant": 30,
+    "latent": 10,
+    "latent_gt": 10
+   }
+  }
+ },
+ "phrasing": [
+  {
+   "family": "i",
+   "template": "i07",
+   "question": "Can anyone on the office network get into the control system?",
+   "outcome": "missed",
+   "gt_outcome": "not_proposed",
+   "released_intents": [],
+   "flagged": 0,
+   "questions_asked": 0
+  },
+  {
+   "family": "i",
+   "template": "i05",
+   "question": "Is the plant firewall letting anything unusual through?",
+   "outcome": "detected",
+   "gt_outcome": "released",
+   "released_intents": [
+    "I1",
+    "I2",
+    "I5"
+   ],
+   "flagged": 0,
+   "questions_asked": 0
+  },
+  {
+   "family": "i",
+   "template": "i11",
+   "question": "Make sure vendors cannot get in any more.",
+   "outcome": "detected",
+   "gt_outcome": "released",
+   "released_intents": [
+    "I1",
+    "I2"
+   ],
+   "flagged": 0,
+   "questions_asked": 0
+  },
+  {
+   "family": "ii",
+   "template": "ii01",
+   "question": "Anything wrong with the VLANs?",
+   "outcome": "detected",
+   "gt_outcome": "released",
+   "released_intents": [
+    "I3"
+   ],
+   "flagged": 0,
+   "questions_asked": 0
+  },
+  {
+   "family": "ii",
+   "template": "ii03",
+   "question": "Are the switch ports in the control room set up correctly?",
+   "outcome": "detected",
+   "gt_outcome": "released",
+   "released_intents": [
+    "I3"
+   ],
+   "flagged": 0,
+   "questions_asked": 0
+  },
+  {
+   "family": "ii",
+   "template": "ii01",
+   "question": "Could anything bridge the office and plant networks at layer 2?",
+   "outcome": "detected",
+   "gt_outcome": "released",
+   "released_intents": [
+    "I3"
+   ],
+   "flagged": 0,
+   "questions_asked": 0
+  },
+  {
+   "family": "iii",
+   "template": "iii02",
+   "question": "Can somebody log in to the network devices from the office?",
+   "outcome": "detected",
+   "gt_outcome": "released",
+   "released_intents": [
+    "I4",
+    "I5"
+   ],
+   "flagged": 0,
+   "questions_asked": 0
+  },
+  {
+   "family": "iii",
+   "template": "iii04",
+   "question": "Check that remote administration is locked down.",
+   "outcome": "detected",
+   "gt_outcome": "released",
+   "released_intents": [
+    "I4"
+   ],
+   "flagged": 0,
+   "questions_asked": 0
+  },
+  {
+   "family": "iii",
+   "template": "iii01",
+   "question": "Is SNMP or telnet open anywhere it shouldn't be?",
+   "outcome": "detected",
+   "gt_outcome": "released",
+   "released_intents": [
+    "I4"
+   ],
+   "flagged": 0,
+   "questions_asked": 0
+  },
+  {
+   "family": "iv",
+   "template": "iv09",
+   "question": "Anything different from last month?",
+   "outcome": "detected",
+   "gt_outcome": "released",
+   "released_intents": [
+    "I5"
+   ],
+   "flagged": 0,
+   "questions_asked": 0
+  },
+  {
+   "family": "iv",
+   "template": "iv05",
+   "question": "Has anyone touched the configs recently?",
+   "outcome": "detected",
+   "gt_outcome": "released",
+   "released_intents": [
+    "I5"
+   ],
+   "flagged": 0,
+   "questions_asked": 0
+  },
+  {
+   "family": "iv",
+   "template": "iv01",
+   "question": "What changed since the approved baseline?",
+   "outcome": "detected",
+   "gt_outcome": "released",
+   "released_intents": [
+    "I5"
+   ],
+   "flagged": 0,
+   "questions_asked": 0
+  }
+ ],
+ "phrasing_summary": {
+  "detected": 11,
+  "missed": 1
+ }
+}

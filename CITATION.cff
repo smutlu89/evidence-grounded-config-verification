@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this package, please cite the book chapter it accompanies."
+title: "Evidence-grounded configuration verification: evaluation package"
+type: dataset
+authors:
+  - family-names: Mutlu
+    given-names: Sedat
+    affiliation: "Muğla Sıtkı Koçman University, Department of Electrical-Electronics Engineering"
+    orcid: "https://orcid.org/0000-0003-4342-851X"
+  - family-names: Karaarslan
+    given-names: Enis
+    affiliation: "Muğla Sıtkı Koçman University, Department of Computer Engineering"
+    orcid: "https://orcid.org/0000-0002-3595-8783"
+repository-code: "https://github.com/smutlu89/evidence-grounded-config-verification"
+license: MIT
+date-released: "2026-11-16"
+preferred-citation:
+  type: generic
+  title: "Securing digitalized energy market boundaries: An evidence-grounded AI framework for configuration resilience"
+  authors:
+    - family-names: Mutlu
+      given-names: Sedat
+    - family-names: Karaarslan
+      given-names: Enis
+  notes: "Chapter 11 in B. Bagis (Ed.), AI-Driven Decision-Making in Finance. CRC Press (forthcoming)."

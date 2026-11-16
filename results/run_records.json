@@ -1,0 +1,5699 @@
+{
+ "runs": {
+  "00e18e": [
+   {
+    "agent_id": "a85856074190a0af7",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:38:12.467Z",
+    "last_event_utc": "2026-11-03T20:39:01.328Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/00e18e.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/00e18e.json"
+     },
+     {
+      "name": "mcp__claude-code-remote__send_later",
+      "target": ""
+     },
+     {
+      "name": "ToolSearch",
+      "target": "select:mcp__claude-code-remote__delete_trigger"
+     },
+     {
+      "name": "mcp__claude-code-remote__delete_trigger",
+      "target": ""
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "be7719d0"
+   }
+  ],
+  "0228c9": [
+   {
+    "agent_id": "ab1bd7497291483de",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:38:12.475Z",
+    "last_event_utc": "2026-11-03T20:39:09.314Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/0228c9.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/0228c9.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "be7719d0"
+   }
+  ],
+  "040d96": [
+   {
+    "agent_id": "a2b7a5e407e597b9c",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:59:11.940Z",
+    "last_event_utc": "2026-11-03T21:00:32.723Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/040d96.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/040d96.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "048ce4": [
+   {
+    "agent_id": "aa0ff96ce46788c1b",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:38:12.485Z",
+    "last_event_utc": "2026-11-03T20:39:47.331Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/048ce4.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/048ce4.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "be7719d0"
+   }
+  ],
+  "052e52": [
+   {
+    "agent_id": "a564c750a7043f46e",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:38:12.495Z",
+    "last_event_utc": "2026-11-03T20:39:15.018Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/052e52.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/052e52.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "be7719d0"
+   }
+  ],
+  "05a01a": [
+   {
+    "agent_id": "a82fb36f071372807",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:38:12.506Z",
+    "last_event_utc": "2026-11-03T20:39:09.032Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/05a01a.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/05a01a.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "be7719d0"
+   }
+  ],
+  "05baab": [
+   {
+    "agent_id": "a2114bae083f918bc",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:38:12.518Z",
+    "last_event_utc": "2026-11-03T20:38:58.628Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/05baab.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/05baab.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "be7719d0"
+   }
+  ],
+  "07094d": [
+   {
+    "agent_id": "a6cd4ecdac168ef38",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:38:12.529Z",
+    "last_event_utc": "2026-11-03T20:39:25.376Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/07094d.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/07094d.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "be7719d0"
+   }
+  ],
+  "078d79": [
+   {
+    "agent_id": "a8cc759115b93ca23",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:59:11.949Z",
+    "last_event_utc": "2026-11-03T21:00:07.185Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/078d79.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/078d79.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "0b33c3": [
+   {
+    "agent_id": "a8ca186c2cca31476",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:38:12.540Z",
+    "last_event_utc": "2026-11-03T20:39:10.925Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/0b33c3.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/0b33c3.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "be7719d0"
+   }
+  ],
+  "0becec": [
+   {
+    "agent_id": "afdd5c4e8e1b3f6e1",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:38:12.551Z",
+    "last_event_utc": "2026-11-03T20:39:11.632Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/0becec.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/0becec.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "be7719d0"
+   }
+  ],
+  "0c5ce8": [
+   {
+    "agent_id": "a003494bf06680f5d",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:38:12.562Z",
+    "last_event_utc": "2026-11-03T20:39:18.845Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/0c5ce8.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/0c5ce8.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "be7719d0"
+   }
+  ],
+  "0c80aa": [
+   {
+    "agent_id": "a27f038fd6ae9ea8c",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:50:15.653Z",
+    "last_event_utc": "2026-11-15T17:51:16.752Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/0c80aa.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/0c80aa.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "0d547e": [
+   {
+    "agent_id": "a8d73294e9a38bf7b",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:40:37.204Z",
+    "last_event_utc": "2026-11-03T20:40:47.218Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/0d547e.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/0d547e.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "0dedee": [
+   {
+    "agent_id": "a279ab01329f6dc15",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:40:37.215Z",
+    "last_event_utc": "2026-11-03T20:41:33.955Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/0dedee.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/0dedee.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "1139b4": [
+   {
+    "agent_id": "af64efb3a25f03f72",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:40:37.227Z",
+    "last_event_utc": "2026-11-03T20:41:35.292Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/1139b4.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/1139b4.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "11b512": [
+   {
+    "agent_id": "a62bbec061670118f",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:59:11.959Z",
+    "last_event_utc": "2026-11-03T21:00:05.892Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/11b512.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/11b512.json"
+     },
+     {
+      "name": "mcp__claude-code-remote__list_triggers",
+      "target": ""
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "11be0b": [
+   {
+    "agent_id": "a4ace9842122269df",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:40:37.238Z",
+    "last_event_utc": "2026-11-03T20:41:32.276Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/11be0b.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/11be0b.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "11e368": [
+   {
+    "agent_id": "a3378abe4158d5337",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:52:01.328Z",
+    "last_event_utc": "2026-11-15T17:53:22.862Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/11e368.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/11e368.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "13395b": [
+   {
+    "agent_id": "af8e2c0c9fb6e87a2",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:40:37.250Z",
+    "last_event_utc": "2026-11-03T20:41:23.726Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/13395b.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/13395b.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "1beeec": [
+   {
+    "agent_id": "ad090385014fbac6f",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:59:11.969Z",
+    "last_event_utc": "2026-11-03T21:00:14.551Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/1beeec.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/1beeec.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "1c19c6": [
+   {
+    "agent_id": "ab08c78305ae11f76",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:59:11.977Z",
+    "last_event_utc": "2026-11-03T21:00:24.587Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/1c19c6.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/1c19c6.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "1c5e16": [
+   {
+    "agent_id": "ae83899d93db9d189",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:59:11.987Z",
+    "last_event_utc": "2026-11-03T21:00:08.313Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/1c5e16.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/1c5e16.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "1ce24a": [
+   {
+    "agent_id": "a512651a6e46d68f1",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:59:11.998Z",
+    "last_event_utc": "2026-11-03T21:00:11.305Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/1ce24a.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/1ce24a.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "1d2fc1": [
+   {
+    "agent_id": "ad7fa8b6f451d4196",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:40:37.266Z",
+    "last_event_utc": "2026-11-03T20:41:53.512Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/1d2fc1.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/1d2fc1.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "1dcfea": [
+   {
+    "agent_id": "a07a652209a7fc2c8",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:40:37.284Z",
+    "last_event_utc": "2026-11-03T20:41:40.452Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/1dcfea.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/1dcfea.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "1f1279": [
+   {
+    "agent_id": "a06bf5a1dc687b316",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:59:12.008Z",
+    "last_event_utc": "2026-11-03T20:59:55.495Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/1f1279.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/1f1279.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "201a37": [
+   {
+    "agent_id": "aa3dbfb0eb01f2d66",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:52:01.351Z",
+    "last_event_utc": "2026-11-15T17:52:59.078Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/201a37.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/201a37.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "2469da": [
+   {
+    "agent_id": "a7468e7e1f62dc333",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:59:12.018Z",
+    "last_event_utc": "2026-11-03T21:00:08.630Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/2469da.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/2469da.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "256db0": [
+   {
+    "agent_id": "a70164623d6bed379",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:59:12.028Z",
+    "last_event_utc": "2026-11-03T20:59:58.488Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/256db0.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/256db0.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "258279": [
+   {
+    "agent_id": "a6e8813b0744f5f51",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:40:37.301Z",
+    "last_event_utc": "2026-11-03T20:41:43.331Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/258279.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/258279.json"
+     },
+     {
+      "name": "mcp__claude-code-remote__send_later",
+      "target": ""
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "25ba27": [
+   {
+    "agent_id": "a299304ba5dfeda49",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:40:37.319Z",
+    "last_event_utc": "2026-11-03T20:41:08.976Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/25ba27.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/25ba27.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "264654": [
+   {
+    "agent_id": "ac244d2d5d0307d68",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:40:37.335Z",
+    "last_event_utc": "2026-11-03T20:41:28.309Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/264654.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/264654.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "276932": [
+   {
+    "agent_id": "a5285bb857cdd6a18",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:40:37.350Z",
+    "last_event_utc": "2026-11-03T20:41:28.059Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/276932.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/276932.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "298e81": [
+   {
+    "agent_id": "a3bfe8a3043073b73",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:40:37.366Z",
+    "last_event_utc": "2026-11-03T20:41:39.179Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/298e81.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/298e81.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "2a3c00": [
+   {
+    "agent_id": "ab2c86295141c010d",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:59:12.038Z",
+    "last_event_utc": "2026-11-03T21:00:03.319Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/2a3c00.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/2a3c00.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "2a720d": [
+   {
+    "agent_id": "a60590f940ab9928e",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:52:01.379Z",
+    "last_event_utc": "2026-11-15T17:53:02.659Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/2a720d.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/2a720d.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "2b5621": [
+   {
+    "agent_id": "abe8a162bc00b6775",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:59:12.048Z",
+    "last_event_utc": "2026-11-03T21:00:18.265Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/2b5621.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/2b5621.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "2bc8c4": [
+   {
+    "agent_id": "a9476eb1dd52cf6ef",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:42:25.980Z",
+    "last_event_utc": "2026-11-03T20:43:45.969Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/2bc8c4.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/2bc8c4.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "2d06c1": [
+   {
+    "agent_id": "adbc3999e97d105f1",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:42:25.990Z",
+    "last_event_utc": "2026-11-03T20:43:26.198Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/2d06c1.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/2d06c1.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "2d0c30": [
+   {
+    "agent_id": "a86e530ec08c30a1c",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:52:01.405Z",
+    "last_event_utc": "2026-11-15T17:52:52.317Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/2d0c30.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/2d0c30.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "2e77d1": [
+   {
+    "agent_id": "af55155b6db2e0d20",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:01:06.457Z",
+    "last_event_utc": "2026-11-03T21:02:14.668Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/2e77d1.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/2e77d1.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "2fca13": [
+   {
+    "agent_id": "a00ce4427e7b114bd",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:42:26.002Z",
+    "last_event_utc": "2026-11-03T20:43:30.348Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/2fca13.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/2fca13.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "30be0a": [
+   {
+    "agent_id": "a248e69eec2777c37",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:42:26.012Z",
+    "last_event_utc": "2026-11-03T20:43:37.790Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/30be0a.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/30be0a.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "319b85": [
+   {
+    "agent_id": "aee9932bd02bb4a7d",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:42:26.022Z",
+    "last_event_utc": "2026-11-03T20:43:16.721Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/319b85.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/319b85.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "3224e8": [
+   {
+    "agent_id": "a342aa909a8fa3911",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:01:06.466Z",
+    "last_event_utc": "2026-11-03T21:02:24.018Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/3224e8.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/3224e8.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "33219a": [
+   {
+    "agent_id": "a037ede3e6276392d",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:42:26.033Z",
+    "last_event_utc": "2026-11-03T20:43:18.822Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/33219a.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/33219a.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "34133f": [
+   {
+    "agent_id": "a6b6709f8c3501eaa",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:42:26.045Z",
+    "last_event_utc": "2026-11-03T20:43:40.542Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/34133f.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/34133f.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "3558d8": [
+   {
+    "agent_id": "a755741c8b2c26856",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:52:01.433Z",
+    "last_event_utc": "2026-11-15T17:53:15.734Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/3558d8.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/3558d8.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "37b80b": [
+   {
+    "agent_id": "a3143d9d70256e368",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:01:06.476Z",
+    "last_event_utc": "2026-11-03T21:01:48.938Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/37b80b.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/37b80b.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "380ac1": [
+   {
+    "agent_id": "acf24c277d470e74e",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:42:26.056Z",
+    "last_event_utc": "2026-11-03T20:43:23.459Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/380ac1.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/380ac1.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "3a16be": [
+   {
+    "agent_id": "a6e157eb66fe78cb6",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:52:01.459Z",
+    "last_event_utc": "2026-11-15T17:53:35.845Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/3a16be.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/3a16be.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "3d3fb4": [
+   {
+    "agent_id": "a205f4c1fd19c5930",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:42:26.066Z",
+    "last_event_utc": "2026-11-03T20:43:14.784Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/3d3fb4.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/3d3fb4.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "3d6036": [
+   {
+    "agent_id": "acec33fac63b7e62b",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:42:26.078Z",
+    "last_event_utc": "2026-11-03T20:43:18.267Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/3d6036.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/3d6036.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "3fdcdb": [
+   {
+    "agent_id": "a0763677c9e9a8c48",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:42:26.088Z",
+    "last_event_utc": "2026-11-03T20:43:16.799Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/3fdcdb.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/3fdcdb.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "41682d": [
+   {
+    "agent_id": "a75fd5aef2b77b2c3",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:42:26.098Z",
+    "last_event_utc": "2026-11-03T20:43:31.152Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/41682d.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/41682d.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "41a0a6": [
+   {
+    "agent_id": "af0b6701fd50bd495",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:44:13.597Z",
+    "last_event_utc": "2026-11-03T20:45:20.850Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/41a0a6.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/41a0a6.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "41fc23": [
+   {
+    "agent_id": "afecbe72c88ec9718",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:01:06.488Z",
+    "last_event_utc": "2026-11-03T21:02:18.415Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/41fc23.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/41fc23.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "42c192": [
+   {
+    "agent_id": "a83d83f8cbd7be7c5",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:52:01.489Z",
+    "last_event_utc": "2026-11-15T17:53:24.788Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/42c192.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/42c192.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "42ec25": [
+   {
+    "agent_id": "abba9508a644c6b0f",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:52:01.516Z",
+    "last_event_utc": "2026-11-15T17:53:15.567Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/42ec25.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/42ec25.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "449dd3": [
+   {
+    "agent_id": "a01ee884f3c1e870d",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:44:13.605Z",
+    "last_event_utc": "2026-11-03T20:45:11.359Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/449dd3.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/449dd3.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "44d350": [
+   {
+    "agent_id": "a45f191aec64126fe",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:01:06.499Z",
+    "last_event_utc": "2026-11-03T21:02:03.713Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/44d350.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/44d350.json"
+     },
+     {
+      "name": "mcp__claude-code-remote__send_later",
+      "target": ""
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "481921": [
+   {
+    "agent_id": "a5adf9f8ba47205ac",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:01:06.512Z",
+    "last_event_utc": "2026-11-03T21:01:53.113Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/481921.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/481921.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "49ed8f": [
+   {
+    "agent_id": "ae565872b5e7350d6",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:44:13.615Z",
+    "last_event_utc": "2026-11-03T20:45:29.810Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/49ed8f.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/49ed8f.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "4b5487": [
+   {
+    "agent_id": "ad63c6440ff94b26b",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:01:06.525Z",
+    "last_event_utc": "2026-11-03T21:02:08.184Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/4b5487.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/4b5487.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "4bf9dc": [
+   {
+    "agent_id": "a1d368f27fc941ad1",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:44:13.626Z",
+    "last_event_utc": "2026-11-03T20:45:46.941Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/4bf9dc.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/4bf9dc.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "4c6039": [
+   {
+    "agent_id": "a6aa45b19ffe824c5",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:01:06.535Z",
+    "last_event_utc": "2026-11-03T21:02:09.203Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/4c6039.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/4c6039.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "4db246": [
+   {
+    "agent_id": "a2aca83e2880dc557",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:44:13.637Z",
+    "last_event_utc": "2026-11-03T20:45:31.824Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/4db246.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/4db246.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "4e819d": [
+   {
+    "agent_id": "a4d38af2ff85a4a66",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:44:13.649Z",
+    "last_event_utc": "2026-11-03T20:45:07.192Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/4e819d.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/4e819d.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "4ebda0": [
+   {
+    "agent_id": "a9c24e96bb616950a",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:01:06.545Z",
+    "last_event_utc": "2026-11-03T21:02:41.123Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/4ebda0.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/4ebda0.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "50024e": [
+   {
+    "agent_id": "a8a95933621466978",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:01:06.555Z",
+    "last_event_utc": "2026-11-03T21:01:58.091Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/50024e.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/50024e.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "51223e": [
+   {
+    "agent_id": "a379269974250f416",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:01:06.566Z",
+    "last_event_utc": "2026-11-03T21:02:28.690Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/51223e.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/51223e.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "51f026": [
+   {
+    "agent_id": "a241fac5431619c7d",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:52:01.545Z",
+    "last_event_utc": "2026-11-15T17:53:26.399Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/51f026.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/51f026.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "526057": [
+   {
+    "agent_id": "a4df36cfb6acc9688",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:44:13.660Z",
+    "last_event_utc": "2026-11-03T20:45:22.368Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/526057.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/526057.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "539f44": [
+   {
+    "agent_id": "a85a54acc6c24267d",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:52:01.573Z",
+    "last_event_utc": "2026-11-15T17:52:54.837Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/539f44.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/539f44.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "53d851": [
+   {
+    "agent_id": "a3c4fb934f184f40f",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:01:06.575Z",
+    "last_event_utc": "2026-11-03T21:02:16.445Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/53d851.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/53d851.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "541cb6": [
+   {
+    "agent_id": "a48a9f91ff33c9b2e",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:52:01.600Z",
+    "last_event_utc": "2026-11-15T17:52:51.517Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/541cb6.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/541cb6.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "5559ee": [
+   {
+    "agent_id": "a8c4829573c34cf5a",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:52:01.627Z",
+    "last_event_utc": "2026-11-15T17:53:36.291Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/5559ee.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/5559ee.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "5601a5": [
+   {
+    "agent_id": "a1de2ae23c3323f8b",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:44:13.672Z",
+    "last_event_utc": "2026-11-03T20:44:55.450Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/5601a5.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/5601a5.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "567108": [
+   {
+    "agent_id": "a63ec60084b405083",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:52:01.651Z",
+    "last_event_utc": "2026-11-15T17:52:45.491Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/567108.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/567108.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "57310c": [
+   {
+    "agent_id": "aa86c3f47453ca493",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:44:13.683Z",
+    "last_event_utc": "2026-11-03T20:45:05.928Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/57310c.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/57310c.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "57ec66": [
+   {
+    "agent_id": "a8190842540f4453f",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:44:13.694Z",
+    "last_event_utc": "2026-11-03T20:44:26.908Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/57ec66.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/57ec66.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "5ae78a": [
+   {
+    "agent_id": "abcad10b5e8794cb4",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:54:14.238Z",
+    "last_event_utc": "2026-11-15T17:55:44.603Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/5ae78a.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/5ae78a.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "5e7eab": [
+   {
+    "agent_id": "ad75b27f412e60d8c",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:44:13.705Z",
+    "last_event_utc": "2026-11-03T20:45:35.579Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/5e7eab.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/5e7eab.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "612e0d": [
+   {
+    "agent_id": "a28a088f2a049b5e3",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:03:43.506Z",
+    "last_event_utc": "2026-11-03T21:04:44.156Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/612e0d.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/612e0d.json"
+     },
+     {
+      "name": "mcp__claude-code-remote__send_later",
+      "target": ""
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "6135e1": [
+   {
+    "agent_id": "ac0658d4cee7beaaf",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:54:14.260Z",
+    "last_event_utc": "2026-11-15T17:55:32.800Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/6135e1.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/6135e1.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "61e60e": [
+   {
+    "agent_id": "a166da8f2656591fa",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:44:13.714Z",
+    "last_event_utc": "2026-11-03T20:45:06.055Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/61e60e.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/61e60e.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "6207bb": [
+   {
+    "agent_id": "ab9bdaf2803409f5d",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:46:16.432Z",
+    "last_event_utc": "2026-11-03T20:47:05.176Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/6207bb.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/6207bb.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "64b87d": [
+   {
+    "agent_id": "aba1bef49a22f67f3",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:54:14.284Z",
+    "last_event_utc": "2026-11-15T17:55:29.264Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/64b87d.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/64b87d.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "66954f": [
+   {
+    "agent_id": "a0e183e072c9d54bd",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:03:43.516Z",
+    "last_event_utc": "2026-11-03T21:04:50.496Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/66954f.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/66954f.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "66a1b1": [
+   {
+    "agent_id": "a1cf729f845d5a35d",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:46:16.439Z",
+    "last_event_utc": "2026-11-03T20:47:04.774Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/66a1b1.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/66a1b1.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "673d1e": [
+   {
+    "agent_id": "a7bcbf94addfdb78d",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:46:16.449Z",
+    "last_event_utc": "2026-11-03T20:47:30.515Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/673d1e.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/673d1e.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "67b3b4": [
+   {
+    "agent_id": "ada194e739a45fd2d",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:54:14.307Z",
+    "last_event_utc": "2026-11-15T17:55:40.947Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/67b3b4.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/67b3b4.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "685311": [
+   {
+    "agent_id": "a2e13933410988967",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:03:43.527Z",
+    "last_event_utc": "2026-11-03T21:04:54.606Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/685311.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/685311.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "68a8a4": [
+   {
+    "agent_id": "a6c31d09ad3588a65",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:03:43.536Z",
+    "last_event_utc": "2026-11-03T21:04:40.458Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/68a8a4.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/68a8a4.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "68bb9e": [
+   {
+    "agent_id": "ae4c7c5ba89b46e9a",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:03:43.546Z",
+    "last_event_utc": "2026-11-03T21:04:48.407Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/68bb9e.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/68bb9e.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "6cd8da": [
+   {
+    "agent_id": "a6d10faa3bb384929",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:54:14.337Z",
+    "last_event_utc": "2026-11-15T17:55:47.229Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/6cd8da.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/6cd8da.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "6d78f5": [
+   {
+    "agent_id": "ad193aa84c7d69650",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:54:14.371Z",
+    "last_event_utc": "2026-11-15T17:54:55.822Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/6d78f5.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/6d78f5.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "6e1b72": [
+   {
+    "agent_id": "ac6e29aaa3a7fb976",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:03:43.556Z",
+    "last_event_utc": "2026-11-03T21:05:11.822Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/6e1b72.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/6e1b72.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "6ef294": [
+   {
+    "agent_id": "a301f74459ea7b0d0",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:03:43.567Z",
+    "last_event_utc": "2026-11-03T21:04:41.434Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/6ef294.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/6ef294.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "72a61a": [
+   {
+    "agent_id": "a706abb0950ae58bc",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:54:14.411Z",
+    "last_event_utc": "2026-11-15T17:55:25.640Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/72a61a.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/72a61a.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "72b920": [
+   {
+    "agent_id": "adae1ffae8c81fe7b",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:03:43.577Z",
+    "last_event_utc": "2026-11-03T21:04:42.572Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/72b920.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/72b920.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "77ac5d": [
+   {
+    "agent_id": "ae35125fac7c05571",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:46:16.457Z",
+    "last_event_utc": "2026-11-03T20:47:22.455Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/77ac5d.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/77ac5d.json"
+     },
+     {
+      "name": "ToolSearch",
+      "target": "select:SubagentHandback"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "79b931": [
+   {
+    "agent_id": "a49febd7c8a65a389",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:46:16.466Z",
+    "last_event_utc": "2026-11-03T20:47:05.008Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/79b931.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/79b931.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "79cd2c": [
+   {
+    "agent_id": "acbb0e35bb9527039",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:03:43.587Z",
+    "last_event_utc": "2026-11-03T21:04:41.101Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/79cd2c.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/79cd2c.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "7a8b3d": [
+   {
+    "agent_id": "a33545c4524b9a119",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:54:14.439Z",
+    "last_event_utc": "2026-11-15T17:55:24.239Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/7a8b3d.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/7a8b3d.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "7e6f0e": [
+   {
+    "agent_id": "aba0c4228ed93ed6a",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:46:16.475Z",
+    "last_event_utc": "2026-11-03T20:47:21.347Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/7e6f0e.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/7e6f0e.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "81c6d3": [
+   {
+    "agent_id": "a4a54a02dce8a64a5",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:54:14.466Z",
+    "last_event_utc": "2026-11-15T17:54:57.650Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/81c6d3.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/81c6d3.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "81e2ba": [
+   {
+    "agent_id": "ac8a0d25c27c251cb",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:54:14.491Z",
+    "last_event_utc": "2026-11-15T17:55:00.146Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/81e2ba.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/81e2ba.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "821cc8": [
+   {
+    "agent_id": "a35284d4496275656",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:03:43.597Z",
+    "last_event_utc": "2026-11-03T21:04:45.865Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/821cc8.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/821cc8.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "846abc": [
+   {
+    "agent_id": "af2c83ac5698acfd3",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:46:16.485Z",
+    "last_event_utc": "2026-11-03T20:47:21.953Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/846abc.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/846abc.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "84ad5e": [
+   {
+    "agent_id": "a4ca327c35db8f6f9",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:46:16.496Z",
+    "last_event_utc": "2026-11-03T20:47:02.424Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/84ad5e.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/84ad5e.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "87164a": [
+   {
+    "agent_id": "aa2356db8f658dca7",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:46:16.506Z",
+    "last_event_utc": "2026-11-03T20:47:22.166Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/87164a.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/87164a.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "898f4e": [
+   {
+    "agent_id": "a92e3c2e1c5208eb2",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:54:14.517Z",
+    "last_event_utc": "2026-11-15T17:55:35.845Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/898f4e.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/898f4e.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "8ae319": [
+   {
+    "agent_id": "ab5a998e9029612fa",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:46:16.516Z",
+    "last_event_utc": "2026-11-03T20:47:34.901Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/8ae319.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/8ae319.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "8d2741": [
+   {
+    "agent_id": "a37d439c649564377",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:46:16.526Z",
+    "last_event_utc": "2026-11-03T20:46:30.447Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/8d2741.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/8d2741.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "8ea83a": [
+   {
+    "agent_id": "a9479174711c5ebfe",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:46:16.535Z",
+    "last_event_utc": "2026-11-03T20:47:37.197Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/8ea83a.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/8ea83a.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "8ebf3b": [
+   {
+    "agent_id": "a5143a8e8a4c4b0dc",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:48:04.436Z",
+    "last_event_utc": "2026-11-03T20:50:21.531Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/8ebf3b.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/8ebf3b.json"
+     },
+     {
+      "name": "mcp__claude-code-remote__send_later",
+      "target": ""
+     },
+     {
+      "name": "ToolSearch",
+      "target": "select:mcp__claude-code-remote__delete_trigger"
+     },
+     {
+      "name": "mcp__claude-code-remote__delete_trigger",
+      "target": ""
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "915cea": [
+   {
+    "agent_id": "a4d6c25e11cec0a41",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:03:43.606Z",
+    "last_event_utc": "2026-11-03T21:04:46.735Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/915cea.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/915cea.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "9224a5": [
+   {
+    "agent_id": "aa7d71c5a0e89dee8",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:03:43.615Z",
+    "last_event_utc": "2026-11-03T21:04:53.826Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/9224a5.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/9224a5.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "92b1ff": [
+   {
+    "agent_id": "abbecc7e0daf6ed4e",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:05:53.420Z",
+    "last_event_utc": "2026-11-03T21:06:33.760Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/92b1ff.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/92b1ff.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "939d0d": [
+   {
+    "agent_id": "ae17bbe88b6ff0e6e",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:05:53.428Z",
+    "last_event_utc": "2026-11-03T21:06:44.435Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/939d0d.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/939d0d.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "9440a1": [
+   {
+    "agent_id": "ac4db7d9d94f7fcd9",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:48:04.446Z",
+    "last_event_utc": "2026-11-03T20:50:03.715Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/9440a1.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/9440a1.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "972b7c": [
+   {
+    "agent_id": "a237615175508c04d",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:48:04.455Z",
+    "last_event_utc": "2026-11-03T20:49:36.162Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/972b7c.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/972b7c.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "9849b1": [
+   {
+    "agent_id": "a90a4b932eacfd817",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:54:14.544Z",
+    "last_event_utc": "2026-11-15T17:55:34.069Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/9849b1.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/9849b1.json"
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "9921c4": [
+   {
+    "agent_id": "a340bd7a70707de1d",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:54:14.568Z",
+    "last_event_utc": "2026-11-15T17:55:12.994Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/9921c4.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/9921c4.json"
+     },
+     {
+      "name": "mcp__remote-devices__device_bash",
+      "target": "true"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "9ac187": [
+   {
+    "agent_id": "aa292ac5bbc45d3a6",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:48:04.464Z",
+    "last_event_utc": "2026-11-03T20:49:15.886Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/9ac187.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/9ac187.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "9c9c6b": [
+   {
+    "agent_id": "ac5c17c839a0f1084",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:59:06.078Z",
+    "last_event_utc": "2026-11-15T18:00:13.923Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/9c9c6b.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/9c9c6b.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "9d01d8": [
+   {
+    "agent_id": "a02c78dca3095144b",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:05:53.437Z",
+    "last_event_utc": "2026-11-03T21:06:46.936Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/9d01d8.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/9d01d8.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "9f1663": [
+   {
+    "agent_id": "a643cd26ddcea3f46",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:05:53.447Z",
+    "last_event_utc": "2026-11-03T21:07:12.876Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/9f1663.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/9f1663.json"
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "a07044": [
+   {
+    "agent_id": "a961b51c279a8ea28",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:59:06.100Z",
+    "last_event_utc": "2026-11-15T17:59:53.975Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/a07044.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/a07044.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "a173ec": [
+   {
+    "agent_id": "ac3da532992a04779",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:48:04.475Z",
+    "last_event_utc": "2026-11-03T20:48:54.255Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/a173ec.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/a173ec.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "a1c74c": [
+   {
+    "agent_id": "ae218876469da91ba",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:48:04.485Z",
+    "last_event_utc": "2026-11-03T20:49:09.849Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/a1c74c.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/a1c74c.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "a3123f": [
+   {
+    "agent_id": "a81095390ac1b3590",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:05:53.456Z",
+    "last_event_utc": "2026-11-03T21:07:00.801Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/a3123f.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/a3123f.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "a47e0c": [
+   {
+    "agent_id": "ab28a23f35183de0a",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:48:04.495Z",
+    "last_event_utc": "2026-11-03T20:48:54.241Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/a47e0c.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/a47e0c.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "a50a21": [
+   {
+    "agent_id": "a476b8a368664eae5",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:59:06.128Z",
+    "last_event_utc": "2026-11-15T17:59:44.456Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/a50a21.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/a50a21.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "a52f44": [
+   {
+    "agent_id": "a10f628e065e079fc",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:48:04.506Z",
+    "last_event_utc": "2026-11-03T20:49:00.949Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/a52f44.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/a52f44.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "a68d91": [
+   {
+    "agent_id": "ad9e1580811116924",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:48:04.516Z",
+    "last_event_utc": "2026-11-03T20:49:25.104Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/a68d91.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/a68d91.json"
+     },
+     {
+      "name": "mcp__claude-code-remote__send_later",
+      "target": ""
+     },
+     {
+      "name": "ToolSearch",
+      "target": "select:mcp__claude-code-remote__delete_trigger"
+     },
+     {
+      "name": "mcp__claude-code-remote__delete_trigger",
+      "target": ""
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "a90c6d": [
+   {
+    "agent_id": "a1e61bb4409797212",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:05:53.467Z",
+    "last_event_utc": "2026-11-03T21:06:36.193Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/a90c6d.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/a90c6d.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "ab9845": [
+   {
+    "agent_id": "ace8bce14e2030775",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:48:04.527Z",
+    "last_event_utc": "2026-11-03T20:49:00.972Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/ab9845.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/ab9845.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "acb381": [
+   {
+    "agent_id": "aa3d09f821a297b10",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:48:04.538Z",
+    "last_event_utc": "2026-11-03T20:49:07.323Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/acb381.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/acb381.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "aeb97b": [
+   {
+    "agent_id": "a788287659c263053",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:59:06.154Z",
+    "last_event_utc": "2026-11-15T18:00:11.014Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/aeb97b.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/aeb97b.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "af2439": [
+   {
+    "agent_id": "a8acd77ec92da6d87",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:59:06.181Z",
+    "last_event_utc": "2026-11-15T18:00:43.337Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/af2439.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/af2439.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "b1313a": [
+   {
+    "agent_id": "af9ecc5aa6f2ed58b",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:48:04.552Z",
+    "last_event_utc": "2026-11-03T20:48:46.064Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/b1313a.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/b1313a.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "dc609c21"
+   }
+  ],
+  "b73864": [
+   {
+    "agent_id": "a95721a9c942022e4",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:52:58.719Z",
+    "last_event_utc": "2026-11-03T20:53:44.108Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/b73864.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/b73864.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "b78d17": [
+   {
+    "agent_id": "ae8d7b9b1434ac103",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:59:06.208Z",
+    "last_event_utc": "2026-11-15T18:00:05.556Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/b78d17.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/b78d17.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "b84ace": [
+   {
+    "agent_id": "a2cd3b7a76826c946",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:52:58.730Z",
+    "last_event_utc": "2026-11-03T20:53:10.961Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/b84ace.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/b84ace.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "b923ee": [
+   {
+    "agent_id": "a3fb76e343d29d6a2",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:52:58.741Z",
+    "last_event_utc": "2026-11-03T20:54:43.155Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/b923ee.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/b923ee.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "b967ee": [
+   {
+    "agent_id": "abb32bb361954020f",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:52:58.751Z",
+    "last_event_utc": "2026-11-03T20:54:13.094Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/b967ee.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/b967ee.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "ba80dc": [
+   {
+    "agent_id": "ab48db44cceea9aaf",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:52:58.760Z",
+    "last_event_utc": "2026-11-03T20:54:18.126Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/ba80dc.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/ba80dc.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "baa729": [
+   {
+    "agent_id": "aed32af4694a321d0",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:59:06.238Z",
+    "last_event_utc": "2026-11-15T18:00:00.014Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/baa729.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/baa729.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "bad104": [
+   {
+    "agent_id": "acec891530bb01bf3",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:05:53.477Z",
+    "last_event_utc": "2026-11-03T21:07:00.334Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/bad104.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/bad104.json"
+     },
+     {
+      "name": "mcp__claude-code-remote__send_later",
+      "target": ""
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "bafe15": [
+   {
+    "agent_id": "afd18d0dd0921cdf3",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:52:58.771Z",
+    "last_event_utc": "2026-11-03T20:53:08.812Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/bafe15.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/bafe15.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "c152ca": [
+   {
+    "agent_id": "aec0b8386c874c98f",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:59:06.267Z",
+    "last_event_utc": "2026-11-15T17:59:54.802Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/c152ca.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/c152ca.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "c40c75": [
+   {
+    "agent_id": "adc977c4c754e1219",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:59:06.297Z",
+    "last_event_utc": "2026-11-15T18:00:05.074Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/c40c75.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/c40c75.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "c55baf": [
+   {
+    "agent_id": "a5417cc8983b99177",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:05:53.488Z",
+    "last_event_utc": "2026-11-03T21:06:45.697Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/c55baf.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/c55baf.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "c75374": [
+   {
+    "agent_id": "a01dc56bc75d63aa1",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:52:58.784Z",
+    "last_event_utc": "2026-11-03T20:53:33.062Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/c75374.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/c75374.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "c9190c": [
+   {
+    "agent_id": "aa8acb45d0ab4a81c",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:59:06.326Z",
+    "last_event_utc": "2026-11-15T18:00:42.188Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/c9190c.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/c9190c.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "c95e4d": [
+   {
+    "agent_id": "a5d0445f65fc2ac1f",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:52:58.796Z",
+    "last_event_utc": "2026-11-03T20:53:47.071Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/c95e4d.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/c95e4d.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "ca25e6": [
+   {
+    "agent_id": "a3d8d62ed16b66ec0",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:52:58.806Z",
+    "last_event_utc": "2026-11-03T20:54:02.416Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/ca25e6.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/ca25e6.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "ca3baa": [
+   {
+    "agent_id": "ab451adde0c802285",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:52:58.817Z",
+    "last_event_utc": "2026-11-03T20:53:46.370Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/ca3baa.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/ca3baa.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "cab5df": [
+   {
+    "agent_id": "ac4c178744d218322",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:52:58.827Z",
+    "last_event_utc": "2026-11-03T20:53:20.202Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/cab5df.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/cab5df.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "cb70f0": [
+   {
+    "agent_id": "afe2c8bc41fafddd8",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:05:53.500Z",
+    "last_event_utc": "2026-11-03T21:07:23.558Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/cb70f0.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/cb70f0.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "cc33b0": [
+   {
+    "agent_id": "a8f0d0ce5e7df9742",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:52:58.837Z",
+    "last_event_utc": "2026-11-03T20:53:22.463Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/cc33b0.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/cc33b0.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "cd093f": [
+   {
+    "agent_id": "acb4b4f6d1326666f",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:59:06.355Z",
+    "last_event_utc": "2026-11-15T18:00:22.674Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/cd093f.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/cd093f.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "cd2818": [
+   {
+    "agent_id": "a9cccd784735f1427",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:59:06.382Z",
+    "last_event_utc": "2026-11-15T18:00:20.683Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/cd2818.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/cd2818.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "cdaaa1": [
+   {
+    "agent_id": "ab7759556a9a44127",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:55:15.609Z",
+    "last_event_utc": "2026-11-03T20:55:34.336Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/cdaaa1.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/cdaaa1.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "ce4862": [
+   {
+    "agent_id": "a9dec60d2e4b2c691",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T17:59:06.401Z",
+    "last_event_utc": "2026-11-15T18:00:22.331Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/ce4862.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/ce4862.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "cf1810": [
+   {
+    "agent_id": "a24e355720b6fa2a3",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:55:15.619Z",
+    "last_event_utc": "2026-11-03T20:55:41.363Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/cf1810.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/cf1810.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "d31fac": [
+   {
+    "agent_id": "a81b38108cd6703c0",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:05:53.511Z",
+    "last_event_utc": "2026-11-03T21:07:10.329Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/d31fac.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/d31fac.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "d36ed8": [
+   {
+    "agent_id": "a6f1982382b4ea40f",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:05:53.522Z",
+    "last_event_utc": "2026-11-03T21:06:30.381Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/d36ed8.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/d36ed8.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "d3aa54": [
+   {
+    "agent_id": "a04b58a7e15a8d77b",
+    "api_errors": [
+     "usage-limit error (HTTP 429): launch rejected before any model output"
+    ],
+    "first_event_utc": "2026-11-15T18:01:20.731Z",
+    "last_event_utc": "2026-11-15T18:01:21.597Z",
+    "model": [],
+    "tool_calls": [],
+    "wrapper_sha256_8": "c3c1618b"
+   },
+   {
+    "agent_id": "aee047ab7482cb504",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T22:40:55.302Z",
+    "last_event_utc": "2026-11-15T22:41:54.090Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/d3aa54.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/d3aa54.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "d44e18": [
+   {
+    "agent_id": "a2a13739700903708",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:05:53.532Z",
+    "last_event_utc": "2026-11-03T21:06:50.658Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/d44e18.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/d44e18.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "d47ff1": [
+   {
+    "agent_id": "a6b0efb1ee5a8711d",
+    "api_errors": [
+     "usage-limit error (HTTP 429): launch rejected before any model output"
+    ],
+    "first_event_utc": "2026-11-15T18:01:20.746Z",
+    "last_event_utc": "2026-11-15T18:01:21.606Z",
+    "model": [],
+    "tool_calls": [],
+    "wrapper_sha256_8": "c3c1618b"
+   },
+   {
+    "agent_id": "a60c7448ff1154297",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T22:40:55.320Z",
+    "last_event_utc": "2026-11-15T22:42:05.005Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/d47ff1.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/d47ff1.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "d5590c": [
+   {
+    "agent_id": "abf86538af278f768",
+    "api_errors": [
+     "usage-limit error (HTTP 429): launch rejected before any model output"
+    ],
+    "first_event_utc": "2026-11-15T18:01:20.765Z",
+    "last_event_utc": "2026-11-15T18:01:21.578Z",
+    "model": [],
+    "tool_calls": [],
+    "wrapper_sha256_8": "c3c1618b"
+   },
+   {
+    "agent_id": "adba828bb4a6303cf",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T22:40:55.342Z",
+    "last_event_utc": "2026-11-15T22:41:43.075Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/d5590c.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/d5590c.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "d690d4": [
+   {
+    "agent_id": "ada6e398f6938a1dd",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:55:15.630Z",
+    "last_event_utc": "2026-11-03T20:56:10.874Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/d690d4.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/d690d4.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "d8cf8f": [
+   {
+    "agent_id": "a5e91e36883f24c72",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:07:41.301Z",
+    "last_event_utc": "2026-11-03T21:08:42.604Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/d8cf8f.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/d8cf8f.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "d95225": [
+   {
+    "agent_id": "a52ac75826c923a9c",
+    "api_errors": [
+     "usage-limit error (HTTP 429): launch rejected before any model output"
+    ],
+    "first_event_utc": "2026-11-15T18:01:20.787Z",
+    "last_event_utc": "2026-11-15T18:01:21.547Z",
+    "model": [],
+    "tool_calls": [],
+    "wrapper_sha256_8": "c3c1618b"
+   },
+   {
+    "agent_id": "ae8f5b5b99522e99c",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T22:40:55.368Z",
+    "last_event_utc": "2026-11-15T22:41:36.223Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/d95225.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/d95225.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "da5b73": [
+   {
+    "agent_id": "ad6ffdd8b74d94bca",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:55:15.640Z",
+    "last_event_utc": "2026-11-03T20:55:55.304Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/da5b73.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/da5b73.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "dd5c07": [
+   {
+    "agent_id": "a1c5228e48ba25e0b",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:55:15.649Z",
+    "last_event_utc": "2026-11-03T20:56:28.776Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/dd5c07.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/dd5c07.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "deae9f": [
+   {
+    "agent_id": "a9bcedd4fde59c8ca",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:55:15.659Z",
+    "last_event_utc": "2026-11-03T20:55:41.342Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/deae9f.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/deae9f.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "e09139": [
+   {
+    "agent_id": "a6f8609690483949e",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:55:15.670Z",
+    "last_event_utc": "2026-11-03T20:56:50.063Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/e09139.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/e09139.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "e3d5bd": [
+   {
+    "agent_id": "a11a0063bee2c2f44",
+    "api_errors": [
+     "usage-limit error (HTTP 429): launch rejected before any model output"
+    ],
+    "first_event_utc": "2026-11-15T18:01:20.811Z",
+    "last_event_utc": "2026-11-15T18:01:21.588Z",
+    "model": [],
+    "tool_calls": [],
+    "wrapper_sha256_8": "c3c1618b"
+   },
+   {
+    "agent_id": "a302ffbeb6fec0807",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T22:40:55.389Z",
+    "last_event_utc": "2026-11-15T22:42:10.708Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/e3d5bd.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/e3d5bd.json"
+     },
+     {
+      "name": "mcp__claude-code-remote__list_triggers",
+      "target": ""
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "e3dae7": [
+   {
+    "agent_id": "ae6f00ed86869ec51",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:55:15.681Z",
+    "last_event_utc": "2026-11-03T20:56:47.860Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/e3dae7.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/e3dae7.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "e3dd3f": [
+   {
+    "agent_id": "a5726c3cfb27dab27",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:55:15.691Z",
+    "last_event_utc": "2026-11-03T20:56:36.094Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/e3dd3f.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/e3dd3f.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "e4cfb5": [
+   {
+    "agent_id": "a2ba26c882f01cd75",
+    "api_errors": [
+     "usage-limit error (HTTP 429): launch rejected before any model output"
+    ],
+    "first_event_utc": "2026-11-15T18:01:20.838Z",
+    "last_event_utc": "2026-11-15T18:01:21.616Z",
+    "model": [],
+    "tool_calls": [],
+    "wrapper_sha256_8": "c3c1618b"
+   },
+   {
+    "agent_id": "a3a72c08845932512",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T22:40:55.411Z",
+    "last_event_utc": "2026-11-15T22:41:52.357Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/e4cfb5.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/e4cfb5.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "e63589": [
+   {
+    "agent_id": "ab4b9cd74cf7307ab",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:07:41.310Z",
+    "last_event_utc": "2026-11-03T21:08:37.160Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/e63589.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/e63589.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "e687f3": [
+   {
+    "agent_id": "a15b306b495d0d331",
+    "api_errors": [
+     "usage-limit error (HTTP 429): launch rejected before any model output"
+    ],
+    "first_event_utc": "2026-11-15T18:01:20.870Z",
+    "last_event_utc": "2026-11-15T18:01:21.566Z",
+    "model": [],
+    "tool_calls": [],
+    "wrapper_sha256_8": "c3c1618b"
+   },
+   {
+    "agent_id": "aa12d3f734a841bd8",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T22:40:55.432Z",
+    "last_event_utc": "2026-11-15T22:42:04.969Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/e687f3.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/e687f3.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "ec3b48": [
+   {
+    "agent_id": "a59fd354003791a31",
+    "api_errors": [
+     "usage-limit error (HTTP 429): launch rejected before any model output"
+    ],
+    "first_event_utc": "2026-11-15T18:01:20.899Z",
+    "last_event_utc": "2026-11-15T18:01:21.640Z",
+    "model": [],
+    "tool_calls": [],
+    "wrapper_sha256_8": "c3c1618b"
+   },
+   {
+    "agent_id": "af0f67c0eb55766b1",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T22:40:55.462Z",
+    "last_event_utc": "2026-11-15T22:41:42.379Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/ec3b48.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/ec3b48.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "ec6566": [
+   {
+    "agent_id": "aa3ebff21ae16d7d9",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:55:15.703Z",
+    "last_event_utc": "2026-11-03T20:56:13.908Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/ec6566.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/ec6566.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "ed4750": [
+   {
+    "agent_id": "afa4b35dea3856731",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:55:15.714Z",
+    "last_event_utc": "2026-11-03T20:56:13.764Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/ed4750.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/ed4750.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "ed5724": [
+   {
+    "agent_id": "aa3b7f3f76ae4795c",
+    "api_errors": [
+     "usage-limit error (HTTP 429): launch rejected before any model output"
+    ],
+    "first_event_utc": "2026-11-15T18:01:20.928Z",
+    "last_event_utc": "2026-11-15T18:01:21.677Z",
+    "model": [],
+    "tool_calls": [],
+    "wrapper_sha256_8": "c3c1618b"
+   },
+   {
+    "agent_id": "a0158260c0ba7bf86",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T22:40:55.493Z",
+    "last_event_utc": "2026-11-15T22:42:21.715Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/ed5724.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/ed5724.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "ed7dc2": [
+   {
+    "agent_id": "a0d9f31ba89d03cfd",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:07:41.320Z",
+    "last_event_utc": "2026-11-03T21:08:40.630Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/ed7dc2.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/ed7dc2.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "ee2531": [
+   {
+    "agent_id": "a1ff5cfd9ea6feb2b",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:55:15.724Z",
+    "last_event_utc": "2026-11-03T20:55:58.779Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/ee2531.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/ee2531.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "eef07f": [
+   {
+    "agent_id": "afee5d0bada5fa713",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:57:18.062Z",
+    "last_event_utc": "2026-11-03T20:58:29.949Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/eef07f.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/eef07f.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "efb659": [
+   {
+    "agent_id": "a443892895f8966d2",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:07:41.328Z",
+    "last_event_utc": "2026-11-03T21:08:34.158Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/efb659.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/efb659.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "f05089": [
+   {
+    "agent_id": "a4c4fd1b6274d3257",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:57:18.069Z",
+    "last_event_utc": "2026-11-03T20:58:15.511Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/f05089.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/f05089.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "f0aef2": [
+   {
+    "agent_id": "a0077c2d33c79c9cd",
+    "api_errors": [
+     "usage-limit error (HTTP 429): launch rejected before any model output"
+    ],
+    "first_event_utc": "2026-11-15T18:01:20.957Z",
+    "last_event_utc": "2026-11-15T18:01:21.665Z",
+    "model": [],
+    "tool_calls": [],
+    "wrapper_sha256_8": "c3c1618b"
+   },
+   {
+    "agent_id": "a73889132e81a9562",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T22:40:55.522Z",
+    "last_event_utc": "2026-11-15T22:42:29.349Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/f0aef2.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/f0aef2.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "f25d84": [
+   {
+    "agent_id": "a175a5fe96f08f627",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:57:18.078Z",
+    "last_event_utc": "2026-11-03T20:58:11.584Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/f25d84.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/f25d84.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "f2de91": [
+   {
+    "agent_id": "a7b1fa951298fdbc6",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:57:18.086Z",
+    "last_event_utc": "2026-11-03T20:58:14.949Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/f2de91.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/f2de91.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "f4ae77": [
+   {
+    "agent_id": "a073032567f874e01",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:57:18.095Z",
+    "last_event_utc": "2026-11-03T20:58:35.439Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/f4ae77.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/f4ae77.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "f4f1af": [
+   {
+    "agent_id": "ae60814c49b876812",
+    "api_errors": [
+     "usage-limit error (HTTP 429): launch rejected before any model output"
+    ],
+    "first_event_utc": "2026-11-15T18:01:20.986Z",
+    "last_event_utc": "2026-11-15T18:01:21.625Z",
+    "model": [],
+    "tool_calls": [],
+    "wrapper_sha256_8": "c3c1618b"
+   },
+   {
+    "agent_id": "a67dc7266f817de38",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T22:40:55.547Z",
+    "last_event_utc": "2026-11-15T22:41:57.910Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/f4f1af.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/f4f1af.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "f50c23": [
+   {
+    "agent_id": "ab453f90c327fcc00",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:57:18.105Z",
+    "last_event_utc": "2026-11-03T20:57:58.869Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/f50c23.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/f50c23.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "f80464": [
+   {
+    "agent_id": "a06f28e6cd9363b76",
+    "api_errors": [
+     "usage-limit error (HTTP 429): launch rejected before any model output"
+    ],
+    "first_event_utc": "2026-11-15T18:01:21.014Z",
+    "last_event_utc": "2026-11-15T18:01:21.652Z",
+    "model": [],
+    "tool_calls": [],
+    "wrapper_sha256_8": "c3c1618b"
+   },
+   {
+    "agent_id": "a67e08e4e7f0d4b80",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T22:40:55.572Z",
+    "last_event_utc": "2026-11-15T22:42:26.944Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/f80464.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/f80464.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "f890c7": [
+   {
+    "agent_id": "a106426d5ebef359e",
+    "api_errors": [
+     "usage-limit error (HTTP 429): launch rejected before any model output"
+    ],
+    "first_event_utc": "2026-11-15T18:01:21.040Z",
+    "last_event_utc": "2026-11-15T18:01:21.688Z",
+    "model": [],
+    "tool_calls": [],
+    "wrapper_sha256_8": "c3c1618b"
+   },
+   {
+    "agent_id": "a1391007fe6b62599",
+    "api_errors": [],
+    "first_event_utc": "2026-11-15T22:40:55.599Z",
+    "last_event_utc": "2026-11-15T22:42:08.958Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/f890c7.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/f890c7.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "f8a2e6": [
+   {
+    "agent_id": "a8c61df4ab0556e33",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:57:18.115Z",
+    "last_event_utc": "2026-11-03T20:58:16.417Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/f8a2e6.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/f8a2e6.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "f91164": [
+   {
+    "agent_id": "abea80865cc8e292e",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T21:07:41.336Z",
+    "last_event_utc": "2026-11-03T21:08:37.786Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/f91164.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/f91164.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "c3c1618b"
+   }
+  ],
+  "fcdf85": [
+   {
+    "agent_id": "abe3cb31ae29e3aff",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:57:18.125Z",
+    "last_event_utc": "2026-11-03T20:58:27.003Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/fcdf85.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/fcdf85.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "fd281c": [
+   {
+    "agent_id": "a21b0da66c22b2a70",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:57:18.135Z",
+    "last_event_utc": "2026-11-03T20:58:09.912Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/fd281c.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/fd281c.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "fd8f3b": [
+   {
+    "agent_id": "a42ad42fa323577cd",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:57:18.146Z",
+    "last_event_utc": "2026-11-03T20:58:33.552Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/fd8f3b.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/fd8f3b.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ],
+  "fe4ff1": [
+   {
+    "agent_id": "a8e1c6a5305837d64",
+    "api_errors": [],
+    "first_event_utc": "2026-11-03T20:57:18.156Z",
+    "last_event_utc": "2026-11-03T20:57:50.698Z",
+    "model": [
+     "claude-haiku-5-5"
+    ],
+    "tool_calls": [
+     {
+      "name": "Read",
+      "target": "/home/claude/exp/run/prompts/fe4ff1.txt"
+     },
+     {
+      "name": "Write",
+      "target": "/home/claude/exp/run/outputs/fe4ff1.json"
+     },
+     {
+      "name": "SubagentHandback",
+      "target": ""
+     }
+    ],
+    "wrapper_sha256_8": "235f89f2"
+   }
+  ]
+ },
+ "wrapper_variants": {
+  "235f89f2": "You are one component in a research pipeline. Read the file /home/claude/exp/run/prompts/<id>.txt with the Read tool and follow the instructions in it exactly. Write your answer (the single JSON object the instructions ask for, and nothing else) to /home/claude/exp/run/outputs/<id>.json with the Write tool. You may use only two tools: Read (for that one file) and Write (for that one output file). Do not call send_later, create_trigger, ScheduleWakeup, ToolSearch, Bash, SendMessage, SendUserMessage or any other tool. Your task ends the moment the output file is written: then reply with the single word: done",
+  "be7719d0": "You are one component in a research pipeline. Read the file /home/claude/exp/run/prompts/<id>.txt with the Read tool and follow the instructions in it exactly. Write your answer (the single JSON object the instructions ask for, and nothing else) to /home/claude/exp/run/outputs/<id>.json with the Write tool. Use no other tools: do not run commands, do not read any other file, do not search. Then reply with the single word: done",
+  "c3c1618b": "You are one component in a research pipeline. Read the file /home/claude/exp/run/prompts/<id>.txt with the Read tool and follow the instructions in it exactly. Write your answer (the single JSON object the instructions ask for, and nothing else) to /home/claude/exp/run/outputs/<id>.json with the Write tool. You may use only two tools: Read (for that one file) and Write (for that one output file). Do not call send_later, create_trigger, list_triggers, ScheduleWakeup, ToolSearch, Bash, SendMessage, SendUserMessage or any other tool. Your task ends the moment the output file is written: then reply with the single word: done",
+  "dc609c21": "You are one component in a research pipeline. Read the file /home/claude/exp/run/prompts/<id>.txt with the Read tool and follow the instructions in it exactly. Write your answer (the single JSON object the instructions ask for, and nothing else) to /home/claude/exp/run/outputs/<id>.json with the Write tool. Use no other tools: do not run commands, do not read any other file, do not search, schedule or send messages. After writing the file, reply with the single word: done"
+ }
+}

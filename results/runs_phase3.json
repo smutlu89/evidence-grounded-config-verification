@@ -1,0 +1,3969 @@
+[
+ {
+  "run": "0c80aa",
+  "phase": 3,
+  "item": "fcddf4",
+  "set": "suite",
+  "idx": 35,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 3,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "rtr-01:52"
+    ],
+    "cited": [
+     "rtr-01:52"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "rtr-01:52"
+    ],
+    "cited": [
+     "rtr-01:52"
+    ],
+    "related": [
+     "rtr-01:52"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "rtr-01:68",
+     "fw-01:15"
+    ],
+    "reason": "not_supported"
+   }
+  ],
+  "gt": [
+   {
+    "template": "iii06",
+    "family": "iii",
+    "intents": [
+     "I4"
+    ],
+    "desc": "IOS HTTP server enabled on rtr-01",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 2,
+  "false_proposals": 1,
+  "false_proposal_reasons": {
+   "not_supported": 1
+  },
+  "false_proposal_examples": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "rtr-01:68",
+     "fw-01:15"
+    ],
+    "claim": "rtr-01 EDGE_IN permits any source to reach TCP/443 on fw-01's outside address 203.0.113.2, exposing an HTTPS management-protocol port on a non-MGMT interface, while policy allows HTTPS/ASDM only from MGMT on the fw-01 mgmt interface."
+   }
+  ]
+ },
+ {
+  "run": "11e368",
+  "phase": 3,
+  "item": "bddb43",
+  "set": "scenario",
+  "idx": 3,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 8,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:80"
+    ],
+    "cited": [
+     "fw-01:80",
+     "fw-01:102"
+    ],
+    "related": [
+     "fw-01:102"
+    ],
+    "label": "violation",
+    "zones": [
+     "OT",
+     "OUTSIDE"
+    ]
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:68"
+    ],
+    "cited": [
+     "fw-01:68",
+     "fw-01:103"
+    ],
+    "related": [
+     "fw-01:103"
+    ],
+    "label": "violation",
+    "zones": [
+     "DMZ",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I4",
+    "anchors": [
+     "sw-core-01:213"
+    ],
+    "cited": [
+     "sw-core-01:213"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I4",
+    "anchors": [
+     "sw-ot-01:206"
+    ],
+    "cited": [
+     "sw-ot-01:206"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:68"
+    ],
+    "cited": [
+     "fw-01:68"
+    ],
+    "related": [
+     "fw-01:68"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:80"
+    ],
+    "cited": [
+     "fw-01:80"
+    ],
+    "related": [
+     "fw-01:80"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-core-01:213"
+    ],
+    "cited": [
+     "sw-core-01:213"
+    ],
+    "related": [
+     "sw-core-01:213"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-ot-01:206"
+    ],
+    "cited": [
+     "sw-ot-01:206"
+    ],
+    "related": [
+     "sw-ot-01:206"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "s3a",
+    "family": "S3",
+    "intents": [
+     "I2"
+    ],
+    "desc": "permissive ACL entry: OT to any on https",
+    "outcome": "released"
+   },
+   {
+    "template": "s3b",
+    "family": "S3",
+    "intents": [
+     "I2"
+    ],
+    "desc": "permissive ACL entry: jump host to all of OT",
+    "outcome": "released"
+   },
+   {
+    "template": "s3c",
+    "family": "S3",
+    "intents": [
+     "I4"
+    ],
+    "desc": "remote logging to a corporate host",
+    "outcome": "released"
+   },
+   {
+    "template": "s3d",
+    "family": "S3",
+    "intents": [
+     "I4"
+    ],
+    "desc": "read-write SNMP community",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 4,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "201a37",
+  "phase": 3,
+  "item": "71f5ae",
+  "set": "suite",
+  "idx": 42,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 1,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-it-01:207"
+    ],
+    "cited": [
+     "sw-it-01:207"
+    ],
+    "related": [],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "iv03",
+    "family": "iv",
+    "intents": [
+     "I5"
+    ],
+    "desc": "SNMP location string changed on sw-it-01",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 0,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "2a720d",
+  "phase": 3,
+  "item": "70d18f",
+  "set": "suite",
+  "idx": 29,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "sw-core-01:217"
+    ],
+    "cited": [
+     "sw-core-01:217"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-core-01:219"
+    ],
+    "cited": [
+     "sw-core-01:219"
+    ],
+    "related": [
+     "sw-core-01:217"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "iii01",
+    "family": "iii",
+    "intents": [
+     "I4"
+    ],
+    "desc": "telnet enabled on vty 0 4 of sw-core-01",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "2d0c30",
+  "phase": 3,
+  "item": "fef40e",
+  "set": "suite",
+  "idx": 20,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I3",
+    "anchors": [
+     "sw-it-01:103"
+    ],
+    "cited": [
+     "sw-it-01:103"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-it-01:105"
+    ],
+    "cited": [
+     "sw-it-01:105"
+    ],
+    "related": [
+     "sw-it-01:103"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "ii03",
+    "family": "ii",
+    "intents": [
+     "I3"
+    ],
+    "desc": "corporate port Gi1/0/11 moved into the OT VLAN",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "3558d8",
+  "phase": 3,
+  "item": "38e2c8",
+  "set": "suite",
+  "idx": 18,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 1,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I3",
+    "anchors": [
+     "sw-ot-01:73"
+    ],
+    "cited": [
+     "sw-ot-01:73"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-ot-01:75"
+    ],
+    "cited": [
+     "sw-ot-01:75"
+    ],
+    "related": [
+     "sw-ot-01:73"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "ii01",
+    "family": "ii",
+    "intents": [
+     "I3"
+    ],
+    "desc": "OT-facing port Gi1/0/6 moved to the corporate VLAN",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "3a16be",
+  "phase": 3,
+  "item": "9eb271",
+  "set": "suite",
+  "idx": 43,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 1,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-it-01:140"
+    ],
+    "cited": [
+     "sw-it-01:140"
+    ],
+    "related": [
+     "sw-it-01:139"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "iv04",
+    "family": "iv",
+    "intents": [
+     "I5"
+    ],
+    "desc": "port description changed on sw-it-01 Gi1/0/17",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 0,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "42c192",
+  "phase": 3,
+  "item": "a18feb",
+  "set": "suite",
+  "idx": 31,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "sw-ot-01:212",
+     "sw-ot-01:215"
+    ],
+    "cited": [
+     "sw-ot-01:203",
+     "sw-ot-01:212",
+     "sw-ot-01:215"
+    ],
+    "related": [
+     "sw-ot-01:203"
+    ],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-ot-01:203"
+    ],
+    "cited": [
+     "sw-ot-01:203"
+    ],
+    "related": [
+     "sw-ot-01:203"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "iii03",
+    "family": "iii",
+    "intents": [
+     "I4"
+    ],
+    "desc": "VTY_MGMT on sw-ot-01 widened to the corporate subnet",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "42ec25",
+  "phase": 3,
+  "item": "14755c",
+  "set": "suite",
+  "idx": 45,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 3,
+  "n_clarification_questions": 1,
+  "n_flagged": 1,
+  "released": [
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-it-01:177"
+    ],
+    "cited": [
+     "sw-it-01:177"
+    ],
+    "related": [
+     "sw-it-01:175"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-it-01:base:179"
+    ],
+    "cited": [
+     "sw-it-01:base:179"
+    ],
+    "related": [
+     "sw-it-01:175"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [
+   {
+    "intent": "I3",
+    "anchors": [
+     "sw-core-01:175",
+     "sw-core-01:187",
+     "sw-ot-01:181"
+    ],
+    "reason": "clarification"
+   }
+  ],
+  "gt": [
+   {
+    "template": "iv06",
+    "family": "iv",
+    "intents": [
+     "I5"
+    ],
+    "desc": "unused IT port Gi1/0/23 activated in the corporate VLAN",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 0,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "51f026",
+  "phase": 3,
+  "item": "a55c7e",
+  "set": "scenario",
+  "idx": 2,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 5,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I3",
+    "anchors": [
+     "sw-ot-01:79"
+    ],
+    "cited": [
+     "sw-ot-01:79"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I3",
+    "anchors": [
+     "sw-core-01:175"
+    ],
+    "cited": [
+     "sw-core-01:175"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-core-01:178"
+    ],
+    "cited": [
+     "sw-core-01:178"
+    ],
+    "related": [
+     "sw-core-01:175"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-ot-01:81"
+    ],
+    "cited": [
+     "sw-ot-01:81"
+    ],
+    "related": [
+     "sw-ot-01:79"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-ot-01:114"
+    ],
+    "cited": [
+     "sw-ot-01:114"
+    ],
+    "related": [
+     "sw-ot-01:109"
+    ],
+    "label": "informational",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "s2a",
+    "family": "S2",
+    "intents": [
+     "I3"
+    ],
+    "desc": "OT-facing access port assigned to the corporate VLAN",
+    "outcome": "released"
+   },
+   {
+    "template": "s2b",
+    "family": "S2",
+    "intents": [
+     "I3"
+    ],
+    "desc": "permissive trunk towards the OT switch",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 2,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "539f44",
+  "phase": 3,
+  "item": "ff5f5a",
+  "set": "suite",
+  "idx": 1,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 3,
+  "n_clarification_questions": 1,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I1",
+    "anchors": [
+     "fw-01:60"
+    ],
+    "cited": [
+     "fw-01:60",
+     "fw-01:103"
+    ],
+    "related": [
+     "fw-01:103"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:60"
+    ],
+    "cited": [
+     "fw-01:60",
+     "fw-01:103"
+    ],
+    "related": [
+     "fw-01:103"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:60"
+    ],
+    "cited": [
+     "fw-01:60"
+    ],
+    "related": [
+     "fw-01:60"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "i01",
+    "family": "i",
+    "intents": [
+     "I1",
+     "I2"
+    ],
+    "desc": "new CORP host-to-OT permit at top of CORP_IN",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 2,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "541cb6",
+  "phase": 3,
+  "item": "3b0f1d",
+  "set": "suite",
+  "idx": 14,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:81"
+    ],
+    "cited": [
+     "fw-01:81",
+     "fw-01:104"
+    ],
+    "related": [
+     "fw-01:104"
+    ],
+    "label": "violation",
+    "zones": [
+     "MGMT",
+     "CORP"
+    ]
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:81"
+    ],
+    "cited": [
+     "fw-01:81"
+    ],
+    "related": [
+     "fw-01:81"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "i14",
+    "family": "i",
+    "intents": [
+     "I2"
+    ],
+    "desc": "management VLAN allowed to reach the corporate network",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "5559ee",
+  "phase": 3,
+  "item": "634652",
+  "set": "suite",
+  "idx": 38,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 3,
+  "n_clarification_questions": 2,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "fw-01:116"
+    ],
+    "cited": [
+     "fw-01:116"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I4",
+    "anchors": [
+     "fw-01:116"
+    ],
+    "cited": [
+     "fw-01:116"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:116"
+    ],
+    "cited": [
+     "fw-01:116"
+    ],
+    "related": [
+     "fw-01:116"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "iii09",
+    "family": "iii",
+    "intents": [
+     "I4"
+    ],
+    "desc": "telnet management enabled on the firewall OT interface",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 2,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "567108",
+  "phase": 3,
+  "item": "e58368",
+  "set": "suite",
+  "idx": 10,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 3,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I1",
+    "anchors": [
+     "fw-01:82"
+    ],
+    "cited": [
+     "fw-01:82",
+     "fw-01:133"
+    ],
+    "related": [
+     "fw-01:133"
+    ],
+    "label": "violation",
+    "zones": [
+     "VENDOR",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:82"
+    ],
+    "cited": [
+     "fw-01:82",
+     "fw-01:133"
+    ],
+    "related": [
+     "fw-01:133"
+    ],
+    "label": "violation",
+    "zones": [
+     "VENDOR",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:82"
+    ],
+    "cited": [
+     "fw-01:82"
+    ],
+    "related": [
+     "fw-01:82"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "i10",
+    "family": "i",
+    "intents": [
+     "I1",
+     "I2"
+    ],
+    "desc": "vendor VPN pool allowed directly into OT",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 2,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "5ae78a",
+  "phase": 3,
+  "item": "47c319",
+  "set": "suite",
+  "idx": 50,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 3,
+  "n_clarification_questions": 2,
+  "n_flagged": 2,
+  "released": [
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-core-01:18"
+    ],
+    "cited": [
+     "sw-core-01:18"
+    ],
+    "related": [],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [
+   {
+    "intent": "I3",
+    "anchors": [
+     "sw-core-01:176",
+     "sw-core-01:188",
+     "sw-ot-01:181"
+    ],
+    "reason": "clarification"
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "rtr-01:46",
+     "rtr-01:54",
+     "rtr-01:38"
+    ],
+    "reason": "clarification"
+   }
+  ],
+  "gt": [
+   {
+    "template": "iv11",
+    "family": "iv",
+    "intents": [
+     "I5"
+    ],
+    "desc": "local user added on sw-core-01",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 0,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "6135e1",
+  "phase": 3,
+  "item": "7e7c0c",
+  "set": "suite",
+  "idx": 39,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 3,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "sw-ot-01:206"
+    ],
+    "cited": [
+     "sw-ot-01:206"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-ot-01:206"
+    ],
+    "cited": [
+     "sw-ot-01:206"
+    ],
+    "related": [
+     "sw-ot-01:206"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [
+   {
+    "intent": "I2",
+    "anchors": [
+     "sw-ot-01:206",
+     "sw-ot-01:191"
+    ],
+    "reason": "not_supported"
+   }
+  ],
+  "gt": [
+   {
+    "template": "iii10",
+    "family": "iii",
+    "intents": [
+     "I4"
+    ],
+    "desc": "syslog exported to a corporate host from sw-ot-01",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 2,
+  "false_proposals": 1,
+  "false_proposal_reasons": {
+   "not_supported": 1
+  },
+  "false_proposal_examples": [
+   {
+    "intent": "I2",
+    "anchors": [
+     "sw-ot-01:206",
+     "sw-ot-01:191"
+    ],
+    "claim": "sw-ot-01 is configured to send logs from its MGMT address 10.10.99.11 to CORP host 192.168.30.95, a flow between the OT side and CORP that is not among the approved cross-zone services."
+   }
+  ]
+ },
+ {
+  "run": "64b87d",
+  "phase": 3,
+  "item": "74c1e6",
+  "set": "suite",
+  "idx": 3,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 7,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I1",
+    "anchors": [
+     "fw-01:63"
+    ],
+    "cited": [
+     "fw-01:63",
+     "fw-01:101"
+    ],
+    "related": [
+     "fw-01:101"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I1",
+    "anchors": [
+     "fw-01:64"
+    ],
+    "cited": [
+     "fw-01:64",
+     "fw-01:101"
+    ],
+    "related": [
+     "fw-01:101"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I1",
+    "anchors": [
+     "fw-01:65"
+    ],
+    "cited": [
+     "fw-01:65",
+     "fw-01:101"
+    ],
+    "related": [
+     "fw-01:101"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:63"
+    ],
+    "cited": [
+     "fw-01:63",
+     "fw-01:101"
+    ],
+    "related": [
+     "fw-01:101"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:64"
+    ],
+    "cited": [
+     "fw-01:64",
+     "fw-01:101"
+    ],
+    "related": [
+     "fw-01:101"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:65"
+    ],
+    "cited": [
+     "fw-01:65",
+     "fw-01:101"
+    ],
+    "related": [
+     "fw-01:101"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:base:62"
+    ],
+    "cited": [
+     "fw-01:base:62"
+    ],
+    "related": [],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "i03",
+    "family": "i",
+    "intents": [
+     "I1",
+     "I2"
+    ],
+    "desc": "CORP-to-OT deny removed; broad CORP permits now reach OT",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 6,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "67b3b4",
+  "phase": 3,
+  "item": "359c8c",
+  "set": "suite",
+  "idx": 46,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 1,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:87"
+    ],
+    "cited": [
+     "fw-01:87"
+    ],
+    "related": [],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "iv07",
+    "family": "iv",
+    "intents": [
+     "I5"
+    ],
+    "desc": "firewall logging level changed",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 0,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "6cd8da",
+  "phase": 3,
+  "item": "eb723c",
+  "set": "suite",
+  "idx": 41,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 3,
+  "n_clarification_questions": 2,
+  "n_flagged": 2,
+  "released": [
+   {
+    "intent": "I5",
+    "anchors": [
+     "rtr-01:55"
+    ],
+    "cited": [
+     "rtr-01:55"
+    ],
+    "related": [
+     "rtr-01:55"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [
+   {
+    "intent": "I3",
+    "anchors": [
+     "sw-core-01:175",
+     "sw-core-01:187"
+    ],
+    "reason": "clarification"
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "rtr-01:46",
+     "rtr-01:54",
+     "rtr-01:56"
+    ],
+    "reason": "clarification"
+   }
+  ],
+  "gt": [
+   {
+    "template": "iv02",
+    "family": "iv",
+    "intents": [
+     "I5"
+    ],
+    "desc": "static route added on the edge router",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 0,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "6d78f5",
+  "phase": 3,
+  "item": "4e82e0",
+  "set": "suite",
+  "idx": 28,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "sw-it-01:211"
+    ],
+    "cited": [
+     "sw-it-01:211"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-it-01:213"
+    ],
+    "cited": [
+     "sw-it-01:213"
+    ],
+    "related": [
+     "sw-it-01:211"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "iii01",
+    "family": "iii",
+    "intents": [
+     "I4"
+    ],
+    "desc": "telnet enabled on vty 0 4 of sw-it-01",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "72a61a",
+  "phase": 3,
+  "item": "6b081d",
+  "set": "scenario",
+  "idx": 1,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 5,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I1",
+    "anchors": [
+     "fw-01:60"
+    ],
+    "cited": [
+     "fw-01:60",
+     "fw-01:103",
+     "fw-01:37"
+    ],
+    "related": [
+     "fw-01:103"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:60"
+    ],
+    "cited": [
+     "fw-01:60",
+     "fw-01:103",
+     "fw-01:37"
+    ],
+    "related": [
+     "fw-01:103"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:60"
+    ],
+    "cited": [
+     "fw-01:60"
+    ],
+    "related": [
+     "fw-01:60"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "rtr-01:68",
+     "rtr-01:38",
+     "fw-01:15",
+     "fw-01:110",
+     "fw-01:111"
+    ],
+    "reason": "not_supported"
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "rtr-01:54",
+     "rtr-01:55",
+     "fw-01:43",
+     "rtr-01:46"
+    ],
+    "reason": "not_supported"
+   }
+  ],
+  "gt": [
+   {
+    "template": "s1",
+    "family": "S1",
+    "intents": [
+     "I1",
+     "I2"
+    ],
+    "desc": "unauthorized IT-to-OT access rule",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 4,
+  "false_proposals": 2,
+  "false_proposal_reasons": {
+   "not_supported": 2
+  },
+  "false_proposal_examples": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "rtr-01:68",
+     "rtr-01:38",
+     "fw-01:15",
+     "fw-01:110",
+     "fw-01:111"
+    ],
+    "claim": "EDGE_IN on rtr-01 permits any source on tcp/443 to 203.0.113.2, the outside address of fw-01, and fw-01 has its HTTP/ASDM server enabled, so HTTPS management of fw-01 is reachable from outside the mgmt interface, contrary to the management policy."
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "rtr-01:54",
+     "rtr-01:55",
+     "fw-01:43",
+     "rtr-01:46"
+    ],
+    "claim": "rtr-01 holds a second default route 0.0.0.0/0 with next hop 10.10.99.1, the MGMT firewall interface, alongside the default route to the ISP, which creates a route from the MGMT zone toward OUTSIDE outside the approved services."
+   }
+  ]
+ },
+ {
+  "run": "7a8b3d",
+  "phase": 3,
+  "item": "5ce6a4",
+  "set": "suite",
+  "idx": 25,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 3,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I3",
+    "anchors": [
+     "sw-ot-01:67"
+    ],
+    "cited": [
+     "sw-ot-01:67"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-ot-01:70"
+    ],
+    "cited": [
+     "sw-ot-01:70"
+    ],
+    "related": [
+     "sw-ot-01:67"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "rtr-01:68",
+     "fw-01:109"
+    ],
+    "reason": "not_supported"
+   }
+  ],
+  "gt": [
+   {
+    "template": "ii07",
+    "family": "ii",
+    "intents": [
+     "I3"
+    ],
+    "desc": "OT-facing port Gi1/0/5 set to trunk mode",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 2,
+  "false_proposals": 1,
+  "false_proposal_reasons": {
+   "not_supported": 1
+  },
+  "false_proposal_examples": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "rtr-01:68",
+     "fw-01:109"
+    ],
+    "claim": "The rtr-01 EDGE_IN ACL permits tcp/443 from any source to the fw-01 outside address 203.0.113.2 while fw-01 has the ASA HTTP (ASDM) server enabled, which exposes HTTPS device management to OUTSIDE contrary to the management policy that limits HTTPS/ASDM to MGMT on the mgmt interface."
+   }
+  ]
+ },
+ {
+  "run": "81c6d3",
+  "phase": 3,
+  "item": "ea3160",
+  "set": "suite",
+  "idx": 7,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:79"
+    ],
+    "cited": [
+     "fw-01:79"
+    ],
+    "related": [
+     "fw-01:101"
+    ],
+    "label": "violation",
+    "zones": [
+     "OT",
+     "CORP"
+    ]
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:79"
+    ],
+    "cited": [
+     "fw-01:79"
+    ],
+    "related": [
+     "fw-01:79"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "i07",
+    "family": "i",
+    "intents": [
+     "I2"
+    ],
+    "desc": "OT direct to corporate reporting server, bypassing the historian",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "81e2ba",
+  "phase": 3,
+  "item": "7a87e9",
+  "set": "suite",
+  "idx": 13,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 3,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I1",
+    "anchors": [
+     "fw-01:60"
+    ],
+    "cited": [
+     "fw-01:60",
+     "fw-01:103"
+    ],
+    "related": [
+     "fw-01:103"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "MGMT"
+    ]
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:60"
+    ],
+    "cited": [
+     "fw-01:60",
+     "fw-01:103"
+    ],
+    "related": [
+     "fw-01:103"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "MGMT"
+    ]
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:60"
+    ],
+    "cited": [
+     "fw-01:60"
+    ],
+    "related": [
+     "fw-01:60"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "i13",
+    "family": "i",
+    "intents": [
+     "I1",
+     "I2"
+    ],
+    "desc": "corporate network allowed into the management VLAN",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 2,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "898f4e",
+  "phase": 3,
+  "item": "372060",
+  "set": "suite",
+  "idx": 47,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 1,
+  "n_clarification_questions": 2,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-ot-01:base:125"
+    ],
+    "cited": [
+     "sw-ot-01:base:125"
+    ],
+    "related": [
+     "sw-ot-01:121"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "iv08",
+    "family": "iv",
+    "intents": [
+     "I5"
+    ],
+    "desc": "portfast removed from sw-ot-01 Gi1/0/14",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 0,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "9849b1",
+  "phase": 3,
+  "item": "c650dd",
+  "set": "suite",
+  "idx": 4,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 7,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I1",
+    "anchors": [
+     "fw-01:63"
+    ],
+    "cited": [
+     "fw-01:63",
+     "fw-01:102"
+    ],
+    "related": [
+     "fw-01:102"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I1",
+    "anchors": [
+     "fw-01:64"
+    ],
+    "cited": [
+     "fw-01:64",
+     "fw-01:102"
+    ],
+    "related": [
+     "fw-01:102"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I1",
+    "anchors": [
+     "fw-01:65"
+    ],
+    "cited": [
+     "fw-01:65",
+     "fw-01:102"
+    ],
+    "related": [
+     "fw-01:102"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:63"
+    ],
+    "cited": [
+     "fw-01:63",
+     "fw-01:102"
+    ],
+    "related": [
+     "fw-01:102"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:64"
+    ],
+    "cited": [
+     "fw-01:64",
+     "fw-01:102"
+    ],
+    "related": [
+     "fw-01:102"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:65"
+    ],
+    "cited": [
+     "fw-01:65",
+     "fw-01:102"
+    ],
+    "related": [
+     "fw-01:102"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:67"
+    ],
+    "cited": [
+     "fw-01:67"
+    ],
+    "related": [
+     "fw-01:67"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "i04",
+    "family": "i",
+    "intents": [
+     "I1",
+     "I2"
+    ],
+    "desc": "CORP-to-OT deny re-entered at the end of CORP_IN (below the broad permits)",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 6,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "9921c4",
+  "phase": 3,
+  "item": "c0530b",
+  "set": "suite",
+  "idx": 8,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:69"
+    ],
+    "cited": [
+     "fw-01:69"
+    ],
+    "related": [
+     "fw-01:101"
+    ],
+    "label": "violation",
+    "zones": [
+     "DMZ",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:69"
+    ],
+    "cited": [
+     "fw-01:69"
+    ],
+    "related": [
+     "fw-01:69"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "i08",
+    "family": "i",
+    "intents": [
+     "I2"
+    ],
+    "desc": "jump-host permit widened to all protocols and the whole OT subnet",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "9c9c6b",
+  "phase": 3,
+  "item": "0659ae",
+  "set": "suite",
+  "idx": 40,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 1,
+  "n_clarification_questions": 1,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-it-01:219"
+    ],
+    "cited": [
+     "sw-it-01:219"
+    ],
+    "related": [
+     "sw-it-01:219"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "iv01",
+    "family": "iv",
+    "intents": [
+     "I5"
+    ],
+    "desc": "second NTP server added on sw-it-01",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 0,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "a07044",
+  "phase": 3,
+  "item": "0a5af1",
+  "set": "suite",
+  "idx": 2,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 3,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I1",
+    "anchors": [
+     "fw-01:62"
+    ],
+    "cited": [
+     "fw-01:62",
+     "fw-01:102"
+    ],
+    "related": [
+     "fw-01:102"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:62"
+    ],
+    "cited": [
+     "fw-01:62",
+     "fw-01:102"
+    ],
+    "related": [
+     "fw-01:102"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:62"
+    ],
+    "cited": [
+     "fw-01:62"
+    ],
+    "related": [
+     "fw-01:62"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "i02",
+    "family": "i",
+    "intents": [
+     "I1",
+     "I2"
+    ],
+    "desc": "CORP-to-OT deny changed to permit",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 2,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "a50a21",
+  "phase": 3,
+  "item": "520a95",
+  "set": "suite",
+  "idx": 11,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 3,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I1",
+    "anchors": [
+     "fw-01:59"
+    ],
+    "cited": [
+     "fw-01:59",
+     "fw-01:100"
+    ],
+    "related": [
+     "fw-01:100"
+    ],
+    "label": "violation",
+    "zones": [
+     "OUTSIDE",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:59"
+    ],
+    "cited": [
+     "fw-01:59",
+     "fw-01:100"
+    ],
+    "related": [
+     "fw-01:100"
+    ],
+    "label": "violation",
+    "zones": [
+     "OUTSIDE",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:59"
+    ],
+    "cited": [
+     "fw-01:59"
+    ],
+    "related": [
+     "fw-01:59"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "i11",
+    "family": "i",
+    "intents": [
+     "I1",
+     "I2"
+    ],
+    "desc": "inbound permit from outside to an OT host",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 2,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "aeb97b",
+  "phase": 3,
+  "item": "afb1c2",
+  "set": "suite",
+  "idx": 48,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 1,
+  "n_clarification_questions": 1,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:61"
+    ],
+    "cited": [
+     "fw-01:61"
+    ],
+    "related": [
+     "fw-01:61"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "iv09",
+    "family": "iv",
+    "intents": [
+     "I5"
+    ],
+    "desc": "undocumented CORP permit to the historian on tcp/8443",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 0,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "af2439",
+  "phase": 3,
+  "item": "dff860",
+  "set": "suite",
+  "idx": 44,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 1,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-core-01:46",
+     "sw-core-01:47"
+    ],
+    "cited": [
+     "sw-core-01:46",
+     "sw-core-01:47"
+    ],
+    "related": [
+     "sw-core-01:46"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "iv05",
+    "family": "iv",
+    "intents": [
+     "I5"
+    ],
+    "desc": "unused VLAN 40 defined on the core switch",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 0,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "b78d17",
+  "phase": 3,
+  "item": "a045d1",
+  "set": "suite",
+  "idx": 24,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I3",
+    "anchors": [
+     "sw-it-01:181"
+    ],
+    "cited": [
+     "sw-it-01:181"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-it-01:184"
+    ],
+    "cited": [
+     "sw-it-01:184"
+    ],
+    "related": [
+     "sw-it-01:181"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "ii06",
+    "family": "ii",
+    "intents": [
+     "I3"
+    ],
+    "desc": "IT switch uplink trunk now carries the OT VLAN",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "baa729",
+  "phase": 3,
+  "item": "fc05bb",
+  "set": "suite",
+  "idx": 32,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "sw-core-01:213"
+    ],
+    "cited": [
+     "sw-core-01:213"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-core-01:213"
+    ],
+    "cited": [
+     "sw-core-01:213"
+    ],
+    "related": [
+     "sw-core-01:213"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "iii04",
+    "family": "iii",
+    "intents": [
+     "I4"
+    ],
+    "desc": "read-write SNMP community without ACL added on sw-core-01",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "c152ca",
+  "phase": 3,
+  "item": "fc9f6c",
+  "set": "suite",
+  "idx": 21,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I3",
+    "anchors": [
+     "sw-it-01:127"
+    ],
+    "cited": [
+     "sw-it-01:127"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-it-01:129"
+    ],
+    "cited": [
+     "sw-it-01:129"
+    ],
+    "related": [
+     "sw-it-01:127"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "ii03",
+    "family": "ii",
+    "intents": [
+     "I3"
+    ],
+    "desc": "corporate port Gi1/0/15 moved into the OT VLAN",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "c40c75",
+  "phase": 3,
+  "item": "129166",
+  "set": "suite",
+  "idx": 30,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "sw-ot-01:211"
+    ],
+    "cited": [
+     "sw-ot-01:211"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-ot-01:base:212"
+    ],
+    "cited": [
+     "sw-ot-01:base:212"
+    ],
+    "related": [
+     "sw-ot-01:211"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "iii02",
+    "family": "iii",
+    "intents": [
+     "I4"
+    ],
+    "desc": "access-class removed from vty 0 4 of sw-ot-01",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "c9190c",
+  "phase": 3,
+  "item": "dff3f3",
+  "set": "suite",
+  "idx": 37,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 4,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "fw-01:111"
+    ],
+    "cited": [
+     "fw-01:111",
+     "fw-01:109"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:111"
+    ],
+    "cited": [
+     "fw-01:111"
+    ],
+    "related": [
+     "fw-01:111"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [
+   {
+    "intent": "I1",
+    "anchors": [
+     "fw-01:111",
+     "fw-01:109"
+    ],
+    "reason": "not_supported"
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "rtr-01:46",
+     "rtr-01:54",
+     "rtr-01:38"
+    ],
+    "reason": "not_supported"
+   }
+  ],
+  "gt": [
+   {
+    "template": "iii08",
+    "family": "iii",
+    "intents": [
+     "I4"
+    ],
+    "desc": "firewall ASDM/HTTPS management allowed from outside",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 3,
+  "false_proposals": 2,
+  "false_proposal_reasons": {
+   "not_supported": 2
+  },
+  "false_proposal_examples": [
+   {
+    "intent": "I1",
+    "anchors": [
+     "fw-01:111",
+     "fw-01:109"
+    ],
+    "claim": "fw-01 accepts HTTP management sessions from 0.0.0.0/0 on the outside interface, so OUTSIDE can open a connection into the MGMT-zone firewall management service."
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "rtr-01:46",
+     "rtr-01:54",
+     "rtr-01:38"
+    ],
+    "claim": "rtr-01 interface GigabitEthernet0 (10.10.99.12, MGMT) at rtr-01:46 has no ACL, since rtr-01:38 binds EDGE_IN only to GigabitEthernet0/0/0, and default route rtr-01:54 sends its traffic to the OUTSIDE uplink 198.51.100.1, so MGMT can reach OUTSIDE beyond the approved NTP-only service."
+   }
+  ]
+ },
+ {
+  "run": "cd093f",
+  "phase": 3,
+  "item": "6cecd8",
+  "set": "suite",
+  "idx": 17,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I3",
+    "anchors": [
+     "sw-ot-01:55"
+    ],
+    "cited": [
+     "sw-ot-01:55"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-ot-01:57"
+    ],
+    "cited": [
+     "sw-ot-01:57"
+    ],
+    "related": [
+     "sw-ot-01:55"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "ii01",
+    "family": "ii",
+    "intents": [
+     "I3"
+    ],
+    "desc": "OT-facing port Gi1/0/3 moved to the corporate VLAN",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "cd2818",
+  "phase": 3,
+  "item": "de39e6",
+  "set": "suite",
+  "idx": 49,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 1,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:base:65"
+    ],
+    "cited": [
+     "fw-01:base:65"
+    ],
+    "related": [],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "iv10",
+    "family": "iv",
+    "intents": [
+     "I5"
+    ],
+    "desc": "CORP web-browsing permit removed",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 0,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "ce4862",
+  "phase": 3,
+  "item": "035606",
+  "set": "suite",
+  "idx": 5,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 6,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I1",
+    "anchors": [
+     "fw-01:60"
+    ],
+    "cited": [
+     "fw-01:60",
+     "fw-01:102"
+    ],
+    "related": [
+     "fw-01:102"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I1",
+    "anchors": [
+     "fw-01:60"
+    ],
+    "cited": [
+     "fw-01:60",
+     "fw-01:102"
+    ],
+    "related": [
+     "fw-01:102"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "MGMT"
+    ]
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:60"
+    ],
+    "cited": [
+     "fw-01:60",
+     "fw-01:102"
+    ],
+    "related": [
+     "fw-01:102"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:60"
+    ],
+    "cited": [
+     "fw-01:60",
+     "fw-01:102"
+    ],
+    "related": [
+     "fw-01:102"
+    ],
+    "label": "violation",
+    "zones": [
+     "CORP",
+     "MGMT"
+    ]
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:60"
+    ],
+    "cited": [
+     "fw-01:60"
+    ],
+    "related": [
+     "fw-01:60"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "rtr-01:68",
+     "fw-01:109"
+    ],
+    "reason": "not_supported"
+   }
+  ],
+  "gt": [
+   {
+    "template": "i05",
+    "family": "i",
+    "intents": [
+     "I1",
+     "I2"
+    ],
+    "desc": "historian web permit widened to 10.10.0.0/16 above the OT deny",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 5,
+  "false_proposals": 1,
+  "false_proposal_reasons": {
+   "not_supported": 1
+  },
+  "false_proposal_examples": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "rtr-01:68",
+     "fw-01:109"
+    ],
+    "claim": "rtr-01 EDGE_IN entry rtr-01:68 permits tcp/443 from any source to the fw-01 outside address 203.0.113.2, where fw-01 has the ASA HTTP server enabled (fw-01:109), so HTTPS management is reachable from outside rather than only from MGMT."
+   }
+  ]
+ },
+ {
+  "run": "d3aa54",
+  "phase": 3,
+  "item": "25b3ac",
+  "set": "suite",
+  "idx": 6,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 1,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:75"
+    ],
+    "cited": [
+     "fw-01:75"
+    ],
+    "related": [
+     "fw-01:100"
+    ],
+    "label": "violation",
+    "zones": [
+     "OT",
+     "OUTSIDE"
+    ]
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:75"
+    ],
+    "cited": [
+     "fw-01:75"
+    ],
+    "related": [
+     "fw-01:75"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "i06",
+    "family": "i",
+    "intents": [
+     "I2"
+    ],
+    "desc": "SCADA-to-historian permit widened to any destination",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "d47ff1",
+  "phase": 3,
+  "item": "e75c71",
+  "set": "suite",
+  "idx": 23,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I3",
+    "anchors": [
+     "sw-core-01:175"
+    ],
+    "cited": [
+     "sw-core-01:175"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-core-01:178"
+    ],
+    "cited": [
+     "sw-core-01:178"
+    ],
+    "related": [
+     "sw-core-01:175"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "ii05",
+    "family": "ii",
+    "intents": [
+     "I3"
+    ],
+    "desc": "core trunk to the OT switch now carries the corporate VLAN",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "d5590c",
+  "phase": 3,
+  "item": "0e8265",
+  "set": "suite",
+  "idx": 9,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:68"
+    ],
+    "cited": [
+     "fw-01:68",
+     "fw-01:102"
+    ],
+    "related": [
+     "fw-01:102"
+    ],
+    "label": "violation",
+    "zones": [
+     "DMZ",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:68"
+    ],
+    "cited": [
+     "fw-01:68"
+    ],
+    "related": [
+     "fw-01:68"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "i09",
+    "family": "i",
+    "intents": [
+     "I2"
+    ],
+    "desc": "historian allowed to poll OT devices directly",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "d95225",
+  "phase": 3,
+  "item": "f14264",
+  "set": "suite",
+  "idx": 12,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 3,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I1",
+    "anchors": [
+     "rtr-01:73"
+    ],
+    "cited": [
+     "rtr-01:73",
+     "rtr-01:38"
+    ],
+    "related": [
+     "rtr-01:38"
+    ],
+    "label": "violation",
+    "zones": [
+     "OUTSIDE",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I2",
+    "anchors": [
+     "rtr-01:73"
+    ],
+    "cited": [
+     "rtr-01:73",
+     "rtr-01:38"
+    ],
+    "related": [
+     "rtr-01:38"
+    ],
+    "label": "violation",
+    "zones": [
+     "OUTSIDE",
+     "OT"
+    ]
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "rtr-01:73"
+    ],
+    "cited": [
+     "rtr-01:73"
+    ],
+    "related": [
+     "rtr-01:73"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "i12",
+    "family": "i",
+    "intents": [
+     "I1",
+     "I2"
+    ],
+    "desc": "edge router ACL permits Internet traffic to the OT subnet",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 2,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "e3d5bd",
+  "phase": 3,
+  "item": "a39e06",
+  "set": "suite",
+  "idx": 19,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I3",
+    "anchors": [
+     "sw-ot-01:73"
+    ],
+    "cited": [
+     "sw-ot-01:73"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-ot-01:75"
+    ],
+    "cited": [
+     "sw-ot-01:75"
+    ],
+    "related": [
+     "sw-ot-01:73"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "ii02",
+    "family": "ii",
+    "intents": [
+     "I3"
+    ],
+    "desc": "OT-facing port Gi1/0/6 moved to the DMZ VLAN",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "e4cfb5",
+  "phase": 3,
+  "item": "c30c00",
+  "set": "suite",
+  "idx": 36,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "fw-01:119"
+    ],
+    "cited": [
+     "fw-01:119"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:119"
+    ],
+    "cited": [
+     "fw-01:119"
+    ],
+    "related": [
+     "fw-01:119"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "iii07",
+    "family": "iii",
+    "intents": [
+     "I4"
+    ],
+    "desc": "firewall SSH management allowed from the corporate interface",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "e687f3",
+  "phase": 3,
+  "item": "95128e",
+  "set": "suite",
+  "idx": 16,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 1,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I3",
+    "anchors": [
+     "sw-ot-01:115"
+    ],
+    "cited": [
+     "sw-ot-01:115"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-ot-01:117"
+    ],
+    "cited": [
+     "sw-ot-01:117"
+    ],
+    "related": [
+     "sw-ot-01:115"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "ii01",
+    "family": "ii",
+    "intents": [
+     "I3"
+    ],
+    "desc": "OT-facing port Gi1/0/13 moved to the corporate VLAN",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "ec3b48",
+  "phase": 3,
+  "item": "924f1f",
+  "set": "suite",
+  "idx": 15,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I2",
+    "anchors": [
+     "fw-01:77"
+    ],
+    "cited": [
+     "fw-01:77"
+    ],
+    "related": [
+     "fw-01:100"
+    ],
+    "label": "violation",
+    "zones": [
+     "OT",
+     "DMZ"
+    ]
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "fw-01:77"
+    ],
+    "cited": [
+     "fw-01:77"
+    ],
+    "related": [
+     "fw-01:77"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "i15",
+    "family": "i",
+    "intents": [
+     "I2"
+    ],
+    "desc": "NTP permit widened from udp/123 to all protocols",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "ed5724",
+  "phase": 3,
+  "item": "6c10a1",
+  "set": "suite",
+  "idx": 27,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 4,
+  "n_clarification_questions": 1,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I3",
+    "anchors": [
+     "sw-core-01:200"
+    ],
+    "cited": [
+     "sw-core-01:200"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-core-01:200",
+     "sw-core-01:201"
+    ],
+    "cited": [
+     "sw-core-01:200"
+    ],
+    "related": [
+     "sw-core-01:200"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-core-01:201"
+    ],
+    "cited": [
+     "sw-core-01:201"
+    ],
+    "related": [
+     "sw-core-01:200"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-core-01:204"
+    ],
+    "cited": [
+     "sw-core-01:204"
+    ],
+    "related": [
+     "sw-core-01:204"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "ii09",
+    "family": "ii",
+    "intents": [
+     "I3"
+    ],
+    "desc": "routed SVI for the OT VLAN added on the core switch",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ },
+ {
+  "run": "f0aef2",
+  "phase": 3,
+  "item": "d51618",
+  "set": "suite",
+  "idx": 26,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 4,
+  "n_clarification_questions": 1,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I3",
+    "anchors": [
+     "sw-core-01:163"
+    ],
+    "cited": [
+     "sw-core-01:163"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-core-01:165"
+    ],
+    "cited": [
+     "sw-core-01:165"
+    ],
+    "related": [
+     "sw-core-01:163"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-core-01:base:167"
+    ],
+    "cited": [
+     "sw-core-01:base:167"
+    ],
+    "related": [
+     "sw-core-01:163"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "rtr-01:68",
+     "fw-01:109"
+    ],
+    "reason": "not_supported"
+   }
+  ],
+  "gt": [
+   {
+    "template": "ii08",
+    "family": "ii",
+    "intents": [
+     "I3"
+    ],
+    "desc": "unused core port Gi1/0/20 activated in the OT VLAN",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 2,
+  "false_proposals": 1,
+  "false_proposal_reasons": {
+   "not_supported": 1
+  },
+  "false_proposal_examples": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "rtr-01:68",
+     "fw-01:109"
+    ],
+    "claim": "EDGE_IN permits any source to tcp/443 on fw-01 outside address 203.0.113.2, an HTTPS path to the firewall outside the mgmt interface that the management policy restricts, while the ASA HTTP server is enabled globally."
+   }
+  ]
+ },
+ {
+  "run": "f4f1af",
+  "phase": 3,
+  "item": "061bfb",
+  "set": "suite",
+  "idx": 33,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 3,
+  "n_clarification_questions": 1,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "sw-ot-01:207"
+    ],
+    "cited": [
+     "sw-ot-01:207"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-ot-01:207"
+    ],
+    "cited": [
+     "sw-ot-01:207"
+    ],
+    "related": [
+     "sw-ot-01:207"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "rtr-01:68",
+     "fw-01:109"
+    ],
+    "reason": "not_supported"
+   }
+  ],
+  "gt": [
+   {
+    "template": "iii04",
+    "family": "iii",
+    "intents": [
+     "I4"
+    ],
+    "desc": "read-write SNMP community without ACL added on sw-ot-01",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 2,
+  "false_proposals": 1,
+  "false_proposal_reasons": {
+   "not_supported": 1
+  },
+  "false_proposal_examples": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "rtr-01:68",
+     "fw-01:109"
+    ],
+    "claim": "EDGE_IN permits any Internet source to tcp/443 on the fw-01 outside address 203.0.113.2, and the ASA HTTP server is enabled, although device management is permitted only from MGMT on the mgmt interface."
+   }
+  ]
+ },
+ {
+  "run": "f80464",
+  "phase": 3,
+  "item": "b3f4eb",
+  "set": "suite",
+  "idx": 34,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 3,
+  "n_clarification_questions": 0,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I4",
+    "anchors": [
+     "rtr-01:76"
+    ],
+    "cited": [
+     "rtr-01:76"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "rtr-01:76"
+    ],
+    "cited": [
+     "rtr-01:76"
+    ],
+    "related": [
+     "rtr-01:76"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [
+   {
+    "intent": "I2",
+    "anchors": [
+     "rtr-01:35",
+     "rtr-01:46",
+     "rtr-01:54",
+     "rtr-01:38"
+    ],
+    "reason": "not_supported"
+   }
+  ],
+  "gt": [
+   {
+    "template": "iii05",
+    "family": "iii",
+    "intents": [
+     "I4"
+    ],
+    "desc": "SNMP community ACL removed on rtr-01",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 2,
+  "false_proposals": 1,
+  "false_proposal_reasons": {
+   "not_supported": 1
+  },
+  "false_proposal_examples": [
+   {
+    "intent": "I2",
+    "anchors": [
+     "rtr-01:35",
+     "rtr-01:46",
+     "rtr-01:54",
+     "rtr-01:38"
+    ],
+    "claim": "rtr-01 GigabitEthernet0 sits in the MGMT subnet 10.10.99.0/24 with no inbound ACL, and rtr-01 has a default route via 198.51.100.1 on the OUTSIDE interface Gi0/0/0 whose only ACL (EDGE_IN) is inbound and does not filter MGMT-sourced traffic, so MGMT traffic can reach OUTSIDE without passing the fw-01 boundary."
+   }
+  ]
+ },
+ {
+  "run": "f890c7",
+  "phase": 3,
+  "item": "c56e41",
+  "set": "suite",
+  "idx": 22,
+  "mode": "canonical",
+  "question": null,
+  "rep": 3,
+  "valid_json": true,
+  "n_candidates": 2,
+  "n_clarification_questions": 1,
+  "n_flagged": 0,
+  "released": [
+   {
+    "intent": "I3",
+    "anchors": [
+     "sw-ot-01:181"
+    ],
+    "cited": [
+     "sw-ot-01:181"
+    ],
+    "related": [],
+    "label": "violation",
+    "zones": null
+   },
+   {
+    "intent": "I5",
+    "anchors": [
+     "sw-ot-01:184"
+    ],
+    "cited": [
+     "sw-ot-01:184"
+    ],
+    "related": [
+     "sw-ot-01:181"
+    ],
+    "label": "baseline_item",
+    "zones": null
+   }
+  ],
+  "suppressed": [],
+  "gt": [
+   {
+    "template": "ii04",
+    "family": "ii",
+    "intents": [
+     "I3"
+    ],
+    "desc": "OT switch uplink trunk now carries the corporate VLAN",
+    "outcome": "released"
+   }
+  ],
+  "false_alarms": 0,
+  "actionable_proposed": 1,
+  "false_proposals": 0,
+  "false_proposal_reasons": {},
+  "false_proposal_examples": []
+ }
+]

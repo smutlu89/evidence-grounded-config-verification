@@ -1,0 +1,409 @@
+{
+ "runs_with_clarification": 50,
+ "texts": 79,
+ "runs_per_topic": {
+  "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'": 25,
+  "firewall HTTP server / tcp 443 to the firewall's outside address": 22,
+  "router default routes / management port": 14,
+  "ports in the outage register / shutdowns": 3,
+  "NTP server": 2,
+  "VLAN 99 management interfaces (SVIs)": 1
+ },
+ "items": [
+  {
+   "run": "00e18e",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "fw-01 has the ASA HTTP server enabled (anchor fw-01:109), with management access limited to 10.10.99.0/24 on the mgmt interface (fw-01:110). The registry says IOS HTTP/HTTPS servers must be disabled and allows HTTPS/ASDM on fw-01 from MGMT on the mgmt interface. Should an enabled ASA HTTP server (ASDM) count as compliant under the management policy, or does the policy require it to be disabled?"
+  },
+  {
+   "run": "040d96",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has two default routes, 0.0.0.0/0 via 198.51.100.1 (rtr-01:54) and 0.0.0.0/0 via 10.10.99.1 (rtr-01:55, the fw-01 MGMT address). Which route is active, and is the route via 10.10.99.1 an approved path? Traffic between MGMT and other zones must use only approved services."
+  },
+  {
+   "run": "040d96",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "rtr-01 EDGE_IN permits any source to tcp/443 on 203.0.113.2, the fw-01 outside address (rtr-01:68). fw-01 has the ASA HTTP server enabled (fw-01:109) with HTTP management limited to the mgmt interface from 10.10.99.0/24 (fw-01:110). Is the Internet-facing HTTPS permit intended, and does it expose any firewall management function?"
+  },
+  {
+   "run": "048ce4",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The registry says only OT-facing ports may be active in VLAN 10, but the approved trunk sets allow VLAN 10 on sw-core-01 Gi1/0/22 and Gi1/0/24. Is VLAN 10 transport over these DMZ-core trunks intended (for example, transit to the fw-01 OT subinterface), and should it be treated as an exception to the OT-facing-only rule?"
+  },
+  {
+   "run": "048ce4",
+   "topic": "NTP server",
+   "text": "sw-it-01 is configured with NTP server 10.10.20.6, a DMZ address that is not listed in the zone registry (only 10.10.20.5 is the approved NTP service for OT and MGMT). Is 10.10.20.6 an authorized time source for sw-it-01, and if so, should it be added to the approved services?"
+  },
+  {
+   "run": "048ce4",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "Trunks sw-core-01 Gi1/0/22 (allowed VLANs 10,99) and Gi1/0/24 (allowed VLANs 10,20,30,99) carry VLAN 10, although the registry says only OT-facing ports may be active in VLAN 10."
+  },
+  {
+   "run": "048ce4",
+   "topic": "NTP server",
+   "text": "sw-it-01, whose management address 10.10.99.13 is in MGMT, is configured to use DMZ address 10.10.20.6 as an NTP server, which is not the approved MGMT-to-DMZ NTP service (10.10.20.5 only)."
+  },
+  {
+   "run": "05baab",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The registry says only OT-facing ports may be active in VLAN 10, but it also approves trunks that carry VLAN 10 (sw-core-01 Gi1/0/22 and Gi1/0/24, sw-ot-01 Gi1/0/24). Should trunks approved for VLAN 10 count as compliant with I3, or is VLAN 10 meant to be limited to access ports?"
+  },
+  {
+   "run": "07094d",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The registry defines OT-facing ports as sw-ot-01 Gi1/0/1-16, yet the approved trunks sw-ot-01 Gi1/0/24 ({10,99}), sw-core-01 Gi1/0/22 ({10,99}) and sw-core-01 Gi1/0/24 ({10,20,30,99}) are active in VLAN 10. Should these uplink trunks be treated as OT-facing for the rule that only OT-facing ports may be active in VLAN 10, or is VLAN 10 on them a violation?"
+  },
+  {
+   "run": "1ce24a",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "The registry says IOS HTTP/HTTPS servers must be disabled, but fw-01 is an ASA with asa_http_server enabled. Should the ASA HTTP server be disabled, or is it acceptable because mgmt_access limits it to 10.10.99.0/24 on the mgmt interface?"
+  },
+  {
+   "run": "1d2fc1",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The registry says only OT-facing ports may be active in VLAN 10, but the approved trunks sw-core-01 Gi1/0/22 and Gi1/0/24 and sw-ot-01 Gi1/0/24 carry VLAN 10. Are these trunks treated as approved exceptions to that rule, or should they be counted as violations?"
+  },
+  {
+   "run": "1d2fc1",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "fw-01 has the ASA HTTP server enabled (fw-01:110) and rtr-01 permits tcp/443 to 203.0.113.2 (rtr-01:68). Is ASA HTTP/ASDM management covered by the HTTPS/ASDM management rule, and is the rtr-01 tcp/443 permit to the firewall outside address an approved service?"
+  },
+  {
+   "run": "1f1279",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "fw-01 has the ASA HTTP server enabled (fw-01:109) with HTTP management limited to 10.10.99.0/24 on the mgmt interface. The registry says IOS HTTP/HTTPS servers must be disabled and allows HTTPS/ASDM management from MGMT only. Does the ASA HTTP server (ASDM) fall under the IOS HTTP/HTTPS rule, or is it an approved ASDM management path?"
+  },
+  {
+   "run": "276932",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The port-role rule says only OT-facing ports may be active in VLAN 10, but the approved trunk sets allow VLAN 10 on sw-core-01 Gi1/0/22 ({10,99}) and Gi1/0/24 ({10,20,30,99}), and on sw-ot-01 Gi1/0/24 ({10,99}). Are these approved uplink trunks exempt from the VLAN 10 port-role rule, or should VLAN 10 be removed from non-OT-facing trunks?"
+  },
+  {
+   "run": "2bc8c4",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has two static default routes, one via 198.51.100.1 (ISP) and one via 10.10.99.1 (fw-01 mgmt interface), and it has a connected MGMT interface Gi0 at 10.10.99.12. Is the default route via 10.10.99.1 intentional, and which route carries traffic toward OT or MGMT?"
+  },
+  {
+   "run": "2d06c1",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The registry says only OT-facing ports may be active in VLAN 10, yet the approved trunk sets include VLAN 10 on sw-ot-01 Gi1/0/24, sw-core-01 Gi1/0/22 and sw-core-01 Gi1/0/24. Should these approved trunks carrying VLAN 10 be treated as permitted exceptions to the OT-facing-port rule?"
+  },
+  {
+   "run": "30be0a",
+   "topic": "router default routes / management port",
+   "text": "Is rtr-01 meant to carry MGMT traffic to OUTSIDE, and which of its two default routes (via 198.51.100.1 and via 10.10.99.1) is intended?"
+  },
+  {
+   "run": "30be0a",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has a MGMT-addressed interface (GigabitEthernet0, 10.10.99.12/24) with no ACL bound to it and a default route via 198.51.100.1 on the OUTSIDE-facing Gi0/0/0, so MGMT-sourced traffic that reaches rtr-01 could leave to OUTSIDE without passing fw-01's MGMT_IN filter."
+  },
+  {
+   "run": "37b80b",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "fw-01 has the ASA HTTP server enabled (fw-01:110) with HTTP management allowed only from 10.10.99.0/24 on the mgmt interface (fw-01:111). The registry says IOS HTTP/HTTPS servers must be disabled, but also permits HTTPS/ASDM management from MGMT on fw-01. Is an enabled ASA HTTP server with MGMT-only access on the mgmt interface acceptable under the management policy, or should it be disabled?"
+  },
+  {
+   "run": "3d3fb4",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "Approved trunks sw-core-01 Gi1/0/22 {10,99} and Gi1/0/24 {10,20,30,99}, and sw-ot-01 Gi1/0/24 {10,99}, carry VLAN 10, but the zone rule says only OT-facing ports may be active in VLAN 10. Should VLAN 10 on these approved trunks be treated as compliant?"
+  },
+  {
+   "run": "41682d",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "fw-01 has the ASA http server enabled (fw-01:109) and mgmt_access service http restricted to 10.10.99.0/24 on the mgmt interface (fw-01:110). Is this ASDM over HTTPS, which the management policy permits, or plain HTTP, which the policy does not list?"
+  },
+  {
+   "run": "4bf9dc",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The I3 rule says only OT-facing ports may be active in VLAN 10, but the approved trunk sets allow VLAN 10 on sw-core-01 GigabitEthernet1/0/22 and GigabitEthernet1/0/24, which are not OT-facing ports. Should VLAN 10 on these approved trunks be treated as compliant?"
+  },
+  {
+   "run": "4bf9dc",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has two default routes: 0.0.0.0/0 via 198.51.100.1 (OUTSIDE) and 0.0.0.0/0 via 10.10.99.1 (fw-01 mgmt interface in MGMT). Is the MGMT default route intended, given that OT-side traffic may reach other zones only through approved services?"
+  },
+  {
+   "run": "4db246",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The registry says only OT-facing ports may be active in VLAN 10, but the approved trunks sw-ot-01 Gi1/0/24 {10,99}, sw-core-01 Gi1/0/22 {10,99} and sw-core-01 Gi1/0/24 {10,20,30,99} carry VLAN 10. Are these trunks an intended exception to the OT-facing-only rule?"
+  },
+  {
+   "run": "4db246",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "rtr-01 EDGE_IN line 68 (rtr-01:68) permits tcp/443 from any source to 203.0.113.2, the fw-01 outside address, while the management policy limits HTTPS/ASDM to MGMT and to the mgmt interface of fw-01. Is this internet-facing HTTPS permit an intended exception?"
+  },
+  {
+   "run": "5601a5",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The approved trunk list allows VLAN 10 on sw-core-01 Gi1/0/22 and Gi1/0/24 and on sw-ot-01 Gi1/0/24, but the registry also says only OT-facing ports may be active in VLAN 10. Are these approved VLAN 10 trunks exempt from the OT-facing-only rule?"
+  },
+  {
+   "run": "5601a5",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "fw-01 has the ASA HTTP server enabled (fw-01:109) and mgmt_access for service http from MGMT on the mgmt interface (fw-01:110). The policy lists only SSH, HTTPS/ASDM and SNMP for management and bars IOS HTTP/HTTPS. Is plain HTTP management on the ASA permitted, or must it be disabled?"
+  },
+  {
+   "run": "5e7eab",
+   "topic": "ports in the outage register / shutdowns",
+   "text": "The planned outages list sw-ot-01 Gi1/0/9 and Gi1/0/10, but both ports are active (no shutdown) and neither appears in the baseline deltas. Should these ports be shut for the Unit 2 outage window, and if so, should that change be recorded against the baseline?"
+  },
+  {
+   "run": "66954f",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "fw-01 has asa_http_server enabled, and rtr-01 EDGE_IN permits tcp/443 and udp/443 from any source to 203.0.113.2 (the fw-01 outside address). Is ASDM/HTTPS reachable on the outside interface? The snapshot records management access only on the mgmt interface."
+  },
+  {
+   "run": "673d1e",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The approved trunk sets allow VLAN 10 on sw-core-01 Gi1/0/22 and Gi1/0/24, but the I3 rule says only OT-facing ports (sw-ot-01 ports 1-16) may be active in VLAN 10. Is VLAN 10 on these DMZ-core trunks an intended exception, or should it be removed?"
+  },
+  {
+   "run": "673d1e",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has two default routes: 0.0.0.0/0 via 198.51.100.1 out GigabitEthernet0/0/0 (rtr-01:54) and 0.0.0.0/0 via 10.10.99.1 out the management interface GigabitEthernet0 (rtr-01:55). Which path is intended, and should rtr-01 be able to forward traffic into MGMT through fw-01?"
+  },
+  {
+   "run": "673d1e",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "fw-01 has asa_http_server enabled (fw-01:109), and rtr-01 permits tcp/443 from any source to the fw-01 outside address 203.0.113.2 (rtr-01:68). Is any HTTPS or ASDM access to fw-01 on the outside address intended? The management policy allows it only on the mgmt interface, from MGMT."
+  },
+  {
+   "run": "77ac5d",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has two default routes: 0.0.0.0/0 via 198.51.100.1 (rtr-01:54) and 0.0.0.0/0 via 10.10.99.1, the fw-01 MGMT gateway (rtr-01:55). Is the default route into the MGMT gateway intended, and if so, should it be given a higher administrative distance so that Internet-bound traffic does not use it?"
+  },
+  {
+   "run": "77ac5d",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "fw-01 has the ASA HTTP server enabled (fw-01:109), and the management policy only disables IOS HTTP/HTTPS servers and limits HTTPS/ASDM to MGMT. Is ASDM on fw-01 intentionally enabled, given that its mgmt_access is restricted to 10.10.99.0/24 on the mgmt interface?"
+  },
+  {
+   "run": "7e6f0e",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has a management interface GigabitEthernet0 at 10.10.99.12/24 in MGMT and two default routes (via 198.51.100.1 and via 10.10.99.1), while its Gi0/0/0 OUTSIDE interface has EDGE_IN. Can traffic arriving from OUTSIDE reach MGMT through rtr-01 without passing fw-01, and is that routing intended?"
+  },
+  {
+   "run": "7e6f0e",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "fw-01 has the ASA HTTP server enabled (fw-01:109), and rtr-01 EDGE_IN permits TCP and UDP 443 from any source to 203.0.113.2, the fw-01 outside address. The snapshot has no mgmt_access record for the outside interface. Is HTTPS/ASDM reachable on the fw-01 outside interface, and if so, is that permitted by the management policy?"
+  },
+  {
+   "run": "87164a",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "Inter-switch trunks carry VLAN 10 on sw-ot-01 Gi1/0/24 and on sw-core-01 Gi1/0/22 and Gi1/0/24. Should the rule that only OT-facing ports may be active in VLAN 10 be read as exempting these approved trunks?"
+  },
+  {
+   "run": "87164a",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "fw-01 is an ASA with asa_http_server enabled (fw-01:110), limited to MGMT on the mgmt interface for ASDM. Does the rule that IOS HTTP/HTTPS servers must be disabled apply to this ASA setting, or is ASDM over HTTPS on fw-01 permitted as device management?"
+  },
+  {
+   "run": "8ae319",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has two default routes, 0.0.0.0/0 via 198.51.100.1 (rtr-01:54) and 0.0.0.0/0 via 10.10.99.1 (rtr-01:55, the fw-01 MGMT interface). Is the second default route via MGMT intended? If so, traffic from rtr-01 toward other zones could bypass fw-01 ACLs."
+  },
+  {
+   "run": "8ae319",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "sw-core-01 GigabitEthernet1/0/22 is an active trunk that carries VLAN 10 (rtr-01 approved set {10,99}, sw-core-01:175). The registry says only OT-facing ports may be active in VLAN 10, but this port is not listed as OT-facing. Is this trunk the authorized OT uplink, so that it is not a violation?"
+  },
+  {
+   "run": "8ea83a",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The registry says only OT-facing ports may be active in VLAN 10, but the approved trunk list also allows VLAN 10 on sw-core-01 Gi1/0/22 {10,99} and Gi1/0/24 {10,20,30,99}, and sw-core-01 has no OT-facing access ports. Is VLAN 10 intentionally active on these core uplink trunks, or should the VLAN 10 rule be read as applying only to OT-facing ports?"
+  },
+  {
+   "run": "8ebf3b",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "The management policy says IOS HTTP/HTTPS servers must be disabled, but fw-01 is an ASA with asa_http_server enabled (fw-01:109) and HTTP/ASDM management restricted to MGMT on the mgmt interface (fw-01:110). Is ASDM on fw-01 an approved management service under the policy, or should the ASA HTTP server be disabled?"
+  },
+  {
+   "run": "9440a1",
+   "topic": "ports in the outage register / shutdowns",
+   "text": "The planned outage list names sw-ot-01 Gi1/0/9 to Gi1/0/12, but only Gi1/0/9 and Gi1/0/10 are shut down (both recorded as baseline deltas). Are Gi1/0/11 and Gi1/0/12 meant to be shut for the Unit 2 window, or should they stay active?"
+  },
+  {
+   "run": "9440a1",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The approved trunks sw-core-01 Gi1/0/22 {10,99} and Gi1/0/24 {10,20,30,99} carry VLAN 10, while the rule says only OT-facing ports may be active in VLAN 10. Should these approved uplink trunks be treated as exceptions to that rule?"
+  },
+  {
+   "run": "9440a1",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has a second default route (0.0.0.0/0 via 10.10.99.1, the fw-01 mgmt interface) alongside the ISP default via 198.51.100.1, and it has a leg in MGMT (GigabitEthernet0, 10.10.99.12). Is this route intended? EDGE_IN denies Internet traffic to 10.10.x.x in the current evidence, but the registry does not say whether a default route into MGMT is allowed."
+  },
+  {
+   "run": "972b7c",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "rtr-01 lines 68 and 69 permit tcp/443 and udp/443 from any source to fw-01's outside address 203.0.113.2, and fw-01 has the ASA HTTP server enabled (fw-01:109). Is any HTTPS or ASDM service intended to be reachable on the outside address? If so, it conflicts with the rule that device management is allowed only from MGMT on the mgmt interface."
+  },
+  {
+   "run": "972b7c",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has an interface in MGMT (GigabitEthernet0, 10.10.99.12/24, line 46) and a default route via 198.51.100.1 on its OUTSIDE uplink (line 54) that bypasses fw-01. Do any MGMT hosts use rtr-01 as their gateway? If so, MGMT-to-OUTSIDE traffic is not inspected by fw-01's MGMT_IN ACL."
+  },
+  {
+   "run": "972b7c",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "rtr-01 EDGE_IN permits tcp/443 and udp/443 from any source to 203.0.113.2, the fw-01 outside address, which is not a MGMT source, while fw-01 has the ASA HTTP server enabled."
+  },
+  {
+   "run": "972b7c",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has a MGMT-subnet interface (10.10.99.12/24) with no acl_in listed and a default route via 198.51.100.1 on its OUTSIDE uplink, so MGMT-sourced traffic routed through rtr-01 could reach OUTSIDE without passing fw-01."
+  },
+  {
+   "run": "9ac187",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "Only OT-facing ports may be active in VLAN 10, but the approved trunks sw-ot-01 Gi1/0/24 {10,99} and sw-core-01 Gi1/0/22 {10,99} carry VLAN 10 on ports that are not in the OT-facing port roles. Does the approved trunk list override the 'only OT-facing ports' rule for these uplinks, or should VLAN 10 be limited to the OT-facing access ports?"
+  },
+  {
+   "run": "9ac187",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "VLAN 10 is allowed on trunk ports sw-core-01 Gi1/0/22 and sw-ot-01 Gi1/0/24, which are not OT-facing access ports, so the rule that only OT-facing ports may be active in VLAN 10 may not hold for these uplinks."
+  },
+  {
+   "run": "a173ec",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "fw-01 has asa_http_server enabled (fw-01:109), restricted to 10.10.99.0/24 on the mgmt interface (fw-01:110). The management policy names HTTPS/ASDM but does not say whether plain HTTP on the ASA is allowed. Is enabled plain HTTP on fw-01 acceptable, or must ASDM use HTTPS only?"
+  },
+  {
+   "run": "a1c74c",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has two default routes: 0.0.0.0/0 via 198.51.100.1 (rtr-01:54) and 0.0.0.0/0 via 10.10.99.1 (rtr-01:55). Is the second route via the firewall management address intended? The registry does not describe it."
+  },
+  {
+   "run": "a3123f",
+   "topic": "NTP server",
+   "text": "Was the addition of NTP server 10.10.20.6 on sw-it-01 an approved change? It is not in the zone registry, and the approved NTP server is 10.10.20.5."
+  },
+  {
+   "run": "a3123f",
+   "topic": "NTP server",
+   "text": "The current sw-it-01 configuration adds an NTP server 10.10.20.6 that is not in the approved baseline and is not the approved NTP server 10.10.20.5."
+  },
+  {
+   "run": "a68d91",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The registry says only OT-facing ports may be active in VLAN 10, but the approved trunks sw-core-01 Gi1/0/22 {10,99}, sw-core-01 Gi1/0/24 {10,20,30,99} and sw-ot-01 Gi1/0/24 {10,99} also carry VLAN 10. Should trunks that carry VLAN 10 be treated as compliant because they appear on the approved trunk list, or does the OT-facing-only rule exclude them?"
+  },
+  {
+   "run": "acb381",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "Does 'OT-facing port' include the sw-core-01 trunk Gi1/0/22 (approved for VLANs {10,99})? It is the only active port on sw-core-01 that carries VLAN 10, and sw-core-01 has no OT-facing access ports. The registry approves this trunk, so I have not reported it as a violation of 'only OT-facing ports may be active in VLAN 10'. Please confirm whether it is intended to be treated as OT-facing."
+  },
+  {
+   "run": "b73864",
+   "topic": "ports in the outage register / shutdowns",
+   "text": "The Unit 2 planned outage lists sw-ot-01 Gi1/0/9, 10, 11 and 12, but in the current snapshot only Gi1/0/10 is shut down while Gi1/0/9, 11 and 12 remain active. Should Gi1/0/9, 11 and 12 also be shut down for the outage, or is the outage list out of date?"
+  },
+  {
+   "run": "b923ee",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "I3 says only OT-facing ports may be active in VLAN 10, but the approved trunk list allows VLAN 10 on sw-core-01 Gi1/0/22 (allowed {10,99}) and Gi1/0/24 (allowed {10,20,30,99}), and the port-role list does not treat these core trunks as OT-facing. Should these approved trunks be treated as compliant with I3, or should VLAN 10 be removed from the sw-core-01 trunks?"
+  },
+  {
+   "run": "ba80dc",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has GigabitEthernet0 in MGMT (10.10.99.12/24) with no ACL on that interface, and its default route points to 198.51.100.1 on the OUTSIDE side (Gi0/0/0). Can MGMT hosts reach OUTSIDE through rtr-01 without passing fw-01, and if so, is that intended?"
+  },
+  {
+   "run": "ca25e6",
+   "topic": "VLAN 99 management interfaces (SVIs)",
+   "text": "The registry bars SVIs with IP addresses only for zone VLANs 10, 20 and 30, while I3 refers to zone VLANs generally and the zone table lists MGMT as VLAN 99. Are the management SVIs Vlan99 with IP addresses on sw-core-01 (10.10.99.10/24), sw-it-01 (10.10.99.13/24) and sw-ot-01 (10.10.99.11/24) compliant with I3?"
+  },
+  {
+   "run": "cb70f0",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has two default routes, one via 198.51.100.1 out Gi0/0/0 (OUTSIDE) and one via 10.10.99.1 (fw-01 mgmt), and its GigabitEthernet0 interface (10.10.99.12, MGMT) has no ACL. Can traffic between MGMT and OUTSIDE be forwarded through rtr-01 without passing fw-01, and is that path intended?"
+  },
+  {
+   "run": "d36ed8",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The registry says only OT-facing ports may be active in VLAN 10, but it also approves trunks that carry VLAN 10 (sw-ot-01 Gi1/0/24, sw-core-01 Gi1/0/22 and sw-core-01 Gi1/0/24). Should those approved VLAN 10 trunks be treated as compliant with I3?"
+  },
+  {
+   "run": "dd5c07",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "rtr-01 EDGE_IN (rtr-01:68 and the udp/443 entry at rtr-01:69) permits HTTPS from any Internet source to fw-01's outside address 203.0.113.2, and fw-01 has the ASA HTTP server enabled (fw-01:110). Is this intended as remote-access VPN termination for the VENDOR group policy, or is it an ASDM/HTTPS management exposure that must be removed?"
+  },
+  {
+   "run": "dd5c07",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The registry says only OT-facing ports may be active in VLAN 10, but sw-core-01 trunks Gi1/0/22 (allowed {10,99}) and Gi1/0/24 (allowed {10,20,30,99}) carry VLAN 10 and are active. Is VLAN 10 on these two sw-core-01 uplink trunks intended under the approved trunk table, or should VLAN 10 be removed from them?"
+  },
+  {
+   "run": "dd5c07",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "EDGE_IN on rtr-01 permits tcp/443 from any source to the fw-01 outside address 203.0.113.2, and the ASA HTTP server is enabled globally on fw-01, so an HTTPS management path may be reachable from outside the MGMT network."
+  },
+  {
+   "run": "e09139",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The registry says only OT-facing ports may be active in VLAN 10, but it also approves sw-core-01 Gi1/0/22 as a trunk carrying {10,99}. Is that trunk an authorized OT uplink, or should VLAN 10 be removed from it?"
+  },
+  {
+   "run": "e09139",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "Trunk GigabitEthernet1/0/22 on sw-core-01 carries VLAN 10, but the port-role rule says only OT-facing ports may be active in VLAN 10, while the approved trunk list allows {10,99} on this port."
+  },
+  {
+   "run": "e3dae7",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The registry approves trunks sw-core-01 Gi1/0/22 {10,99}, sw-core-01 Gi1/0/24 {10,20,30,99} and sw-ot-01 Gi1/0/24 {10,99}, but I3 states that only OT-facing ports may be active in VLAN 10. Is VLAN 10 on these non-OT-facing trunks an accepted exception to I3, or should VLAN 10 be removed from the DMZ core trunks?"
+  },
+  {
+   "run": "e3dae7",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "Trunks sw-core-01 Gi1/0/22 (allowed 10,99) and Gi1/0/24 (allowed 10,20,30,99) carry VLAN 10, the OT VLAN, on non-OT-facing ports of the DMZ core switch, which conflicts with the rule that only OT-facing ports may be active in VLAN 10 unless the registry's trunk approval is an accepted exception."
+  },
+  {
+   "run": "ec6566",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has two default routes, 0.0.0.0/0 via 198.51.100.1 (rtr-01:54) and 0.0.0.0/0 via 10.10.99.1 (rtr-01:55, the fw-01 mgmt interface). Is the second default route through the MGMT side intended, and is router-originated traffic supposed to leave through it?"
+  },
+  {
+   "run": "ed4750",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "rtr-01 permits tcp/443 from any source to 203.0.113.2/32, the fw-01 outside address (rtr-01:68), and fw-01 has the ASA HTTP server enabled globally (fw-01:109). Is HTTPS/ASDM reachable on the fw-01 outside interface, given that the only http mgmt_access record is restricted to MGMT on the mgmt interface (fw-01:110)?"
+  },
+  {
+   "run": "ed7dc2",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "Does the registry's ban on IOS HTTP/HTTPS servers also cover the ASA HTTP server on fw-01 (global asa_http_server enabled at fw-01:109), or is only HTTPS/ASDM management from MGMT on the mgmt interface required?"
+  },
+  {
+   "run": "ed7dc2",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The rule says only OT-facing ports may be active in VLAN 10, but the approved trunk table allows VLAN 10 on sw-core-01 Gi1/0/22 and Gi1/0/24 (lines sw-core-01:175 and sw-core-01:187). Are these core trunks an approved exception to the OT-facing-only rule?"
+  },
+  {
+   "run": "ed7dc2",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "fw-01 has the asa_http_server global setting enabled; the registry bans IOS HTTP/HTTPS servers but does not state whether the ASA HTTP server must be disabled, so compliance cannot be determined from the registry."
+  },
+  {
+   "run": "ed7dc2",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "sw-core-01 trunks Gi1/0/22 and Gi1/0/24 carry VLAN 10, while the rule says only OT-facing ports may be active in VLAN 10; the approved trunk table permits VLAN 10 on these trunks, so the intent is ambiguous for core uplinks."
+  },
+  {
+   "run": "f05089",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The registry approves trunk sw-core-01 GigabitEthernet1/0/22 for VLANs {10,99} and GigabitEthernet1/0/24 for VLANS {10,20,30,99}, but also states that only OT-facing ports may be active in VLAN 10. Are these two trunks allowed to carry VLAN 10, or should VLAN 10 be removed from them?"
+  },
+  {
+   "run": "f4ae77",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "fw-01 has the ASA HTTP server enabled (fw-01:109), and rtr-01 permits any-source TCP/443 and UDP/443 to the fw-01 outside address 203.0.113.2 (rtr-01:68, rtr-01:69). The registry bans IOS HTTP/HTTPS servers and allows HTTPS/ASDM only from MGMT on the mgmt interface, which the mgmt_access record (fw-01:110) meets. Is the ASA HTTP server intended as the permitted ASDM service, and is the Internet-facing 443 permit to the outside address intended?"
+  },
+  {
+   "run": "fcdf85",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "fw-01 has the ASA HTTP server enabled (fw-01:109) and management access over the http service from 10.10.99.0/24 on the mgmt interface (fw-01:110). The policy requires HTTPS/ASDM management and disables IOS HTTP/HTTPS servers, but it does not state whether ASA plain-HTTP management is acceptable. Should fw-01 ASDM access be HTTPS only, and should the ASA HTTP server be disabled?"
+  }
+ ]
+}

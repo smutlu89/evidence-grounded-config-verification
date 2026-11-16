@@ -1,0 +1,131 @@
+{
+ "runs_with_clarification": 15,
+ "texts": 24,
+ "runs_per_topic": {
+  "router default routes / management port": 7,
+  "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'": 7,
+  "firewall HTTP server / tcp 443 to the firewall's outside address": 5
+ },
+ "items": [
+  {
+   "run": "3558d8",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has two default routes: 0.0.0.0/0 via 198.51.100.1 (GigabitEthernet0/0/0, OUTSIDE) and 0.0.0.0/0 via 10.10.99.1 (fw-01 mgmt, MGMT). Which route is preferred, and can any MGMT-originated traffic leave through the 198.51.100.1 path without passing fw-01?"
+  },
+  {
+   "run": "42ec25",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The approved-trunk table permits VLAN 10 on sw-core-01 Gi1/0/22 {10,99}, sw-core-01 Gi1/0/24 {10,20,30,99} and sw-ot-01 Gi1/0/24 {10,99}, but the rule says only OT-facing ports (sw-ot-01 Gi1/0/1-16) may be active in VLAN 10. Should these approved core and uplink trunks be treated as compliant, or as violations of I3?"
+  },
+  {
+   "run": "42ec25",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "VLAN 10 is allowed on the non-OT-facing trunks sw-core-01 Gi1/0/22, sw-core-01 Gi1/0/24 and sw-ot-01 Gi1/0/24, which is in tension with the rule that only OT-facing ports may be active in VLAN 10."
+  },
+  {
+   "run": "539f44",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The switch port roles say only OT-facing ports may be active in VLAN 10, but the approved trunks carry VLAN 10 on non-OT-facing ports: sw-core-01 Gi1/0/22 {10,99} and sw-core-01 Gi1/0/24 {10,20,30,99}, plus the OT uplink sw-ot-01 Gi1/0/24 {10,99}. Are these approved trunks an exception to the VLAN 10 rule, or should VLAN 10 be carried only on OT-facing ports?"
+  },
+  {
+   "run": "5559ee",
+   "topic": "router default routes / management port",
+   "text": "The zone registry assigns no zone to rtr-01 GigabitEthernet0 (10.10.99.12/24, no inbound ACL, anchor rtr-01:46) or to GigabitEthernet0/0/1 (203.0.113.1/29, no ACL, anchor rtr-01:41), and rtr-01 has two default routes (rtr-01:54 via 198.51.100.1 and rtr-01:55 via 10.10.99.1). Can OT-side or MGMT hosts reach OUTSIDE, or the firewall's outside side, through rtr-01 without passing the fw-01 MGMT_IN or OUTSIDE_IN ACLs? Please confirm the zones of these interfaces and whether rtr-01 forwards traffic between them."
+  },
+  {
+   "run": "5559ee",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "fw-01 has the ASA HTTP server enabled (fw-01:109) and plaintext http management from MGMT on the mgmt interface (fw-01:110). The policy forbids IOS HTTP/HTTPS servers and requires HTTPS/ASDM, but it does not say whether plaintext ASA http management is forbidden. Should this be reported as a policy violation?"
+  },
+  {
+   "run": "5ae78a",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The approved trunk list allows VLAN 10 on sw-core-01 Gi1/0/22 and Gi1/0/24 and on the sw-ot-01 Gi1/0/24 uplink, but the registry also says only OT-facing ports may be active in VLAN 10. Should these trunks be treated as approved exceptions, or as violations of the VLAN 10 rule?"
+  },
+  {
+   "run": "5ae78a",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 GigabitEthernet0 (10.10.99.12/24) sits in MGMT with no ACL, and rtr-01 has two default routes, one via the OUTSIDE next hop 198.51.100.1 and one via the fw-01 mgmt address 10.10.99.1. Is this intentional? If MGMT hosts can reach rtr-01 and be forwarded to OUTSIDE, that bypasses the MGMT_IN policy on fw-01 and the approved-services rule."
+  },
+  {
+   "run": "5ae78a",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "Non-OT-facing trunk ports (sw-core-01 Gi1/0/22 and Gi1/0/24, sw-ot-01 Gi1/0/24 uplink) allow VLAN 10, while the registry says only OT-facing ports may be active in VLAN 10."
+  },
+  {
+   "run": "5ae78a",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has a management-side interface (GigabitEthernet0, 10.10.99.12/24) with no ACL and a default route via the OUTSIDE next hop 198.51.100.1, and the only bound ACL (EDGE_IN) filters inbound traffic on Gi0/0/0 only, so MGMT traffic reaching rtr-01 could be forwarded to OUTSIDE outside the approved services."
+  },
+  {
+   "run": "6cd8da",
+   "topic": "router default routes / management port",
+   "text": "Is rtr-01 meant to have a leg in MGMT (GigabitEthernet0 10.10.99.12/24) and a default route via 10.10.99.1 alongside its ISP default route? If so, which hosts use rtr-01 as a path, and which ACL controls MGMT-to-OUTSIDE traffic on that path?"
+  },
+  {
+   "run": "6cd8da",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The registry says only OT-facing ports may be active in VLAN 10, yet the approved trunks sw-core-01 Gi1/0/22 {10,99} and Gi1/0/24 {10,20,30,99} carry VLAN 10. Are these two uplink trunks an approved exception to the OT-facing rule?"
+  },
+  {
+   "run": "6cd8da",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "Trunks sw-core-01 Gi1/0/22 and Gi1/0/24 carry VLAN 10, while the registry says only OT-facing ports may be active in VLAN 10 and these trunks are not OT-facing ports."
+  },
+  {
+   "run": "6cd8da",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has a leg in MGMT (GigabitEthernet0 10.10.99.12/24) and two default routes, one via the ISP and one via fw-01's MGMT address 10.10.99.1; its interface record shows no acl_in, so the records do not rule out forwarding between MGMT and OUTSIDE outside fw-01 policy."
+  },
+  {
+   "run": "898f4e",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 GigabitEthernet0 (10.10.99.12/24, rtr-01:46) is a MGMT-subnet interface with no ACL binding, and rtr-01 has two default routes (rtr-01:54 via 198.51.100.1 and rtr-01:55 via 10.10.99.1). Can MGMT hosts reach OUTSIDE through rtr-01 without passing fw-01, and is rtr-01 meant to carry transit traffic between these interfaces?"
+  },
+  {
+   "run": "898f4e",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "rtr-01 EDGE_IN permits tcp/443 and udp/443 from any to 203.0.113.2, the fw-01 outside address (rtr-01:68, rtr-01:69). fw-01 has asa_http_server enabled (fw-01:109), while the only recorded HTTP management access is restricted to the mgmt interface from 10.10.99.0/24 (fw-01:110). Is the Internet-facing 443 permit intended, and does fw-01 serve HTTPS on the outside interface?"
+  },
+  {
+   "run": "9c9c6b",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "fw-01 is an ASA, not an IOS device, and has the ASA HTTP server enabled (fw-01:109) with a management access record for service http from 10.10.99.0/24 on the mgmt interface (fw-01:110). The management policy allows HTTPS/ASDM from MGMT on the mgmt interface but only says that IOS HTTP/HTTPS servers must be disabled. Is this plaintext http service an approved HTTPS/ASDM management path, or must the ASA HTTP server be disabled?"
+  },
+  {
+   "run": "aeb97b",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "I2 limits the approved-service rule to traffic between the OT side (OT, MGMT) and other zones, while the cross-zone services list also governs CORP traffic. Should CORP-to-DMZ permits outside the approved list, such as fw-01:61 (tcp/8443 from CORP to historian 10.10.20.10), be reported under I2 or only under I5?"
+  },
+  {
+   "run": "d3aa54",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The registry says only OT-facing ports may be active in VLAN 10, but the approved trunks carry VLAN 10 on sw-ot-01 Gi1/0/24 (uplink), sw-core-01 Gi1/0/22 and sw-core-01 Gi1/0/24, which are not OT-facing ports. Should VLAN 10 on these approved trunks be treated as an exception to the active-port rule, or should VLAN 10 be removed from these trunks?"
+  },
+  {
+   "run": "e687f3",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has two static default routes with equal definition: 0.0.0.0/0 via 198.51.100.1 (edge) and 0.0.0.0/0 via 10.10.99.1 (fw-01 mgmt interface). Is the second default route through the fw-01 mgmt interface intended? If so, traffic arriving from the Internet at rtr-01 could reach fw-01 on its mgmt interface without passing OUTSIDE_IN; the evidence shows MGMT_IN denies this traffic, but please confirm the routing design."
+  },
+  {
+   "run": "ed5724",
+   "topic": "firewall HTTP server / tcp 443 to the firewall's outside address",
+   "text": "rtr-01 EDGE_IN permits tcp/443 and udp/443 from any source to 203.0.113.2/32, the fw-01 outside address, and fw-01 has the ASA HTTP server enabled (fw-01:109). The management policy limits HTTPS/ASDM to MGMT. Is Internet-side HTTPS to the firewall outside address intended?"
+  },
+  {
+   "run": "f0aef2",
+   "topic": "router default routes / management port",
+   "text": "rtr-01 has a second default route 0.0.0.0/0 via 10.10.99.1 (fw-01 mgmt interface, anchor rtr-01:55) alongside the outside default via 198.51.100.1 (rtr-01:54). Is this intended? It routes outside-sourced traffic toward the fw-01 MGMT-side interface, so please confirm it is not an alternate path into MGMT or OT."
+  },
+  {
+   "run": "f4f1af",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The registry says only OT-facing ports may be active in VLAN 10, but it also approves trunks carrying VLAN 10 on sw-ot-01 Gi1/0/24 {10,99}, sw-core-01 Gi1/0/22 {10,99} and sw-core-01 Gi1/0/24 {10,20,30,99}. Should approved trunk carriage of VLAN 10 be treated as compliant with I3, or do these uplink trunks count as active VLAN 10 ports that violate the rule?"
+  },
+  {
+   "run": "f890c7",
+   "topic": "trunks carrying VLAN 10 vs. 'only OT-facing ports active in VLAN 10'",
+   "text": "The approved trunk list allows VLAN 10 on sw-core-01 Gi1/0/22 and Gi1/0/24, and the I3 rule says only OT-facing ports may be active in VLAN 10. The registry does not label any sw-core-01 port as OT-facing. Should these two trunks count as OT-facing for the VLAN 10 rule, or is VLAN 10 on them a violation?"
+  }
+ ]
+}

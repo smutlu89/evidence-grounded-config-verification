@@ -1,0 +1,2960 @@
+{
+ "seed": 20261103,
+ "items": {
+  "6b081d": {
+   "set": "scenario",
+   "idx": 1,
+   "gt": [
+    {
+     "intents": [
+      "I1",
+      "I2"
+     ],
+     "accept": [
+      "fw-01:60"
+     ],
+     "family": "S1",
+     "template": "s1",
+     "desc": "unauthorized IT-to-OT access rule"
+    }
+   ]
+  },
+  "a55c7e": {
+   "set": "scenario",
+   "idx": 2,
+   "gt": [
+    {
+     "intents": [
+      "I3"
+     ],
+     "accept": [
+      "sw-ot-01:79",
+      "sw-ot-01:81"
+     ],
+     "family": "S2",
+     "template": "s2a",
+     "desc": "OT-facing access port assigned to the corporate VLAN"
+    },
+    {
+     "intents": [
+      "I3"
+     ],
+     "accept": [
+      "sw-core-01:175",
+      "sw-core-01:178"
+     ],
+     "family": "S2",
+     "template": "s2b",
+     "desc": "permissive trunk towards the OT switch"
+    }
+   ]
+  },
+  "bddb43": {
+   "set": "scenario",
+   "idx": 3,
+   "gt": [
+    {
+     "intents": [
+      "I2"
+     ],
+     "accept": [
+      "fw-01:80"
+     ],
+     "family": "S3",
+     "template": "s3a",
+     "desc": "permissive ACL entry: OT to any on https"
+    },
+    {
+     "intents": [
+      "I2"
+     ],
+     "accept": [
+      "fw-01:68"
+     ],
+     "family": "S3",
+     "template": "s3b",
+     "desc": "permissive ACL entry: jump host to all of OT"
+    },
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "sw-ot-01:206"
+     ],
+     "family": "S3",
+     "template": "s3c",
+     "desc": "remote logging to a corporate host"
+    },
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "sw-core-01:213"
+     ],
+     "family": "S3",
+     "template": "s3d",
+     "desc": "read-write SNMP community"
+    }
+   ]
+  },
+  "ff5f5a": {
+   "set": "suite",
+   "idx": 1,
+   "gt": [
+    {
+     "intents": [
+      "I1",
+      "I2"
+     ],
+     "accept": [
+      "fw-01:60"
+     ],
+     "family": "i",
+     "template": "i01",
+     "desc": "new CORP host-to-OT permit at top of CORP_IN"
+    }
+   ]
+  },
+  "0a5af1": {
+   "set": "suite",
+   "idx": 2,
+   "gt": [
+    {
+     "intents": [
+      "I1",
+      "I2"
+     ],
+     "accept": [
+      "fw-01:62"
+     ],
+     "family": "i",
+     "template": "i02",
+     "desc": "CORP-to-OT deny changed to permit"
+    }
+   ]
+  },
+  "74c1e6": {
+   "set": "suite",
+   "idx": 3,
+   "gt": [
+    {
+     "intents": [
+      "I1",
+      "I2"
+     ],
+     "accept": [
+      "fw-01:63",
+      "fw-01:64",
+      "fw-01:65"
+     ],
+     "family": "i",
+     "template": "i03",
+     "desc": "CORP-to-OT deny removed; broad CORP permits now reach OT"
+    }
+   ]
+  },
+  "c650dd": {
+   "set": "suite",
+   "idx": 4,
+   "gt": [
+    {
+     "intents": [
+      "I1",
+      "I2"
+     ],
+     "accept": [
+      "fw-01:63",
+      "fw-01:64",
+      "fw-01:65"
+     ],
+     "family": "i",
+     "template": "i04",
+     "desc": "CORP-to-OT deny re-entered at the end of CORP_IN (below the broad permits)"
+    }
+   ]
+  },
+  "035606": {
+   "set": "suite",
+   "idx": 5,
+   "gt": [
+    {
+     "intents": [
+      "I1",
+      "I2"
+     ],
+     "accept": [
+      "fw-01:60"
+     ],
+     "family": "i",
+     "template": "i05",
+     "desc": "historian web permit widened to 10.10.0.0/16 above the OT deny"
+    }
+   ]
+  },
+  "25b3ac": {
+   "set": "suite",
+   "idx": 6,
+   "gt": [
+    {
+     "intents": [
+      "I2"
+     ],
+     "accept": [
+      "fw-01:75"
+     ],
+     "family": "i",
+     "template": "i06",
+     "desc": "SCADA-to-historian permit widened to any destination"
+    }
+   ]
+  },
+  "ea3160": {
+   "set": "suite",
+   "idx": 7,
+   "gt": [
+    {
+     "intents": [
+      "I2"
+     ],
+     "accept": [
+      "fw-01:79"
+     ],
+     "family": "i",
+     "template": "i07",
+     "desc": "OT direct to corporate reporting server, bypassing the historian"
+    }
+   ]
+  },
+  "c0530b": {
+   "set": "suite",
+   "idx": 8,
+   "gt": [
+    {
+     "intents": [
+      "I2"
+     ],
+     "accept": [
+      "fw-01:69"
+     ],
+     "family": "i",
+     "template": "i08",
+     "desc": "jump-host permit widened to all protocols and the whole OT subnet"
+    }
+   ]
+  },
+  "0e8265": {
+   "set": "suite",
+   "idx": 9,
+   "gt": [
+    {
+     "intents": [
+      "I2"
+     ],
+     "accept": [
+      "fw-01:68"
+     ],
+     "family": "i",
+     "template": "i09",
+     "desc": "historian allowed to poll OT devices directly"
+    }
+   ]
+  },
+  "e58368": {
+   "set": "suite",
+   "idx": 10,
+   "gt": [
+    {
+     "intents": [
+      "I1",
+      "I2"
+     ],
+     "accept": [
+      "fw-01:82"
+     ],
+     "family": "i",
+     "template": "i10",
+     "desc": "vendor VPN pool allowed directly into OT"
+    }
+   ]
+  },
+  "520a95": {
+   "set": "suite",
+   "idx": 11,
+   "gt": [
+    {
+     "intents": [
+      "I1",
+      "I2"
+     ],
+     "accept": [
+      "fw-01:59"
+     ],
+     "family": "i",
+     "template": "i11",
+     "desc": "inbound permit from outside to an OT host"
+    }
+   ]
+  },
+  "f14264": {
+   "set": "suite",
+   "idx": 12,
+   "gt": [
+    {
+     "intents": [
+      "I1",
+      "I2"
+     ],
+     "accept": [
+      "rtr-01:73"
+     ],
+     "family": "i",
+     "template": "i12",
+     "desc": "edge router ACL permits Internet traffic to the OT subnet"
+    }
+   ]
+  },
+  "7a87e9": {
+   "set": "suite",
+   "idx": 13,
+   "gt": [
+    {
+     "intents": [
+      "I1",
+      "I2"
+     ],
+     "accept": [
+      "fw-01:60"
+     ],
+     "family": "i",
+     "template": "i13",
+     "desc": "corporate network allowed into the management VLAN"
+    }
+   ]
+  },
+  "3b0f1d": {
+   "set": "suite",
+   "idx": 14,
+   "gt": [
+    {
+     "intents": [
+      "I2"
+     ],
+     "accept": [
+      "fw-01:81"
+     ],
+     "family": "i",
+     "template": "i14",
+     "desc": "management VLAN allowed to reach the corporate network"
+    }
+   ]
+  },
+  "924f1f": {
+   "set": "suite",
+   "idx": 15,
+   "gt": [
+    {
+     "intents": [
+      "I2"
+     ],
+     "accept": [
+      "fw-01:77"
+     ],
+     "family": "i",
+     "template": "i15",
+     "desc": "NTP permit widened from udp/123 to all protocols"
+    }
+   ]
+  },
+  "95128e": {
+   "set": "suite",
+   "idx": 16,
+   "gt": [
+    {
+     "intents": [
+      "I3"
+     ],
+     "accept": [
+      "sw-ot-01:115",
+      "sw-ot-01:117"
+     ],
+     "family": "ii",
+     "template": "ii01",
+     "desc": "OT-facing port Gi1/0/13 moved to the corporate VLAN"
+    }
+   ]
+  },
+  "6cecd8": {
+   "set": "suite",
+   "idx": 17,
+   "gt": [
+    {
+     "intents": [
+      "I3"
+     ],
+     "accept": [
+      "sw-ot-01:55",
+      "sw-ot-01:57"
+     ],
+     "family": "ii",
+     "template": "ii01",
+     "desc": "OT-facing port Gi1/0/3 moved to the corporate VLAN"
+    }
+   ]
+  },
+  "38e2c8": {
+   "set": "suite",
+   "idx": 18,
+   "gt": [
+    {
+     "intents": [
+      "I3"
+     ],
+     "accept": [
+      "sw-ot-01:73",
+      "sw-ot-01:75"
+     ],
+     "family": "ii",
+     "template": "ii01",
+     "desc": "OT-facing port Gi1/0/6 moved to the corporate VLAN"
+    }
+   ]
+  },
+  "a39e06": {
+   "set": "suite",
+   "idx": 19,
+   "gt": [
+    {
+     "intents": [
+      "I3"
+     ],
+     "accept": [
+      "sw-ot-01:73",
+      "sw-ot-01:75"
+     ],
+     "family": "ii",
+     "template": "ii02",
+     "desc": "OT-facing port Gi1/0/6 moved to the DMZ VLAN"
+    }
+   ]
+  },
+  "fef40e": {
+   "set": "suite",
+   "idx": 20,
+   "gt": [
+    {
+     "intents": [
+      "I3"
+     ],
+     "accept": [
+      "sw-it-01:103",
+      "sw-it-01:105"
+     ],
+     "family": "ii",
+     "template": "ii03",
+     "desc": "corporate port Gi1/0/11 moved into the OT VLAN"
+    }
+   ]
+  },
+  "fc9f6c": {
+   "set": "suite",
+   "idx": 21,
+   "gt": [
+    {
+     "intents": [
+      "I3"
+     ],
+     "accept": [
+      "sw-it-01:127",
+      "sw-it-01:129"
+     ],
+     "family": "ii",
+     "template": "ii03",
+     "desc": "corporate port Gi1/0/15 moved into the OT VLAN"
+    }
+   ]
+  },
+  "c56e41": {
+   "set": "suite",
+   "idx": 22,
+   "gt": [
+    {
+     "intents": [
+      "I3"
+     ],
+     "accept": [
+      "sw-ot-01:181",
+      "sw-ot-01:184"
+     ],
+     "family": "ii",
+     "template": "ii04",
+     "desc": "OT switch uplink trunk now carries the corporate VLAN"
+    }
+   ]
+  },
+  "e75c71": {
+   "set": "suite",
+   "idx": 23,
+   "gt": [
+    {
+     "intents": [
+      "I3"
+     ],
+     "accept": [
+      "sw-core-01:175",
+      "sw-core-01:178"
+     ],
+     "family": "ii",
+     "template": "ii05",
+     "desc": "core trunk to the OT switch now carries the corporate VLAN"
+    }
+   ]
+  },
+  "a045d1": {
+   "set": "suite",
+   "idx": 24,
+   "gt": [
+    {
+     "intents": [
+      "I3"
+     ],
+     "accept": [
+      "sw-it-01:181",
+      "sw-it-01:184"
+     ],
+     "family": "ii",
+     "template": "ii06",
+     "desc": "IT switch uplink trunk now carries the OT VLAN"
+    }
+   ]
+  },
+  "5ce6a4": {
+   "set": "suite",
+   "idx": 25,
+   "gt": [
+    {
+     "intents": [
+      "I3"
+     ],
+     "accept": [
+      "sw-ot-01:185",
+      "sw-ot-01:67",
+      "sw-ot-01:70"
+     ],
+     "family": "ii",
+     "template": "ii07",
+     "desc": "OT-facing port Gi1/0/5 set to trunk mode"
+    }
+   ]
+  },
+  "d51618": {
+   "set": "suite",
+   "idx": 26,
+   "gt": [
+    {
+     "intents": [
+      "I3"
+     ],
+     "accept": [
+      "sw-core-01:163",
+      "sw-core-01:165"
+     ],
+     "family": "ii",
+     "template": "ii08",
+     "desc": "unused core port Gi1/0/20 activated in the OT VLAN"
+    }
+   ]
+  },
+  "6c10a1": {
+   "set": "suite",
+   "idx": 27,
+   "gt": [
+    {
+     "intents": [
+      "I3"
+     ],
+     "accept": [
+      "sw-core-01:200",
+      "sw-core-01:201"
+     ],
+     "family": "ii",
+     "template": "ii09",
+     "desc": "routed SVI for the OT VLAN added on the core switch"
+    }
+   ]
+  },
+  "4e82e0": {
+   "set": "suite",
+   "idx": 28,
+   "gt": [
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "sw-it-01:211",
+      "sw-it-01:213"
+     ],
+     "family": "iii",
+     "template": "iii01",
+     "desc": "telnet enabled on vty 0 4 of sw-it-01"
+    }
+   ]
+  },
+  "70d18f": {
+   "set": "suite",
+   "idx": 29,
+   "gt": [
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "sw-core-01:217",
+      "sw-core-01:219"
+     ],
+     "family": "iii",
+     "template": "iii01",
+     "desc": "telnet enabled on vty 0 4 of sw-core-01"
+    }
+   ]
+  },
+  "129166": {
+   "set": "suite",
+   "idx": 30,
+   "gt": [
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "sw-ot-01:211"
+     ],
+     "family": "iii",
+     "template": "iii02",
+     "desc": "access-class removed from vty 0 4 of sw-ot-01"
+    }
+   ]
+  },
+  "a18feb": {
+   "set": "suite",
+   "idx": 31,
+   "gt": [
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "sw-ot-01:203",
+      "sw-ot-01:212",
+      "sw-ot-01:215"
+     ],
+     "family": "iii",
+     "template": "iii03",
+     "desc": "VTY_MGMT on sw-ot-01 widened to the corporate subnet"
+    }
+   ]
+  },
+  "fc05bb": {
+   "set": "suite",
+   "idx": 32,
+   "gt": [
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "sw-core-01:213"
+     ],
+     "family": "iii",
+     "template": "iii04",
+     "desc": "read-write SNMP community without ACL added on sw-core-01"
+    }
+   ]
+  },
+  "061bfb": {
+   "set": "suite",
+   "idx": 33,
+   "gt": [
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "sw-ot-01:207"
+     ],
+     "family": "iii",
+     "template": "iii04",
+     "desc": "read-write SNMP community without ACL added on sw-ot-01"
+    }
+   ]
+  },
+  "b3f4eb": {
+   "set": "suite",
+   "idx": 34,
+   "gt": [
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "rtr-01:76"
+     ],
+     "family": "iii",
+     "template": "iii05",
+     "desc": "SNMP community ACL removed on rtr-01"
+    }
+   ]
+  },
+  "fcddf4": {
+   "set": "suite",
+   "idx": 35,
+   "gt": [
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "rtr-01:52"
+     ],
+     "family": "iii",
+     "template": "iii06",
+     "desc": "IOS HTTP server enabled on rtr-01"
+    }
+   ]
+  },
+  "c30c00": {
+   "set": "suite",
+   "idx": 36,
+   "gt": [
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "fw-01:119"
+     ],
+     "family": "iii",
+     "template": "iii07",
+     "desc": "firewall SSH management allowed from the corporate interface"
+    }
+   ]
+  },
+  "dff3f3": {
+   "set": "suite",
+   "idx": 37,
+   "gt": [
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "fw-01:111"
+     ],
+     "family": "iii",
+     "template": "iii08",
+     "desc": "firewall ASDM/HTTPS management allowed from outside"
+    }
+   ]
+  },
+  "634652": {
+   "set": "suite",
+   "idx": 38,
+   "gt": [
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "fw-01:116"
+     ],
+     "family": "iii",
+     "template": "iii09",
+     "desc": "telnet management enabled on the firewall OT interface"
+    }
+   ]
+  },
+  "7e7c0c": {
+   "set": "suite",
+   "idx": 39,
+   "gt": [
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "sw-ot-01:206"
+     ],
+     "family": "iii",
+     "template": "iii10",
+     "desc": "syslog exported to a corporate host from sw-ot-01"
+    }
+   ]
+  },
+  "0659ae": {
+   "set": "suite",
+   "idx": 40,
+   "gt": [
+    {
+     "intents": [
+      "I5"
+     ],
+     "accept": [
+      "sw-it-01:219"
+     ],
+     "family": "iv",
+     "template": "iv01",
+     "desc": "second NTP server added on sw-it-01"
+    }
+   ]
+  },
+  "eb723c": {
+   "set": "suite",
+   "idx": 41,
+   "gt": [
+    {
+     "intents": [
+      "I5"
+     ],
+     "accept": [
+      "rtr-01:55"
+     ],
+     "family": "iv",
+     "template": "iv02",
+     "desc": "static route added on the edge router"
+    }
+   ]
+  },
+  "71f5ae": {
+   "set": "suite",
+   "idx": 42,
+   "gt": [
+    {
+     "intents": [
+      "I5"
+     ],
+     "accept": [
+      "sw-it-01:207"
+     ],
+     "family": "iv",
+     "template": "iv03",
+     "desc": "SNMP location string changed on sw-it-01"
+    }
+   ]
+  },
+  "9eb271": {
+   "set": "suite",
+   "idx": 43,
+   "gt": [
+    {
+     "intents": [
+      "I5"
+     ],
+     "accept": [
+      "sw-it-01:139",
+      "sw-it-01:140"
+     ],
+     "family": "iv",
+     "template": "iv04",
+     "desc": "port description changed on sw-it-01 Gi1/0/17"
+    }
+   ]
+  },
+  "dff860": {
+   "set": "suite",
+   "idx": 44,
+   "gt": [
+    {
+     "intents": [
+      "I5"
+     ],
+     "accept": [
+      "sw-core-01:46"
+     ],
+     "family": "iv",
+     "template": "iv05",
+     "desc": "unused VLAN 40 defined on the core switch"
+    }
+   ]
+  },
+  "14755c": {
+   "set": "suite",
+   "idx": 45,
+   "gt": [
+    {
+     "intents": [
+      "I5"
+     ],
+     "accept": [
+      "sw-it-01:105",
+      "sw-it-01:111",
+      "sw-it-01:117",
+      "sw-it-01:123",
+      "sw-it-01:129",
+      "sw-it-01:135",
+      "sw-it-01:141",
+      "sw-it-01:147",
+      "sw-it-01:153",
+      "sw-it-01:159",
+      "sw-it-01:175",
+      "sw-it-01:177",
+      "sw-it-01:45",
+      "sw-it-01:51",
+      "sw-it-01:57",
+      "sw-it-01:63",
+      "sw-it-01:69",
+      "sw-it-01:75",
+      "sw-it-01:81",
+      "sw-it-01:87",
+      "sw-it-01:93",
+      "sw-it-01:99"
+     ],
+     "family": "iv",
+     "template": "iv06",
+     "desc": "unused IT port Gi1/0/23 activated in the corporate VLAN"
+    }
+   ]
+  },
+  "359c8c": {
+   "set": "suite",
+   "idx": 46,
+   "gt": [
+    {
+     "intents": [
+      "I5"
+     ],
+     "accept": [
+      "fw-01:87"
+     ],
+     "family": "iv",
+     "template": "iv07",
+     "desc": "firewall logging level changed"
+    }
+   ]
+  },
+  "372060": {
+   "set": "suite",
+   "idx": 47,
+   "gt": [
+    {
+     "intents": [
+      "I5"
+     ],
+     "accept": [
+      "sw-ot-01:121"
+     ],
+     "family": "iv",
+     "template": "iv08",
+     "desc": "portfast removed from sw-ot-01 Gi1/0/14"
+    }
+   ]
+  },
+  "afb1c2": {
+   "set": "suite",
+   "idx": 48,
+   "gt": [
+    {
+     "intents": [
+      "I5"
+     ],
+     "accept": [
+      "fw-01:61"
+     ],
+     "family": "iv",
+     "template": "iv09",
+     "desc": "undocumented CORP permit to the historian on tcp/8443"
+    }
+   ]
+  },
+  "de39e6": {
+   "set": "suite",
+   "idx": 49,
+   "gt": [
+    {
+     "intents": [
+      "I5"
+     ],
+     "accept": [
+      "fw-01:base:65"
+     ],
+     "family": "iv",
+     "template": "iv10",
+     "desc": "CORP web-browsing permit removed"
+    }
+   ]
+  },
+  "47c319": {
+   "set": "suite",
+   "idx": 50,
+   "gt": [
+    {
+     "intents": [
+      "I5"
+     ],
+     "accept": [
+      "sw-core-01:18"
+     ],
+     "family": "iv",
+     "template": "iv11",
+     "desc": "local user added on sw-core-01"
+    }
+   ]
+  },
+  "0281c7": {
+   "set": "compliant_c1",
+   "idx": 1,
+   "gt": []
+  },
+  "840464": {
+   "set": "compliant_c1",
+   "idx": 2,
+   "gt": []
+  },
+  "be1f94": {
+   "set": "compliant_c1",
+   "idx": 3,
+   "gt": []
+  },
+  "207e9b": {
+   "set": "compliant_c1",
+   "idx": 4,
+   "gt": []
+  },
+  "55092b": {
+   "set": "compliant_c1",
+   "idx": 5,
+   "gt": []
+  },
+  "28ab15": {
+   "set": "compliant_c1",
+   "idx": 6,
+   "gt": []
+  },
+  "bc270a": {
+   "set": "compliant_c2",
+   "idx": 1,
+   "gt": []
+  },
+  "9f67aa": {
+   "set": "compliant_c2",
+   "idx": 2,
+   "gt": []
+  },
+  "d3c73e": {
+   "set": "compliant_c2",
+   "idx": 3,
+   "gt": []
+  },
+  "7b2dc9": {
+   "set": "compliant_c2",
+   "idx": 4,
+   "gt": []
+  },
+  "e448be": {
+   "set": "compliant_c2",
+   "idx": 5,
+   "gt": []
+  },
+  "720dd4": {
+   "set": "compliant_c2",
+   "idx": 6,
+   "gt": []
+  },
+  "54ba0e": {
+   "set": "compliant_c3",
+   "idx": 1,
+   "gt": []
+  },
+  "343549": {
+   "set": "compliant_c3",
+   "idx": 2,
+   "gt": []
+  },
+  "95c29b": {
+   "set": "compliant_c3",
+   "idx": 3,
+   "gt": []
+  },
+  "71151f": {
+   "set": "compliant_c3",
+   "idx": 4,
+   "gt": []
+  },
+  "c2eef1": {
+   "set": "compliant_c3",
+   "idx": 5,
+   "gt": []
+  },
+  "2e9c08": {
+   "set": "compliant_c3",
+   "idx": 6,
+   "gt": []
+  },
+  "3fcdfd": {
+   "set": "compliant_c4",
+   "idx": 1,
+   "gt": []
+  },
+  "c5ac2b": {
+   "set": "compliant_c4",
+   "idx": 2,
+   "gt": []
+  },
+  "302188": {
+   "set": "compliant_c4",
+   "idx": 3,
+   "gt": []
+  },
+  "81e0f3": {
+   "set": "compliant_c4",
+   "idx": 4,
+   "gt": []
+  },
+  "36e89e": {
+   "set": "compliant_c4",
+   "idx": 5,
+   "gt": []
+  },
+  "d0e05c": {
+   "set": "compliant_c4",
+   "idx": 6,
+   "gt": []
+  },
+  "672178": {
+   "set": "compliant_c5",
+   "idx": 1,
+   "gt": []
+  },
+  "9f97b4": {
+   "set": "compliant_c5",
+   "idx": 2,
+   "gt": []
+  },
+  "78f388": {
+   "set": "compliant_c5",
+   "idx": 3,
+   "gt": []
+  },
+  "9b0292": {
+   "set": "compliant_c5",
+   "idx": 4,
+   "gt": []
+  },
+  "6853cd": {
+   "set": "compliant_c5",
+   "idx": 5,
+   "gt": []
+  },
+  "a14652": {
+   "set": "compliant_c5",
+   "idx": 6,
+   "gt": []
+  },
+  "ef513b": {
+   "set": "latent",
+   "idx": 1,
+   "gt": [
+    {
+     "intents": [
+      "I1",
+      "I2"
+     ],
+     "accept": [
+      "fw-01:60"
+     ],
+     "family": "i",
+     "template": "i01",
+     "desc": "new CORP host-to-OT permit at top of CORP_IN"
+    }
+   ]
+  },
+  "1039e4": {
+   "set": "latent",
+   "idx": 2,
+   "gt": [
+    {
+     "intents": [
+      "I1",
+      "I2"
+     ],
+     "accept": [
+      "fw-01:82"
+     ],
+     "family": "i",
+     "template": "i10",
+     "desc": "vendor VPN pool allowed directly into OT"
+    }
+   ]
+  },
+  "2c7b9b": {
+   "set": "latent",
+   "idx": 3,
+   "gt": [
+    {
+     "intents": [
+      "I1",
+      "I2"
+     ],
+     "accept": [
+      "fw-01:60"
+     ],
+     "family": "i",
+     "template": "i13",
+     "desc": "corporate network allowed into the management VLAN"
+    }
+   ]
+  },
+  "5545c1": {
+   "set": "latent",
+   "idx": 4,
+   "gt": [
+    {
+     "intents": [
+      "I3"
+     ],
+     "accept": [
+      "sw-ot-01:61",
+      "sw-ot-01:63"
+     ],
+     "family": "ii",
+     "template": "ii01",
+     "desc": "OT-facing port Gi1/0/4 moved to the corporate VLAN"
+    }
+   ]
+  },
+  "00bd54": {
+   "set": "latent",
+   "idx": 5,
+   "gt": [
+    {
+     "intents": [
+      "I3"
+     ],
+     "accept": [
+      "sw-core-01:175",
+      "sw-core-01:178"
+     ],
+     "family": "ii",
+     "template": "ii05",
+     "desc": "core trunk to the OT switch now carries the corporate VLAN"
+    }
+   ]
+  },
+  "9affe9": {
+   "set": "latent",
+   "idx": 6,
+   "gt": [
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "sw-core-01:217",
+      "sw-core-01:219"
+     ],
+     "family": "iii",
+     "template": "iii01",
+     "desc": "telnet enabled on vty 0 4 of sw-core-01"
+    }
+   ]
+  },
+  "09c258": {
+   "set": "latent",
+   "idx": 7,
+   "gt": [
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "rtr-01:77"
+     ],
+     "family": "iii",
+     "template": "iii04",
+     "desc": "read-write SNMP community without ACL added on rtr-01"
+    }
+   ]
+  },
+  "f901e7": {
+   "set": "latent",
+   "idx": 8,
+   "gt": [
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "fw-01:119"
+     ],
+     "family": "iii",
+     "template": "iii07",
+     "desc": "firewall SSH management allowed from the corporate interface"
+    }
+   ]
+  },
+  "5873ce": {
+   "set": "latent",
+   "idx": 9,
+   "gt": [
+    {
+     "intents": [
+      "I4"
+     ],
+     "accept": [
+      "sw-it-01:206"
+     ],
+     "family": "iii",
+     "template": "iii10",
+     "desc": "syslog exported to a corporate host from sw-it-01"
+    }
+   ]
+  },
+  "3d0fea": {
+   "set": "latent",
+   "idx": 10,
+   "gt": [
+    {
+     "intents": [
+      "I3"
+     ],
+     "accept": [
+      "sw-core-01:200",
+      "sw-core-01:201"
+     ],
+     "family": "ii",
+     "template": "ii09",
+     "desc": "routed SVI for the OT VLAN added on the core switch"
+    }
+   ]
+  }
+ },
+ "runs": {
+  "ec6566": {
+   "item": "fcddf4",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "251523": {
+   "item": "bc270a",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "3224e8": {
+   "item": "c56e41",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "c55baf": {
+   "item": "ff5f5a",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "67b3b4": {
+   "item": "359c8c",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "3a16be": {
+   "item": "9eb271",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "283815": {
+   "item": "a14652",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "25ba27": {
+   "item": "035606",
+   "mode": "question",
+   "question": "Is the plant firewall letting anything unusual through?",
+   "run": 1
+  },
+  "048ce4": {
+   "item": "0659ae",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "9515d9": {
+   "item": "302188",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "0d547e": {
+   "item": "0659ae",
+   "mode": "question",
+   "question": "What changed since the approved baseline?",
+   "run": 1
+  },
+  "a50a21": {
+   "item": "520a95",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "1c19c6": {
+   "item": "fc9f6c",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "a1c74c": {
+   "item": "720dd4",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "f4ae77": {
+   "item": "d51618",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "4db246": {
+   "item": "035606",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "62f18a": {
+   "item": "81e0f3",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "77ac5d": {
+   "item": "a55c7e",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "1c5e16": {
+   "item": "7e7c0c",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "d8cf8f": {
+   "item": "fc05bb",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "bad332": {
+   "item": "0281c7",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "79cd2c": {
+   "item": "95128e",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "6b7ec0": {
+   "item": "7b2dc9",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "d31fac": {
+   "item": "e75c71",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "d4fb9f": {
+   "item": "720dd4",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "cf1810": {
+   "item": "ea3160",
+   "mode": "question",
+   "question": "Can anyone on the office network get into the control system?",
+   "run": 1
+  },
+  "d44e18": {
+   "item": "14755c",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "42ec25": {
+   "item": "14755c",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "cd2818": {
+   "item": "de39e6",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "6135e1": {
+   "item": "7e7c0c",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "efb659": {
+   "item": "e58368",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "e687f3": {
+   "item": "95128e",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "2c474a": {
+   "item": "207e9b",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "a173ec": {
+   "item": "e75c71",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "41fc23": {
+   "item": "9eb271",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "caf8f0": {
+   "item": "3fcdfd",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "13395b": {
+   "item": "a045d1",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "8c4fd9": {
+   "item": "e448be",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "baa729": {
+   "item": "fc05bb",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "f25d84": {
+   "item": "b3f4eb",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "df189e": {
+   "item": "343549",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "33219a": {
+   "item": "afb1c2",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "0becec": {
+   "item": "d3c73e",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "cab5df": {
+   "item": "fef40e",
+   "mode": "question",
+   "question": "Are the switch ports in the control room set up correctly?",
+   "run": 1
+  },
+  "ed7dc2": {
+   "item": "634652",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "72b920": {
+   "item": "061bfb",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "deae9f": {
+   "item": "38e2c8",
+   "mode": "question",
+   "question": "Could anything bridge the office and plant networks at layer 2?",
+   "run": 1
+  },
+  "2e77d1": {
+   "item": "129166",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "7a8b3d": {
+   "item": "5ce6a4",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "3cf7e1": {
+   "item": "c2eef1",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "641921": {
+   "item": "9f97b4",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "00e18e": {
+   "item": "28ab15",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "6cd8da": {
+   "item": "eb723c",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "c152ca": {
+   "item": "fc9f6c",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "f91164": {
+   "item": "d51618",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "0c80aa": {
+   "item": "fcddf4",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "30be0a": {
+   "item": "c2eef1",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "87ec63": {
+   "item": "28ab15",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "cb70f0": {
+   "item": "a18feb",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "846abc": {
+   "item": "0281c7",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "1139b4": {
+   "item": "5545c1",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "81c6d3": {
+   "item": "ea3160",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "e4cfb5": {
+   "item": "c30c00",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "53d851": {
+   "item": "eb723c",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "b923ee": {
+   "item": "359c8c",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "3d3fb4": {
+   "item": "ea3160",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "37b80b": {
+   "item": "520a95",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "88700b": {
+   "item": "2e9c08",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "44d350": {
+   "item": "035606",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "ae5268": {
+   "item": "9f67aa",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "c40c75": {
+   "item": "129166",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "9921c4": {
+   "item": "c0530b",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "1f1279": {
+   "item": "dff860",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "258279": {
+   "item": "78f388",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "dd5c07": {
+   "item": "343549",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "79b931": {
+   "item": "9f97b4",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "052e52": {
+   "item": "7b2dc9",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "0b33c3": {
+   "item": "c56e41",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "7c1ae7": {
+   "item": "a14652",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "d47ff1": {
+   "item": "e75c71",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "5ae78a": {
+   "item": "47c319",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "9ac187": {
+   "item": "4e82e0",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "ca3baa": {
+   "item": "3d0fea",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "b9aa9b": {
+   "item": "720dd4",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "2b5621": {
+   "item": "dff3f3",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "e09139": {
+   "item": "70d18f",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "57310c": {
+   "item": "fc9f6c",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "4a8be9": {
+   "item": "71151f",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "89a3b4": {
+   "item": "e448be",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "9849b1": {
+   "item": "c650dd",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "b78d17": {
+   "item": "a045d1",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "44663f": {
+   "item": "672178",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "87164a": {
+   "item": "e58368",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "aeb97b": {
+   "item": "afb1c2",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "685311": {
+   "item": "7a87e9",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "9c9c6b": {
+   "item": "0659ae",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "2469da": {
+   "item": "b3f4eb",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "3d6036": {
+   "item": "c30c00",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "612e0d": {
+   "item": "71f5ae",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "11b512": {
+   "item": "c0530b",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "f8a2e6": {
+   "item": "95128e",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "abbc70": {
+   "item": "2e9c08",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "07094d": {
+   "item": "ff5f5a",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "e63589": {
+   "item": "de39e6",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "b84ace": {
+   "item": "dff860",
+   "mode": "question",
+   "question": "Has anyone touched the configs recently?",
+   "run": 1
+  },
+  "63b1ca": {
+   "item": "d3c73e",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "34133f": {
+   "item": "9eb271",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "256db0": {
+   "item": "25b3ac",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "2d06c1": {
+   "item": "2e9c08",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "0228c9": {
+   "item": "129166",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "c95e4d": {
+   "item": "0e8265",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "319b85": {
+   "item": "47c319",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "f4f1af": {
+   "item": "061bfb",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "673d1e": {
+   "item": "c0530b",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "6d78f5": {
+   "item": "4e82e0",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "8d2741": {
+   "item": "95128e",
+   "mode": "question",
+   "question": "Anything wrong with the VLANs?",
+   "run": 1
+  },
+  "f50c23": {
+   "item": "6853cd",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "d5590c": {
+   "item": "0e8265",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "6e1b72": {
+   "item": "74c1e6",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "51223e": {
+   "item": "6cecd8",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "3ae3f5": {
+   "item": "d3c73e",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "471945": {
+   "item": "54ba0e",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "1beeec": {
+   "item": "afb1c2",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "d854f6": {
+   "item": "bc270a",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "4c6039": {
+   "item": "c650dd",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "80d7ac": {
+   "item": "95c29b",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "6207bb": {
+   "item": "95c29b",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "5a90ec": {
+   "item": "672178",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "2d0c30": {
+   "item": "fef40e",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "1deef2": {
+   "item": "36e89e",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "fd8dd1": {
+   "item": "0281c7",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "3558d8": {
+   "item": "38e2c8",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "a68d91": {
+   "item": "dff860",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "f80464": {
+   "item": "b3f4eb",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "1d2fc1": {
+   "item": "ef513b",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "d36ed8": {
+   "item": "ea3160",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "c15af5": {
+   "item": "302188",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "d3aa54": {
+   "item": "25b3ac",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "8ea83a": {
+   "item": "55092b",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "f7ba57": {
+   "item": "9f97b4",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "5601a5": {
+   "item": "5873ce",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "41682d": {
+   "item": "302188",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "7e6f0e": {
+   "item": "38e2c8",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "ec3b48": {
+   "item": "924f1f",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "0c5ce8": {
+   "item": "fef40e",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "11e368": {
+   "item": "bddb43",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "ed4750": {
+   "item": "634652",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "ab9845": {
+   "item": "840464",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "f7d951": {
+   "item": "c5ac2b",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "078d79": {
+   "item": "70d18f",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "36a208": {
+   "item": "840464",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "11be0b": {
+   "item": "bc270a",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "821cc8": {
+   "item": "a045d1",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "972b7c": {
+   "item": "7e7c0c",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "539f44": {
+   "item": "ff5f5a",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "2b378f": {
+   "item": "be1f94",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "412244": {
+   "item": "7b2dc9",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "7751f6": {
+   "item": "55092b",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "298e81": {
+   "item": "81e0f3",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "ba80dc": {
+   "item": "6cecd8",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "e21344": {
+   "item": "81e0f3",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "4e819d": {
+   "item": "6b081d",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "42c192": {
+   "item": "a18feb",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "0dedee": {
+   "item": "6c10a1",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "915cea": {
+   "item": "47c319",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "d690d4": {
+   "item": "0a5af1",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "05a01a": {
+   "item": "9f67aa",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "c9190c": {
+   "item": "dff3f3",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "286ca5": {
+   "item": "9f67aa",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "a192e2": {
+   "item": "343549",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "acb381": {
+   "item": "f14264",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "bb3242": {
+   "item": "55092b",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "a07044": {
+   "item": "0a5af1",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "b73864": {
+   "item": "c5ac2b",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "5e7eab": {
+   "item": "d0e05c",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "449dd3": {
+   "item": "2c7b9b",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "f05089": {
+   "item": "372060",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "2a720d": {
+   "item": "70d18f",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "da5b73": {
+   "item": "54ba0e",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "9224a5": {
+   "item": "a55c7e",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "3fdcdb": {
+   "item": "3fcdfd",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "a47e0c": {
+   "item": "7a87e9",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "b1313a": {
+   "item": "eb723c",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "fd8f3b": {
+   "item": "bddb43",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "d95225": {
+   "item": "f14264",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "cdaaa1": {
+   "item": "520a95",
+   "mode": "question",
+   "question": "Make sure vendors cannot get in any more.",
+   "run": 1
+  },
+  "1e5bd1": {
+   "item": "9b0292",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "66a1b1": {
+   "item": "a18feb",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "cc33b0": {
+   "item": "fc05bb",
+   "mode": "question",
+   "question": "Check that remote administration is locked down.",
+   "run": 1
+  },
+  "d5294e": {
+   "item": "840464",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "b76433": {
+   "item": "78f388",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "6ef294": {
+   "item": "a39e06",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "81e2ba": {
+   "item": "7a87e9",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "66954f": {
+   "item": "bddb43",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "49ed8f": {
+   "item": "a14652",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "567108": {
+   "item": "e58368",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "57ec66": {
+   "item": "4e82e0",
+   "mode": "question",
+   "question": "Is SNMP or telnet open anywhere it shouldn't be?",
+   "run": 1
+  },
+  "a3123f": {
+   "item": "0659ae",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "41a0a6": {
+   "item": "74c1e6",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "e3dae7": {
+   "item": "207e9b",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "4bf9dc": {
+   "item": "a39e06",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "ee2531": {
+   "item": "1039e4",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "fcdf85": {
+   "item": "f901e7",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "8e3b0d": {
+   "item": "36e89e",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "d332f0": {
+   "item": "c2eef1",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "c75374": {
+   "item": "924f1f",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "64b87d": {
+   "item": "74c1e6",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "95a084": {
+   "item": "6853cd",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "1dcfea": {
+   "item": "14755c",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "2fca13": {
+   "item": "672178",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "264654": {
+   "item": "09c258",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "9d01d8": {
+   "item": "38e2c8",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "3a4e3f": {
+   "item": "d0e05c",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "3035f1": {
+   "item": "be1f94",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "380ac1": {
+   "item": "71f5ae",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "ce4862": {
+   "item": "035606",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "c9993b": {
+   "item": "207e9b",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "a52f44": {
+   "item": "061bfb",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "481921": {
+   "item": "fcddf4",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "238157": {
+   "item": "54ba0e",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "61e60e": {
+   "item": "9affe9",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "68bb9e": {
+   "item": "f14264",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "5559ee": {
+   "item": "634652",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "eef07f": {
+   "item": "c650dd",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "4b5487": {
+   "item": "924f1f",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "8ebf3b": {
+   "item": "be1f94",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "b967ee": {
+   "item": "de39e6",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "84ad5e": {
+   "item": "520a95",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "939d0d": {
+   "item": "c30c00",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "e3d5bd": {
+   "item": "a39e06",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "f0aef2": {
+   "item": "d51618",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "05baab": {
+   "item": "00bd54",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "fd281c": {
+   "item": "25b3ac",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "da1822": {
+   "item": "6853cd",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "f2de91": {
+   "item": "3b0f1d",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "51f026": {
+   "item": "a55c7e",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "9d19f7": {
+   "item": "71151f",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "9f1663": {
+   "item": "5ce6a4",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "9440a1": {
+   "item": "36e89e",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "2bc8c4": {
+   "item": "9b0292",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "ca25e6": {
+   "item": "5ce6a4",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "92b1ff": {
+   "item": "6b081d",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "72a61a": {
+   "item": "6b081d",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "cd093f": {
+   "item": "6cecd8",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "bad104": {
+   "item": "359c8c",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "541cb6": {
+   "item": "3b0f1d",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "526057": {
+   "item": "e448be",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "ed5724": {
+   "item": "6c10a1",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "8ae319": {
+   "item": "dff3f3",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "e178fe": {
+   "item": "c5ac2b",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "a6d472": {
+   "item": "28ab15",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "4ebda0": {
+   "item": "fef40e",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "e3dd3f": {
+   "item": "71151f",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "fe4ff1": {
+   "item": "129166",
+   "mode": "question",
+   "question": "Can somebody log in to the network devices from the office?",
+   "run": 1
+  },
+  "a90c6d": {
+   "item": "4e82e0",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "276932": {
+   "item": "fc05bb",
+   "mode": "canonical",
+   "question": null,
+   "run": 1
+  },
+  "898f4e": {
+   "item": "372060",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "50024e": {
+   "item": "0a5af1",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "1ce24a": {
+   "item": "0e8265",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "1ecfbb": {
+   "item": "3fcdfd",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "68a8a4": {
+   "item": "372060",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "040d96": {
+   "item": "6c10a1",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "af2439": {
+   "item": "dff860",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "5a9238": {
+   "item": "95c29b",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "bafe15": {
+   "item": "afb1c2",
+   "mode": "question",
+   "question": "Anything different from last month?",
+   "run": 1
+  },
+  "2a3c00": {
+   "item": "3b0f1d",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "f890c7": {
+   "item": "c56e41",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "c3b1bc": {
+   "item": "9b0292",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "201a37": {
+   "item": "71f5ae",
+   "mode": "canonical",
+   "question": null,
+   "run": 3
+  },
+  "50f1a8": {
+   "item": "78f388",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  },
+  "187f93": {
+   "item": "d0e05c",
+   "mode": "canonical",
+   "question": null,
+   "run": 2
+  }
+ }
+}

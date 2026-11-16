@@ -1,0 +1,274 @@
+You are Layer 2 ("evidence-constrained reasoning") of a configuration verification pipeline for the OT network of a power plant.
+
+You never see raw device configurations. You receive:
+  1. the site's zone registry and policies,
+  2. the security intents to check,
+  3. evidence records extracted deterministically from the current configuration snapshots of five devices, each with an anchor of the form device:line,
+  4. baseline-delta records listing every difference from the approved baseline (anchor device:line for a line in the current snapshot, device:base:line for a line that exists only in the baseline).
+
+Task: find the evidence that violates the intents and return candidate findings. A deterministic validator re-checks every candidate against the evidence; candidates that cite anchors that do not exist, or claim something the cited records do not show, are discarded and are not returned to you. Do not speculate beyond the evidence. If an intent or question is too vague to map onto the registry, do not guess: set clarification_flag to true and ask a question.
+
+How to read the evidence:
+  - acl_entry records belong to the ACL named in "acl" and are evaluated in ascending "pos" order; the first matching entry decides. A permit is effective only for traffic that no earlier entry of the same ACL already matches. Addresses are CIDR (0.0.0.0/0 = any). dst_ports is [low, high]; if absent, all ports.
+  - acl_binding records show where an ACL is applied; an ACL that is not bound has no effect. An ACL bound with vpn-filter applies to VENDOR traffic.
+  - interface records describe switch ports, SVIs and firewall interfaces. Other records cover vty lines, SNMP, logging, NTP, HTTP servers, firewall management access and routes.
+
+Citing:
+  - ACL problems: cite the effective permit entry (or entries) that creates the forbidden path.
+  - VLAN, trunk and SVI problems: cite the interface record.
+  - Management problems: cite the vty, snmp_community, global, mgmt_access, snmp_host or logging_host record.
+  - Baseline consistency: cite the anchor of each baseline_delta record.
+  - Use zone names exactly as in the registry (OT, MGMT, DMZ, CORP, VENDOR, OUTSIDE) for source_zone and destination_zone of I1 and I2 findings; use "n/a" for I3, I4 and I5.
+
+ZONE REGISTRY
+ZONES (name, network, VLAN, contents)
+  OT      10.10.10.0/24    VLAN 10   control assets (PLC, RTU, HMI, SCADA servers, EWS 10.10.10.40)
+  MGMT    10.10.99.0/24    VLAN 99   network management (NMS 10.10.99.50, syslog 10.10.99.60)
+  DMZ     10.10.20.0/24    VLAN 20   historian 10.10.20.10, NTP 10.10.20.5, jump host 10.10.20.30, patch server 10.10.20.40
+  CORP    192.168.30.0/24  VLAN 30   corporate IT (reporting server 192.168.30.20)
+  VENDOR  172.16.50.0/24   VLAN -    remote-access VPN address pool for vendors
+  OUTSIDE any address not inside the zones above
+INTERFACE ZONES (traffic entering through the interface comes from this zone)
+  fw-01: outside=OUTSIDE, corp=CORP, dmz=DMZ, ot=OT, mgmt=MGMT; ACLs bound with vpn-filter apply to VENDOR traffic
+  rtr-01: GigabitEthernet0/0/0=OUTSIDE
+APPROVED CROSS-ZONE SERVICES (everything else between the OT side (OT, MGMT) and other zones is forbidden)
+  A1 SCADA servers 10.10.10.20-10.10.10.23 -> historian 10.10.20.10 tcp/5450
+  A2 OT and MGMT -> NTP server 10.10.20.5 udp/123
+  A3 OT -> patch server 10.10.20.40 tcp/8530
+  A4 jump host 10.10.20.30 -> engineering workstation 10.10.10.40 tcp/3389
+  A5 CORP -> historian 10.10.20.10 tcp/443; CORP -> jump host 10.10.20.30 tcp/3389
+  A6 historian 10.10.20.10 -> reporting server 192.168.30.20 tcp/443
+  A7 VENDOR -> jump host 10.10.20.30 tcp/3389 (no other destination)
+SWITCH PORT ROLES (GigabitEthernet1/0/x)
+  sw-ot-01: ports 1-16 OT-facing (access, VLAN 10); ports 17-23 unused (VLAN 999, shutdown); port 24 uplink trunk
+  sw-it-01: ports 1-20 CORP access (VLAN 30); ports 21-23 unused; port 24 uplink trunk
+  sw-core-01: ports 1-4 DMZ servers (access, VLAN 20); ports 5-20 and 23 unused (VLAN 999, shutdown); ports 21, 22, 24 trunks
+  Only OT-facing ports may be active in VLAN 10.
+APPROVED TRUNKS (allowed VLAN sets; any other trunk is unauthorized)
+  sw-ot-01 Gi1/0/24 {10,99}; sw-it-01 Gi1/0/24 {30,99}; sw-core-01 Gi1/0/21 {30,99}, Gi1/0/22 {10,99}, Gi1/0/24 {10,20,30,99}
+  Switches must not have routed VLAN interfaces (SVIs with an IP address) for zone VLANs 10, 20 or 30.
+MANAGEMENT POLICY
+  Device management (SSH, HTTPS/ASDM, SNMP) only from MGMT 10.10.99.0/24 and, on fw-01, only on the mgmt interface.
+  Telnet must not be enabled anywhere. IOS HTTP/HTTPS servers must be disabled. SNMP communities must be read-only
+  and restricted by an ACL that permits only MGMT hosts. Logging and SNMP trap destinations must be inside MGMT.
+PLANNED OUTAGES (authorized shutdowns): sw-ot-01 Gi1/0/9, Gi1/0/10, Gi1/0/11, Gi1/0/12 (Unit 2 outage window)
+
+INTENTS TO CHECK
+  I1 SCADA isolation: Corporate IT (CORP), the Internet (OUTSIDE) and vendor VPN users (VENDOR) must not be able to open connections directly into the OT side (OT or MGMT).
+  I2 DMZ mediation: Traffic between the OT side (OT, MGMT) and any other zone, in either direction, must use only the approved cross-zone services; vendor VPN users may reach only the jump host.
+  I3 Boundary enforcement: Zone VLANs stay separated at layer 2: OT-facing ports are access ports in VLAN 10, only OT-facing ports are active in VLAN 10, other ports stay in their zone VLAN, trunks carry only their approved VLAN sets, and switches have no routed VLAN interfaces (SVIs with an IP address) for zone VLANs.
+  I4 Management-plane restriction: Device management follows the management policy in the registry.
+  I5 Baseline consistency: Every deviation from the approved baseline is reported for reconciliation.
+
+EVIDENCE RECORDS (198)
+{"anchor":"fw-01:15","type":"interface","name":"GigabitEthernet1/1","nameif":"outside","security_level":0,"ip":"203.0.113.2/29"}
+{"anchor":"fw-01:20","type":"interface","name":"GigabitEthernet1/2"}
+{"anchor":"fw-01:25","type":"interface","name":"GigabitEthernet1/2.10","subif_vlan":10,"nameif":"ot","security_level":100,"ip":"10.10.10.1/24"}
+{"anchor":"fw-01:31","type":"interface","name":"GigabitEthernet1/2.20","subif_vlan":20,"nameif":"dmz","security_level":50,"ip":"10.10.20.1/24"}
+{"anchor":"fw-01:37","type":"interface","name":"GigabitEthernet1/2.30","subif_vlan":30,"nameif":"corp","security_level":80,"ip":"192.168.30.1/24"}
+{"anchor":"fw-01:43","type":"interface","name":"GigabitEthernet1/2.99","subif_vlan":99,"nameif":"mgmt","security_level":100,"ip":"10.10.99.1/24"}
+{"anchor":"fw-01:49","type":"interface","name":"Management1/1","shutdown":true}
+{"anchor":"fw-01:59","type":"acl_entry","acl":"OUTSIDE_IN","pos":0,"kind":"extended","action":"permit","proto":"tcp","src":"0.0.0.0/0","dst":"10.10.10.21/32","dst_ports":[22,22]}
+{"anchor":"fw-01:60","type":"acl_entry","acl":"OUTSIDE_IN","pos":1,"kind":"extended","action":"deny","proto":"ip","src":"0.0.0.0/0","dst":"0.0.0.0/0","flags":["log"]}
+{"anchor":"fw-01:61","type":"acl_entry","acl":"CORP_IN","pos":0,"kind":"extended","action":"permit","proto":"tcp","src":"192.168.30.0/24","dst":"10.10.20.10/32","dst_ports":[443,443]}
+{"anchor":"fw-01:62","type":"acl_entry","acl":"CORP_IN","pos":1,"kind":"extended","action":"permit","proto":"tcp","src":"192.168.30.0/24","dst":"10.10.20.30/32","dst_ports":[3389,3389]}
+{"anchor":"fw-01:63","type":"acl_entry","acl":"CORP_IN","pos":2,"kind":"extended","action":"deny","proto":"ip","src":"192.168.30.0/24","dst":"10.10.10.0/24","flags":["log"]}
+{"anchor":"fw-01:64","type":"acl_entry","acl":"CORP_IN","pos":3,"kind":"extended","action":"deny","proto":"ip","src":"192.168.30.0/24","dst":"10.10.99.0/24","flags":["log"]}
+{"anchor":"fw-01:65","type":"acl_entry","acl":"CORP_IN","pos":4,"kind":"extended","action":"permit","proto":"tcp","src":"192.168.30.0/24","dst":"0.0.0.0/0","dst_ports":[443,443]}
+{"anchor":"fw-01:66","type":"acl_entry","acl":"CORP_IN","pos":5,"kind":"extended","action":"permit","proto":"tcp","src":"192.168.30.0/24","dst":"0.0.0.0/0","dst_ports":[80,80]}
+{"anchor":"fw-01:67","type":"acl_entry","acl":"CORP_IN","pos":6,"kind":"extended","action":"permit","proto":"udp","src":"192.168.30.0/24","dst":"0.0.0.0/0","dst_ports":[53,53]}
+{"anchor":"fw-01:68","type":"acl_entry","acl":"CORP_IN","pos":7,"kind":"extended","action":"deny","proto":"ip","src":"0.0.0.0/0","dst":"0.0.0.0/0","flags":["log"]}
+{"anchor":"fw-01:69","type":"acl_entry","acl":"DMZ_IN","pos":0,"kind":"extended","action":"permit","proto":"tcp","src":"10.10.20.10/32","dst":"192.168.30.20/32","dst_ports":[443,443]}
+{"anchor":"fw-01:70","type":"acl_entry","acl":"DMZ_IN","pos":1,"kind":"extended","action":"permit","proto":"tcp","src":"10.10.20.30/32","dst":"10.10.10.40/32","dst_ports":[3389,3389]}
+{"anchor":"fw-01:71","type":"acl_entry","acl":"DMZ_IN","pos":2,"kind":"extended","action":"deny","proto":"ip","src":"0.0.0.0/0","dst":"10.10.10.0/24","flags":["log"]}
+{"anchor":"fw-01:72","type":"acl_entry","acl":"DMZ_IN","pos":3,"kind":"extended","action":"deny","proto":"ip","src":"0.0.0.0/0","dst":"10.10.99.0/24","flags":["log"]}
+{"anchor":"fw-01:73","type":"acl_entry","acl":"DMZ_IN","pos":4,"kind":"extended","action":"permit","proto":"udp","src":"10.10.20.5/32","dst":"0.0.0.0/0","dst_ports":[123,123]}
+{"anchor":"fw-01:74","type":"acl_entry","acl":"DMZ_IN","pos":5,"kind":"extended","action":"permit","proto":"tcp","src":"10.10.20.40/32","dst":"0.0.0.0/0","dst_ports":[443,443]}
+{"anchor":"fw-01:75","type":"acl_entry","acl":"DMZ_IN","pos":6,"kind":"extended","action":"deny","proto":"ip","src":"0.0.0.0/0","dst":"0.0.0.0/0","flags":["log"]}
+{"anchor":"fw-01:76","type":"acl_entry","acl":"OT_IN","pos":0,"kind":"extended","action":"permit","proto":"tcp","src":"10.10.10.20/32","dst":"10.10.20.10/32","dst_ports":[5450,5450]}
+{"anchor":"fw-01:77","type":"acl_entry","acl":"OT_IN","pos":1,"kind":"extended","action":"permit","proto":"tcp","src":"10.10.10.21/32","dst":"10.10.20.10/32","dst_ports":[5450,5450]}
+{"anchor":"fw-01:78","type":"acl_entry","acl":"OT_IN","pos":2,"kind":"extended","action":"permit","proto":"udp","src":"10.10.10.0/24","dst":"10.10.20.5/32","dst_ports":[123,123]}
+{"anchor":"fw-01:79","type":"acl_entry","acl":"OT_IN","pos":3,"kind":"extended","action":"permit","proto":"tcp","src":"10.10.10.0/24","dst":"10.10.20.40/32","dst_ports":[8530,8530]}
+{"anchor":"fw-01:80","type":"acl_entry","acl":"OT_IN","pos":4,"kind":"extended","action":"deny","proto":"ip","src":"0.0.0.0/0","dst":"0.0.0.0/0","flags":["log"]}
+{"anchor":"fw-01:81","type":"acl_entry","acl":"MGMT_IN","pos":0,"kind":"extended","action":"permit","proto":"udp","src":"10.10.99.0/24","dst":"10.10.20.5/32","dst_ports":[123,123]}
+{"anchor":"fw-01:82","type":"acl_entry","acl":"MGMT_IN","pos":1,"kind":"extended","action":"deny","proto":"ip","src":"0.0.0.0/0","dst":"0.0.0.0/0","flags":["log"]}
+{"anchor":"fw-01:83","type":"acl_entry","acl":"VENDOR_VPN","pos":0,"kind":"extended","action":"permit","proto":"tcp","src":"172.16.50.0/24","dst":"10.10.20.30/32","dst_ports":[3389,3389]}
+{"anchor":"fw-01:84","type":"acl_entry","acl":"VENDOR_VPN","pos":1,"kind":"extended","action":"deny","proto":"ip","src":"0.0.0.0/0","dst":"0.0.0.0/0","flags":["log"]}
+{"anchor":"fw-01:89","type":"logging_host","address":"10.10.99.60","interface":"mgmt"}
+{"anchor":"fw-01:100","type":"acl_binding","acl":"OUTSIDE_IN","direction":"in","interface":"outside"}
+{"anchor":"fw-01:101","type":"acl_binding","acl":"OT_IN","direction":"in","interface":"ot"}
+{"anchor":"fw-01:102","type":"acl_binding","acl":"DMZ_IN","direction":"in","interface":"dmz"}
+{"anchor":"fw-01:103","type":"acl_binding","acl":"CORP_IN","direction":"in","interface":"corp"}
+{"anchor":"fw-01:104","type":"acl_binding","acl":"MGMT_IN","direction":"in","interface":"mgmt"}
+{"anchor":"fw-01:105","type":"route","interface":"outside","prefix":"0.0.0.0/0","next_hop":"203.0.113.1"}
+{"anchor":"fw-01:110","type":"global","setting":"asa_http_server","enabled":true}
+{"anchor":"fw-01:111","type":"mgmt_access","service":"http","src":"10.10.99.0/24","interface":"mgmt"}
+{"anchor":"fw-01:112","type":"snmp_host","address":"10.10.99.50","interface":"mgmt"}
+{"anchor":"fw-01:119","type":"mgmt_access","service":"ssh","src":"10.10.99.0/24","interface":"mgmt"}
+{"anchor":"fw-01:126","type":"ntp_server","address":"10.10.20.5"}
+{"anchor":"fw-01:133","type":"acl_binding","acl":"VENDOR_VPN","direction":"in","interface":"vpn-filter (group-policy VENDOR)"}
+{"anchor":"rtr-01:35","type":"interface","name":"GigabitEthernet0/0/0","ip":"198.51.100.2/30","acl_in":"EDGE_IN"}
+{"anchor":"rtr-01:38","type":"acl_binding","acl":"EDGE_IN","direction":"in","interface":"GigabitEthernet0/0/0"}
+{"anchor":"rtr-01:41","type":"interface","name":"GigabitEthernet0/0/1","ip":"203.0.113.1/29"}
+{"anchor":"rtr-01:46","type":"interface","name":"GigabitEthernet0","ip":"10.10.99.12/24"}
+{"anchor":"rtr-01:52","type":"global","setting":"ip_http_server","enabled":false}
+{"anchor":"rtr-01:53","type":"global","setting":"ip_http_secure_server","enabled":false}
+{"anchor":"rtr-01:54","type":"route","prefix":"0.0.0.0/0","next_hop":"198.51.100.1"}
+{"anchor":"rtr-01:55","type":"route","prefix":"0.0.0.0/0","next_hop":"10.10.99.1"}
+{"anchor":"rtr-01:58","type":"acl_entry","acl":"SNMP_NMS","pos":0,"kind":"standard","action":"permit","src":"10.10.99.50/32","seq":10}
+{"anchor":"rtr-01:59","type":"acl_entry","acl":"SNMP_NMS","pos":1,"kind":"standard","action":"deny","src":"0.0.0.0/0","seq":20}
+{"anchor":"rtr-01:61","type":"acl_entry","acl":"VTY_MGMT","pos":0,"kind":"standard","action":"permit","src":"10.10.99.0/24","seq":10}
+{"anchor":"rtr-01:62","type":"acl_entry","acl":"VTY_MGMT","pos":1,"kind":"standard","action":"deny","src":"0.0.0.0/0","seq":20}
+{"anchor":"rtr-01:65","type":"acl_entry","acl":"EDGE_IN","pos":0,"kind":"extended","action":"deny","proto":"ip","src":"10.0.0.0/8","dst":"0.0.0.0/0","seq":10}
+{"anchor":"rtr-01:66","type":"acl_entry","acl":"EDGE_IN","pos":1,"kind":"extended","action":"deny","proto":"ip","src":"172.16.0.0/12","dst":"0.0.0.0/0","seq":20}
+{"anchor":"rtr-01:67","type":"acl_entry","acl":"EDGE_IN","pos":2,"kind":"extended","action":"deny","proto":"ip","src":"192.168.0.0/16","dst":"0.0.0.0/0","seq":30}
+{"anchor":"rtr-01:68","type":"acl_entry","acl":"EDGE_IN","pos":3,"kind":"extended","action":"permit","proto":"tcp","src":"0.0.0.0/0","dst":"203.0.113.2/32","dst_ports":[443,443],"seq":40}
+{"anchor":"rtr-01:69","type":"acl_entry","acl":"EDGE_IN","pos":4,"kind":"extended","action":"permit","proto":"udp","src":"0.0.0.0/0","dst":"203.0.113.2/32","dst_ports":[443,443],"seq":50}
+{"anchor":"rtr-01:70","type":"acl_entry","acl":"EDGE_IN","pos":5,"kind":"extended","action":"permit","proto":"tcp","src":"0.0.0.0/0","dst":"203.0.113.0/29","flags":["established"],"seq":60}
+{"anchor":"rtr-01:71","type":"acl_entry","acl":"EDGE_IN","pos":6,"kind":"extended","action":"permit","proto":"udp","src":"0.0.0.0/0","dst":"203.0.113.0/29","src_ports":[53,53],"seq":70}
+{"anchor":"rtr-01:72","type":"acl_entry","acl":"EDGE_IN","pos":7,"kind":"extended","action":"permit","proto":"udp","src":"0.0.0.0/0","dst":"203.0.113.2/32","src_ports":[123,123],"seq":80}
+{"anchor":"rtr-01:73","type":"acl_entry","acl":"EDGE_IN","pos":8,"kind":"extended","action":"deny","proto":"ip","src":"0.0.0.0/0","dst":"0.0.0.0/0","flags":["log"],"seq":90}
+{"anchor":"rtr-01:75","type":"logging_host","address":"10.10.99.60"}
+{"anchor":"rtr-01:76","type":"snmp_community","mode":"RO","acl":"SNMP_NMS"}
+{"anchor":"rtr-01:78","type":"snmp_host","address":"10.10.99.50"}
+{"anchor":"rtr-01:87","type":"vty","lines":"0 4","transport_input":["ssh"],"access_class":"VTY_MGMT"}
+{"anchor":"rtr-01:90","type":"vty","lines":"5 15","transport_input":["ssh"],"access_class":"VTY_MGMT"}
+{"anchor":"rtr-01:94","type":"ntp_server","address":"10.10.20.5"}
+{"anchor":"sw-core-01:34","type":"vlan","vlan_id":10}
+{"anchor":"sw-core-01:37","type":"vlan","vlan_id":20}
+{"anchor":"sw-core-01:40","type":"vlan","vlan_id":30}
+{"anchor":"sw-core-01:43","type":"vlan","vlan_id":99}
+{"anchor":"sw-core-01:46","type":"vlan","vlan_id":999}
+{"anchor":"sw-core-01:49","type":"interface","name":"GigabitEthernet1/0/1","access_vlan":20,"mode":"access","portfast":true}
+{"anchor":"sw-core-01:55","type":"interface","name":"GigabitEthernet1/0/2","access_vlan":20,"mode":"access","portfast":true}
+{"anchor":"sw-core-01:61","type":"interface","name":"GigabitEthernet1/0/3","access_vlan":20,"mode":"access","portfast":true}
+{"anchor":"sw-core-01:67","type":"interface","name":"GigabitEthernet1/0/4","access_vlan":20,"mode":"access","portfast":true}
+{"anchor":"sw-core-01:73","type":"interface","name":"GigabitEthernet1/0/5","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-core-01:79","type":"interface","name":"GigabitEthernet1/0/6","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-core-01:85","type":"interface","name":"GigabitEthernet1/0/7","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-core-01:91","type":"interface","name":"GigabitEthernet1/0/8","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-core-01:97","type":"interface","name":"GigabitEthernet1/0/9","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-core-01:103","type":"interface","name":"GigabitEthernet1/0/10","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-core-01:109","type":"interface","name":"GigabitEthernet1/0/11","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-core-01:115","type":"interface","name":"GigabitEthernet1/0/12","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-core-01:121","type":"interface","name":"GigabitEthernet1/0/13","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-core-01:127","type":"interface","name":"GigabitEthernet1/0/14","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-core-01:133","type":"interface","name":"GigabitEthernet1/0/15","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-core-01:139","type":"interface","name":"GigabitEthernet1/0/16","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-core-01:145","type":"interface","name":"GigabitEthernet1/0/17","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-core-01:151","type":"interface","name":"GigabitEthernet1/0/18","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-core-01:157","type":"interface","name":"GigabitEthernet1/0/19","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-core-01:163","type":"interface","name":"GigabitEthernet1/0/20","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-core-01:169","type":"interface","name":"GigabitEthernet1/0/21","trunk_allowed":[30,99],"mode":"trunk"}
+{"anchor":"sw-core-01:175","type":"interface","name":"GigabitEthernet1/0/22","trunk_allowed":[10,99],"mode":"trunk"}
+{"anchor":"sw-core-01:181","type":"interface","name":"GigabitEthernet1/0/23","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-core-01:187","type":"interface","name":"GigabitEthernet1/0/24","trunk_allowed":[10,20,30,99],"mode":"trunk"}
+{"anchor":"sw-core-01:193","type":"interface","name":"Vlan1","shutdown":true}
+{"anchor":"sw-core-01:197","type":"interface","name":"Vlan99","ip":"10.10.99.10/24"}
+{"anchor":"sw-core-01:201","type":"global","setting":"ip_http_server","enabled":false}
+{"anchor":"sw-core-01:202","type":"global","setting":"ip_http_secure_server","enabled":false}
+{"anchor":"sw-core-01:205","type":"acl_entry","acl":"SNMP_NMS","pos":0,"kind":"standard","action":"permit","src":"10.10.99.50/32"}
+{"anchor":"sw-core-01:206","type":"acl_entry","acl":"SNMP_NMS","pos":1,"kind":"standard","action":"deny","src":"0.0.0.0/0"}
+{"anchor":"sw-core-01:208","type":"acl_entry","acl":"VTY_MGMT","pos":0,"kind":"standard","action":"permit","src":"10.10.99.0/24"}
+{"anchor":"sw-core-01:209","type":"acl_entry","acl":"VTY_MGMT","pos":1,"kind":"standard","action":"deny","src":"0.0.0.0/0"}
+{"anchor":"sw-core-01:211","type":"logging_host","address":"10.10.99.60"}
+{"anchor":"sw-core-01:212","type":"snmp_community","mode":"RO","acl":"SNMP_NMS"}
+{"anchor":"sw-core-01:214","type":"snmp_host","address":"10.10.99.50"}
+{"anchor":"sw-core-01:217","type":"vty","lines":"0 4","transport_input":["ssh"],"access_class":"VTY_MGMT"}
+{"anchor":"sw-core-01:220","type":"vty","lines":"5 15","transport_input":["ssh"],"access_class":"VTY_MGMT"}
+{"anchor":"sw-core-01:224","type":"ntp_server","address":"10.10.20.5"}
+{"anchor":"sw-it-01:34","type":"vlan","vlan_id":30}
+{"anchor":"sw-it-01:37","type":"vlan","vlan_id":99}
+{"anchor":"sw-it-01:40","type":"vlan","vlan_id":999}
+{"anchor":"sw-it-01:43","type":"interface","name":"GigabitEthernet1/0/1","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:49","type":"interface","name":"GigabitEthernet1/0/2","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:55","type":"interface","name":"GigabitEthernet1/0/3","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:61","type":"interface","name":"GigabitEthernet1/0/4","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:67","type":"interface","name":"GigabitEthernet1/0/5","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:73","type":"interface","name":"GigabitEthernet1/0/6","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:79","type":"interface","name":"GigabitEthernet1/0/7","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:85","type":"interface","name":"GigabitEthernet1/0/8","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:91","type":"interface","name":"GigabitEthernet1/0/9","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:97","type":"interface","name":"GigabitEthernet1/0/10","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:103","type":"interface","name":"GigabitEthernet1/0/11","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:109","type":"interface","name":"GigabitEthernet1/0/12","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:115","type":"interface","name":"GigabitEthernet1/0/13","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:121","type":"interface","name":"GigabitEthernet1/0/14","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:127","type":"interface","name":"GigabitEthernet1/0/15","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:133","type":"interface","name":"GigabitEthernet1/0/16","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:139","type":"interface","name":"GigabitEthernet1/0/17","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:145","type":"interface","name":"GigabitEthernet1/0/18","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:151","type":"interface","name":"GigabitEthernet1/0/19","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:157","type":"interface","name":"GigabitEthernet1/0/20","access_vlan":30,"mode":"access","portfast":true}
+{"anchor":"sw-it-01:163","type":"interface","name":"GigabitEthernet1/0/21","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-it-01:169","type":"interface","name":"GigabitEthernet1/0/22","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-it-01:175","type":"interface","name":"GigabitEthernet1/0/23","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-it-01:181","type":"interface","name":"GigabitEthernet1/0/24","trunk_allowed":[30,99],"mode":"trunk"}
+{"anchor":"sw-it-01:187","type":"interface","name":"Vlan1","shutdown":true}
+{"anchor":"sw-it-01:191","type":"interface","name":"Vlan99","ip":"10.10.99.13/24"}
+{"anchor":"sw-it-01:195","type":"global","setting":"ip_http_server","enabled":false}
+{"anchor":"sw-it-01:196","type":"global","setting":"ip_http_secure_server","enabled":false}
+{"anchor":"sw-it-01:199","type":"acl_entry","acl":"SNMP_NMS","pos":0,"kind":"standard","action":"permit","src":"10.10.99.50/32"}
+{"anchor":"sw-it-01:200","type":"acl_entry","acl":"SNMP_NMS","pos":1,"kind":"standard","action":"deny","src":"0.0.0.0/0"}
+{"anchor":"sw-it-01:202","type":"acl_entry","acl":"VTY_MGMT","pos":0,"kind":"standard","action":"permit","src":"10.10.99.0/24"}
+{"anchor":"sw-it-01:203","type":"acl_entry","acl":"VTY_MGMT","pos":1,"kind":"standard","action":"deny","src":"0.0.0.0/0"}
+{"anchor":"sw-it-01:205","type":"logging_host","address":"10.10.99.60"}
+{"anchor":"sw-it-01:206","type":"snmp_community","mode":"RO","acl":"SNMP_NMS"}
+{"anchor":"sw-it-01:208","type":"snmp_host","address":"10.10.99.50"}
+{"anchor":"sw-it-01:211","type":"vty","lines":"0 4","transport_input":["ssh"],"access_class":"VTY_MGMT"}
+{"anchor":"sw-it-01:214","type":"vty","lines":"5 15","transport_input":["ssh"],"access_class":"VTY_MGMT"}
+{"anchor":"sw-it-01:218","type":"ntp_server","address":"10.10.20.5"}
+{"anchor":"sw-ot-01:34","type":"vlan","vlan_id":10}
+{"anchor":"sw-ot-01:37","type":"vlan","vlan_id":99}
+{"anchor":"sw-ot-01:40","type":"vlan","vlan_id":999}
+{"anchor":"sw-ot-01:43","type":"interface","name":"GigabitEthernet1/0/1","access_vlan":10,"mode":"access","portfast":true}
+{"anchor":"sw-ot-01:49","type":"interface","name":"GigabitEthernet1/0/2","access_vlan":10,"mode":"access","portfast":true}
+{"anchor":"sw-ot-01:55","type":"interface","name":"GigabitEthernet1/0/3","access_vlan":10,"mode":"access","portfast":true}
+{"anchor":"sw-ot-01:61","type":"interface","name":"GigabitEthernet1/0/4","access_vlan":10,"mode":"access","portfast":true}
+{"anchor":"sw-ot-01:67","type":"interface","name":"GigabitEthernet1/0/5","access_vlan":10,"mode":"access","portfast":true}
+{"anchor":"sw-ot-01:73","type":"interface","name":"GigabitEthernet1/0/6","access_vlan":10,"mode":"access","portfast":true}
+{"anchor":"sw-ot-01:79","type":"interface","name":"GigabitEthernet1/0/7","access_vlan":10,"mode":"access","portfast":true}
+{"anchor":"sw-ot-01:85","type":"interface","name":"GigabitEthernet1/0/8","access_vlan":10,"mode":"access","portfast":true}
+{"anchor":"sw-ot-01:91","type":"interface","name":"GigabitEthernet1/0/9","access_vlan":10,"mode":"access","portfast":true}
+{"anchor":"sw-ot-01:97","type":"interface","name":"GigabitEthernet1/0/10","access_vlan":10,"mode":"access","portfast":true}
+{"anchor":"sw-ot-01:103","type":"interface","name":"GigabitEthernet1/0/11","access_vlan":10,"mode":"access","portfast":true}
+{"anchor":"sw-ot-01:109","type":"interface","name":"GigabitEthernet1/0/12","access_vlan":10,"mode":"access","portfast":true}
+{"anchor":"sw-ot-01:115","type":"interface","name":"GigabitEthernet1/0/13","access_vlan":10,"mode":"access","portfast":true}
+{"anchor":"sw-ot-01:121","type":"interface","name":"GigabitEthernet1/0/14","access_vlan":10,"mode":"access","portfast":true}
+{"anchor":"sw-ot-01:127","type":"interface","name":"GigabitEthernet1/0/15","access_vlan":10,"mode":"access","portfast":true}
+{"anchor":"sw-ot-01:133","type":"interface","name":"GigabitEthernet1/0/16","access_vlan":10,"mode":"access","portfast":true}
+{"anchor":"sw-ot-01:139","type":"interface","name":"GigabitEthernet1/0/17","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-ot-01:145","type":"interface","name":"GigabitEthernet1/0/18","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-ot-01:151","type":"interface","name":"GigabitEthernet1/0/19","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-ot-01:157","type":"interface","name":"GigabitEthernet1/0/20","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-ot-01:163","type":"interface","name":"GigabitEthernet1/0/21","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-ot-01:169","type":"interface","name":"GigabitEthernet1/0/22","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-ot-01:175","type":"interface","name":"GigabitEthernet1/0/23","access_vlan":999,"mode":"access","shutdown":true}
+{"anchor":"sw-ot-01:181","type":"interface","name":"GigabitEthernet1/0/24","trunk_allowed":[10,99],"mode":"trunk"}
+{"anchor":"sw-ot-01:187","type":"interface","name":"Vlan1","shutdown":true}
+{"anchor":"sw-ot-01:191","type":"interface","name":"Vlan99","ip":"10.10.99.11/24"}
+{"anchor":"sw-ot-01:195","type":"global","setting":"ip_http_server","enabled":false}
+{"anchor":"sw-ot-01:196","type":"global","setting":"ip_http_secure_server","enabled":false}
+{"anchor":"sw-ot-01:199","type":"acl_entry","acl":"SNMP_NMS","pos":0,"kind":"standard","action":"permit","src":"10.10.99.50/32"}
+{"anchor":"sw-ot-01:200","type":"acl_entry","acl":"SNMP_NMS","pos":1,"kind":"standard","action":"deny","src":"0.0.0.0/0"}
+{"anchor":"sw-ot-01:202","type":"acl_entry","acl":"VTY_MGMT","pos":0,"kind":"standard","action":"permit","src":"10.10.99.0/24"}
+{"anchor":"sw-ot-01:203","type":"acl_entry","acl":"VTY_MGMT","pos":1,"kind":"standard","action":"deny","src":"0.0.0.0/0"}
+{"anchor":"sw-ot-01:205","type":"logging_host","address":"10.10.99.60"}
+{"anchor":"sw-ot-01:206","type":"snmp_community","mode":"RO","acl":"SNMP_NMS"}
+{"anchor":"sw-ot-01:208","type":"snmp_host","address":"10.10.99.50"}
+{"anchor":"sw-ot-01:211","type":"vty","lines":"0 4","transport_input":["ssh"],"access_class":"VTY_MGMT"}
+{"anchor":"sw-ot-01:214","type":"vty","lines":"5 15","transport_input":["ssh"],"access_class":"VTY_MGMT"}
+{"anchor":"sw-ot-01:218","type":"ntp_server","address":"10.10.20.5"}
+
+BASELINE DELTAS (1)
+{"anchor":"fw-01:59","type":"baseline_delta","change":"added","section":"global","keyword":"access-list OUTSIDE_IN","record":"fw-01:59"}
+
+OUTPUT FORMAT
+Return exactly one JSON object and nothing else (no prose, no code fences):
+{"candidates": [{"intent_id": "<I1..I5>", "source_zone": "<zone or n/a>", "destination_zone": "<zone or n/a>",
+  "protocol_or_port": "<e.g. tcp/22, ip, n/a>", "action": "<permit, enabled, assigned, changed, ...>",
+  "evidence_types": ["<record types>"], "constraint": "must_not_exist",
+  "anchors": ["<anchor copied exactly from the evidence>"], "claim": "<one sentence>",
+  "remediation": "<one sentence, or empty>", "clarification_flag": false}],
+ "clarifications": [{"intent_id": "<I1..I5>", "question": "<question to the engineer>"}]}
+Use an empty list where there is nothing to report.
